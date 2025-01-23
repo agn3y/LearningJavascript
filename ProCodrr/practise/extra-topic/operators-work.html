@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Logical Operators</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Understanding Logical Operators in JavaScript</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                Logical operators like <code>&&</code> (AND) and <code>||</code> (OR) are commonly used to return 
+                boolean values (<code>true</code> or <code>false</code>). However, in reality, they return values 
+                based on the **truthy** or **falsy** nature of their operands.
+            </p>
+            <h2>Behavior of Logical Operators</h2>
+            <ul>
+                <li><code>0 && 2</code>: Returns <code>0</code> (falsy value).</li>
+                <li><code>0 || 2</code>: Returns <code>2</code> (truthy value).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Explanation</h2>
+            <ol>
+                <li>First, the values are evaluated to determine if they are truthy or falsy.</li>
+                <li>The result depends on the operator:
+                    <ul>
+                        <li><strong>AND (<code>&&</code>):</strong> Returns the first falsy value, or the last truthy value if all are truthy.</li>
+                        <li><strong>OR (<code>||</code>):</strong> Returns the first truthy value, or the last falsy value if all are falsy.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>
+                For example, in <code>0 && 2</code>, <code>0</code> is falsy, so it is returned. In <code>0 || 2</code>, 
+                <code>2</code> is the first truthy value, so it is returned.
+            </p>
+        </section>
+
+        <section>
+            <h2>Code Example</h2>
+            <script>
+                function printThatCode() {  
+                    const userAge = 22;
+
+                    // Logical conditions
+                    const isSchoolStudent = (userAge >= 5) && (userAge <= 18);
+                    const isCollegeStudent = (userAge >= 18) || (userAge <= 24);
+
+                    console.log("Is School Student:", isSchoolStudent); // false
+                    console.log("Is College Student:", isCollegeStudent); // true
+
+                    // Logical operations with 0 and 2
+                    console.log("0 && 2:", 0 && 2); // 0
+                    console.log("0 || 2:", 0 || 2); // 2
+
+                    // Boolean conversion
+                    console.log("Boolean(0 && 2):", Boolean(0 && 2)); // false
+                    console.log("Boolean(0 || 2):", Boolean(0 || 2)); // true
+                }
+
+                printThatCode();
+            </script>
+        </section>
+
+        <section>
+            <h2>Notes</h2>
+            <ul>
+                <li>In the case of <code>&&</code> (AND), evaluation stops as soon as a falsy value is encountered.</li>
+                <li>In the case of <code>||</code> (OR), evaluation stops as soon as a truthy value is encountered.</li>
+                <li>These operators return the actual value of the operand, not a boolean.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a class="link-button" href="../Main-Topics/4-ComparisonOperator.html">Previous Page</a>
+    </footer>
+</body>
+
+</html>

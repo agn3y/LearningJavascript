@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //it only works with strings
+
+        //setItem to Adds a new item or updates an existing item in `localStorage`. 
+        localStorage.setItem('message','Winner Winner Chicken Dinner'); 
+
+        //Retrieves the value associated with the specified `key` from `localStorage`
+        localStorage.getItem('message');
+
+        // Removes the item with the specified `key` from `localStorage`.
+        localStorage.removeItem('message');  
+
+        console.log(localStorage.getItem('message'));
+        console.log('hello my name is agney patelS'.length); // get length of string
+        console.log('hello'.toUpperCase()); 
+        console.log('hello'.toLowerCase());
+        // when we store the score we have to convert it to string using stringify then when we want to load the score we convert it to an object again using json.parse//
+    </script>
+</body>
+</html>

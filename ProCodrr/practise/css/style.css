@@ -1,0 +1,72 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inconsolata:wght@200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Body styles */
+body {
+    color: #DDB65D; /* Gold for text */
+    background-color: #4F2C1D; /* Dark brown background */
+    font-family: "Lora", serif;/* Elegant serif font for the body */
+    font-weight: 400; /* Normal weight */
+    font-style: normal;
+    line-height: 1.8; /* Comfortable line height */
+}
+
+/* List items */
+li {
+    margin-bottom: 0.5rem; /* Space between list items */
+}
+
+/* Links */
+a {
+    margin-top: 20px; /* Spacing above links */
+    display: inline-block;
+    color: #DDB65D; /* Gold text color */
+    border: 1px solid #DDB65D; /* Gold border */
+    background-color: #4F2C1D; /* Matches background */
+    border-radius: 7px; /* Rounded corners */
+    padding: 7px; /* Inner spacing */
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+a:hover {
+    color: #4F2C1D; /* Dark brown on hover */
+    background-color: #DDB65D; /* Gold background on hover */
+}
+
+/* Paragraphs */
+p {
+    text-align: justify; /* Align text for readability */
+    margin-bottom: 0.5rem; /* Space below paragraphs */
+}
+
+/* Preformatted text */
+pre {
+    font-family: "Inconsolata", monospace; /* Monospaced font for code blocks */
+    font-size: 1rem; /* Standard font size */
+    color: #DBB04A; /* Lighter gold for preformatted text */
+    background-color: #2C1E1E; /* Darker background for contrast */
+    padding: 10px; /* Inner spacing */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Inline code */
+code {
+    font-family: "JetBrains Mono", monospace; /* Monospaced font for inline code */
+    font-size: 14px; /* Slightly smaller for inline use */
+    font-weight: 400; /* Normal weight */
+    line-height: 1.6; /* Spacing for inline code */
+    color: #DBB04A; /* Gold text */
+    padding: 2px 4px; /* Subtle padding */
+    cursor: pointer;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+}
+
+hr {
+    margin-top: 30px;
+}

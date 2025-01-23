@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #0000009f;
+    font-family: cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;   /* Centers horizontally */
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.welt.de%2Fimg%2Fpolitik%2Fausland%2Fmobile140879143%2F7892501147-ci102l-w1024%2FChina-unter-Mao-im-Uebersee-Museum-Bremen.jpg&f=1&nofb=1&ipt=7d8a85be33b09c02fb43f4099458ad5a3c13295b056b00e36a9e65a048bdd7b5&ipo=images");
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+}
+
+form input {
+    color: rgba(240, 248, 255, 0.458);
+    text-align: center;
+    margin: 10px;
+    padding: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #0000009f;
+    border-radius: 3px;
+}
+
+form button {
+    display: inline-block;
+    width: 60px;
+    margin-top: 10px;
+    color: rgba(240, 248, 255, 0.458);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 3px;
+    background-color: #0000009f;
+}
+
+::placeholder {
+    color: rgba(240, 248, 255, 0.458);
+    text-align: center;
+}

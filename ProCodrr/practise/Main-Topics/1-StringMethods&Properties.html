@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods & Properties</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Template Literals & String Methods</h1>
+        <p>The Complete JavaScript Course | Episode 07</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Methods Without Arguments</h2>
+            <ul>
+                <li><code>toUpperCase()</code></li>
+                <li><code>toLowerCase()</code></li>
+                <li><code>trim()</code></li>
+                <li><code>trimStart()</code></li>
+                <li><code>trimEnd()</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Methods With Arguments</h2>
+            <ul>
+                <li><code>includes()</code></li>
+                <li><code>indexOf()</code></li>
+                <li><code>replace()</code></li>
+                <li><code>replaceAll()</code></li>
+                <li><code>concat()</code></li>
+                <li><code>parseInt()</code> (or use <code>'+'</code> operator for quick conversion)</li>
+                <li><code>padStart()</code></li>
+                <li><code>padEnd()</code></li>
+                <li><code>charAt()</code></li>
+                <li><code>charCodeAt()</code></li>
+                <li><code>split()</code></li>
+            </ul>
+        </section>
+
+        <footer>
+            <a class="link-button" href="0-Fundamentals.html">Previous Page</a>
+            <a class="link-button" href="2-Math-Object.html">Next Page</a>
+        </footer>
+    </main>
+
+    <script>
+        // Example Strings
+        const songName = `       Template Literals | String Methods & Properties | The Complete JavaScript Course | Ep.07         `;
+        const result = 'AgneY PateL';
+        const percentage = 'and my result is 80%';
+        const creditCard = `1079`;
+        const creditCard1 = `7036`;
+
+        // 1. String Case Methods
+        console.log(songName.toUpperCase());
+        console.log(songName.toLowerCase());
+
+        // 2. String Trimming Methods
+        console.log(songName.trim());
+        console.log(songName.trimStart());
+        console.log(songName.trimEnd());
+
+        // 3. Searching Strings
+        console.log(songName.includes('JavaScript'));
+        console.log(songName.indexOf('S'));
+        console.log(songName[20]);
+
+        // 4. Replacing Substrings
+        console.log(songName.replace('Template Literals', 'Danza Kuduro'));
+        console.log(songName.replaceAll('i', 'I'));
+
+        // 5. Concatenating Strings
+        console.log(result.concat(', ', percentage));
+        console.log('My account last four digits are '.concat(creditCard));
+
+        // 6. Parsing Strings to Numbers
+        console.log(parseInt('34222 bk'));
+
+        // 7. Padding Strings
+        console.log(creditCard.padStart(12, '*'));
+        console.log(creditCard1.padEnd(12, '*'));
+
+        // 8. Accessing Characters
+        console.log(result.charAt(4));
+        console.log(result.charCodeAt(2));
+
+        // 9. Splitting Strings
+        console.log(percentage.split());
+        console.log(percentage.split(' '));
+        console.log(percentage.split('a'));
+
+        // 10. Template Literals with Embedded Variables
+        console.log(`My account's number is ${creditCard1.padStart(12, '*')}`);
+        console.log(`I have ${creditCard}.98$ in my account`);
+    </script>
+</body>
+
+</html>

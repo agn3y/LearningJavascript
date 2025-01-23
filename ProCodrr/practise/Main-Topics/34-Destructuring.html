@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring In JS</title>
+    <script src="../externJsFile/Destructuring.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Destructuring in JavaScript</h1>
+    <Ol>
+        <li>Destructuring Arrays</li>
+        <li>Destructuring Objects</li>
+        <li>Destructuring functions</li>
+    </Ol>
+    <code>
+        <pre>
+// Destructuring Arrays
+
+const clgFriend = [
+  "Agney",
+  "Guruvesh",
+  "Ayush",
+  "Anirudh",
+  "Harmin",
+  "Wajid",
+  "Viren",
+];
+
+const [a, b, c, d, e, f, g] = clgFriend;
+const [, , thirdFriend] = clgFriend; // skip first two values
+
+//Another way of accessing any element of an array 
+const {2:ayushName} = clgFriend;
+const {2:canada} = clgFriend; // {indexOfAnArray:variableName = Name of array that you are targeting}
+
+//And Another way
+
+const LastName = clgFriend[6];
+
+// Destructuring Objects
+
+const person = {
+    Name : 'Agney',
+    Age : 25,
+    Education : 'Bachelor Of Engineering in Information Technology',
+    Degree : 'Yes',
+    Job : 'front-End Web-Developer',
+    address : {
+        Country : 'India',
+        State : 'NewYork',
+        Village : 'Jhadadia'
+    }
+}
+
+const {Name, Age,Job} = person ;
+const {Name : myName, Age : myAge} = person ; // Passing value of name and age to myName and myAge.
+const {address : {Country : homeCountry }  } = person;
+
+
+console.log(homeCountry); // Accessing an inner element of an object and then changing name of the variable
+
+
+// Destructuring function
+function info(data) {
+    return(data)
+}
+
+info(person) 
+
+function friends([zero,,one,two]) {
+    console.log(zero,one,two);
+}
+friends(clgFriend)
+
+//Accessing particular element from object
+
+function info2({Name,Age}) {
+    console.log({Name,Age}); 
+}
+info2(person)
+        </pre>
+    </code>
+    <a class="link-button" href="33-RestParameters.html">PreviousPage</a>
+    <a class="link-button" href="35-BOM.html">NextPage</a>
+</body>
+</html>

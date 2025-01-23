@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>'this' keyword in JavaScript</title>
+    <script src="../externJsFile/OOPS/DemystifyingTHISKeyword.js" defer></script>
+  </head>
+  <body style="font-family: cursive">
+    <h1>'this' keyword in JavaScript</h1>
+    <section>
+      <h2>In reference of an Object</h2>
+      <p>whenever we use "this" keyword in an object it allows you to access the property of that object into the method which is defined into the object</p>
+      <p>inshort je object ma method che a object ni property ne "this" keyword access karwa dese</p>
+      <p>but when we use "this" into a method and define a function within the method and then try to access "this" it will point to window itself not the object</p>
+      <p>inshort when we call a method from an object "this" will point to the value of that object but when we call method and define a function within the method and then use "this" it wll point to window</p>
+      <p>inmost of cases  atleast from what i have heard of "this" will point whichever object or method it is define on left of</p>
+      <p>to fix that we have to use another "this" inside the method check the code</p>
+    </section>
+    <section>
+      <h2>In reference of constructor function</h2>
+      <p>when we use "this" in a constructore function it will point to the objects which are getting create by that constructor function</p>
+      <h2>Using this with eventListeners</h2>
+      <p>when we use "this" with eventListeners it bydefault point the element that we have selected. However, if we use "this" with an eventListener and use arrow function it behave differentlt beacuse The arrow function doesn’t have its own this. Instead, it inherits this from the surrounding scope (in this case, the element that was clicked). So when you use this inside an arrow function, it points to the element that triggered the event. So their value of this depends on their surrounding scope</p>
+      <p>In eventListener on whichever element "this" is used it will point to that element</p>
+    </section>
+  </body>
+</html>

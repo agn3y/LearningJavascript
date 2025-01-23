@@ -1,0 +1,17 @@
+.container {
+    width: 80px;
+    display:flex;
+}
+
+.container img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.container p {
+    margin: 0;
+    text-align: center;
+    font-size: large;
+}

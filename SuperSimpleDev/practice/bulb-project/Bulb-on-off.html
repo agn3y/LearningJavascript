@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        body {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            margin: 0; 
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 50vh; 
+        }
+
+        button {
+            border: 1px solid white;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            margin-top: 50px;
+        }
+
+        img {
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <img id="myImage" src="pic_bulboff.gif" alt="light-bulb-image" width="200px" height="auto">
+        <div>
+            <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn On</button>
+            <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn Off</button>
+        </div>
+    </div>
+</body>
+</html>

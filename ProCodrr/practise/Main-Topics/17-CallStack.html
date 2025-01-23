@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Stack</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/CallStack.js"></script>
+</head>
+<body>
+    <h1>Call Stack</h1>
+    <p>The <strong>call stack</strong> in JavaScript is like a list that keeps track of what function is currently running and what functions to run next</p>
+    <p>The call stack ensures that functions run in the correct order</p>
+    <h4>How It Works:</h4>
+    <ol>
+        <li>When a function is called, it gets added to the top of the stack</li>
+        <li>The function runs, and when it finishes, it gets removed from the stack</li>
+        <li>The program then moves to the next function in the stack</li>
+    </ol>
+    <code><pre>
+function greet() {
+console.log("Hello");
+sayName();
+console.log("Goodbye");
+}
+          
+function sayName() {
+console.log("My name is Agney");
+}
+          
+greet();          
+    </pre></code>
+    <h4>What Happened Step by Step:</h4>
+    <ol>
+        <li><code>greet() </code>is added to the stack and starts running</li>
+        <li>Inside <code>greet()</code>, <code>sayName()</code> is called, so it gets added to the stack.</li>
+        <li><code>sayName()</code> runs, prints "My name is Agney," and then is removed from the stack</li>
+        <li>Execution returns to <code>greet()</code>, which finishes and is removed from the stack</li>
+    </ol>
+    <h1>what is stack overflow ?</h1>
+    <ul>
+        <li>A stack overflow occurs when a program uses more stack memory than is allocated for it</li>
+        <li>The stack is a region of memory used for storing local variables, function call information, and control flow during program execution</li>
+        <li>When a program calls a function, information about that function (like local variables and the return address) is stored in a "stack frame" on the stack</li>
+        <li>If a function calls itself repeatedly without a proper base case (or stopping condition), the stack keeps growing with each call. Eventually, the stack exceeds its limit, causing a stack overflow.</li>
+        <li>If a function uses too much stack space (e.g., by allocating large arrays or large local variables), it may overflow the stack</li>
+    </ul>
+    <h4>Example of such code:</h4>
+    <code><pre>
+function introduceMe() {
+console.log('Hi, My name is Agney');
+introduceMe()
+}
+introduceMe()
+console.log('Program Ended');
+    </pre></code>
+    <script>
+        function greet() {
+        console.log("Hello");
+        sayName();
+        console.log("Goodbye");
+        }
+                
+        function sayName() {
+        console.log("My name is Agney");
+        }
+                
+        greet(); 
+    </script>
+    <a class="link-button" href="16-Execution Context.html">PreviousPage</a>
+    <a class="link-button" href="18-Hoisting.html">NextPage</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous vs Asynchronous</title>
+    <script src="../externJsFile/SynchronousVsAsynchronous.js" defer></script>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            margin-block: 1rem;
+        }
+
+        .image-class {
+            max-width: 500px;
+            max-height: 500px;
+            padding: 2rem;
+            border: 2px solid white;
+            background-color: rgb(0, 0, 0);
+            border-radius: 6px;
+            font-family: cursive;
+            overflow: auto;
+        }
+
+        .image-class img {
+            max-width: 100%;
+            max-height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section >
+        <h1>Synchronous vs Asynchronous</h1>
+        <button>Random Fox Image</button>
+        <button class="blocking">Block main thread</button>
+        <div class="image-class">
+            <img src="" alt="random-dog-image">
+        </div>
+    </section>
+<section>
+    <!-- <h2>last project and its code</h2> -->
+</section>
+</body>
+</html>

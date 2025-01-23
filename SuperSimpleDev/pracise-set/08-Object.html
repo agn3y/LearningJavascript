@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docent</title>
+</head>
+
+<body>
+    <script>
+        const product = {                       //using dot notation
+            'product-price': '290',
+            product_rating: {
+                stars: '3.5/5',
+                count: 98
+            },
+            ['ramada-prise']: '$9.89/kg' //using bracket notation
+        };
+
+        product.transport = 'By-Road';
+        product['delivery-time'] = '3 days';    //bracket notation will let us use properties which don't work with dot notation
+
+        const var1 = product;
+
+        const var2 = 2009 + 99;
+
+        console.log(product);
+        console.log(var1);
+        console.log(var2);
+        console.log(product.product_rating.stars)
+        // when we use bracket notation we can use variable and may be a calculation which will have some value
+        //inside of an object we can save any type of value
+
+
+        //destructuring
+        let name1 = {
+            'FirstName' : 'Patel',
+            'LastName' : 'Agney',
+            'Age' : '22Y 4M'
+        };
+
+        const {LastName, Age} = name1;  --
+                                            
+        console.log (LastName);
+        console.log (Age);
+
+        //shorthand property
+        
+    </script>
+</body>
+
+</html>

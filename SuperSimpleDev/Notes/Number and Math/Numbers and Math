@@ -1,0 +1,275 @@
+Order of Operation
+
+* / are done first
++ - are done after
+
+However * / have same property
+
+2 * 5 / 2 
+it will calculate left to right
+
+However + - have same property
+
+2 * 5 / 2 
+it will calculate left to right
+
+we could use (....) to control which part get done first
+
+Order of operation
+
+1. (....)
+2. * and /
+3. + and -
+4. Comparison Operators {listed below 136}
+5. Logical Operator
+
+In Programming :
+
+2,3,4 = Integer
+2.2 , 4.4 = floats
+
+
+Calculations with floats are sometimes inaccurate.
+
+1. Do the calculation in cents
+2. Convert back to dollars
+
+Strings.
+
+alert('hello'); /* it will create a pop-up of hello in browser */
+
+whenever we add string to a number it will consider number as a string which is called [[ type coercion. ]]
+
+example : 
+
+'$' + 20.95 + 7.99
+'$20.957.99'
+
+all number will be considered as a string because of its left to right behavior
+
+Solution :
+
+'$' + (2095 + 799) / 100
+$28.94
+
+
+3rd Way to create a string :
+
+1> in first way we could use '' to write a string
+
+2> we could also use " " to write a string
+
+than what could be the difference
+
+
+Example :
+
+'I'm learning js' /* this may not work as we think */
+
+here we can use " "
+
+
+"I'm learning js"
+
+3. in third way we could use an escape character which is \' something like
+
+'I\'m learning javascript'
+
+\n = creates a new line in js
+
+(*)Template strings :
+
+we can create strings using ` `.
+it provides
+
+Interpolation : insert value directly to a string 0
+
+Input : `Items ${1+1} : $${(2095 + 799)/100}`
+Output : 'Items 2 : $28.94'
+
+we could also create multi-line string with Template strings :
+
+Input: 	`Hello
+		 There	` 
+
+Output : `Hello
+		 There	` 
+
+Using comments
+
+we can use //   for a single line comment or  /*abc*/   for multiline comment.
+
+Variables :
+
+variable = container
+
+we don't have to use let when we want to reassign variable.
+
+Ways to define code:
+
+1> use of let   {let a = 3;}
+2> use of const {const a = 5;}     //constant variable
+3> use of var   {var a =6;}
+
+adding short-cuts to our code
+
+cartQuantity = cartQuantity + 2;   // Instead of this we could write
+cartQuantity +=2;
+ 
+
+---------------------------------
+Variable Re-assignment shortcuts 
+---------------------------------
++=2		variable = variable + 2
+-=2		variable = variable - 2
+*=2		variable = variable * 2
+/=2		variable = variable / 2
+++		variable = variable + 1
+--		variable = variable - 1
+
+--------------------
+Naming CConventions
+--------------------
+camelCase		cartQuantity
+PascalCase		CartQuantity
+
+---------------------
+Comparison Operators 
+---------------------
+>			greater than
+<			less than
+>=			greater than or equal to
+<=			less than or equal to
+===	, ==	equal to
+!==			not equal to	
+
+-----------------
+Logical Operators
+-----------------
+- let us combine boolean values.
+!	not
+||	or
+&&	and
+
+----------
+Statement
+----------
+1. If else
+
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+
+2. else if
+
+if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+
+------------------------
+Truthy and Falsely Values
+------------------------
+Falsely Values
+
+0, null, undefined, NaN, false(Boolean value), an empty string ("").
+
+-------------------------
+Shortcut for if statement
+-------------------------
+- Ternary Operator ?:
+
+true ? 'truthy' : 'falsy' 
+
+For Understanding
+
+if(true){
+  'truthy'
+}
+else{
+  'falsy'
+}
+
+- Guard Operator  &&
+- Default Operator ||
+
+---------
+Functions 
+---------
+- function will let us reuse the code.
+
+function(parameter){
+
+  // Write the code here
+  
+}
+
+----------
+Parameters
+----------
+- Parameters are variables listed in a function's definition that allow you to pass data into the function 
+  when it is called.
+- Parameters are essential for creating flexible, reusable, and maintainable functions in JavaScript, 
+  enabling efficient data handling in programming.
+- A function can have more than one parameter
+
+function callOut-myName (firstName, lastName) {
+  console.log(Ayush,patel)
+}
+callOutMyName()
+
+- we could assign a default value into parameters
+
+function calculateTax (cost,taxPercent = 0.1 // assigning default value) {
+      console.log(cost * taxPercent);
+}
+
+calculateTax(2000, 0.1)
+calculateTax(300)
+
+-------
+Objects
+-------
+- An object groups multiple values together
+- An object is just another type of value
+- We can use . or [] to use property of an object // important
+
+- Bracket Notation lets us use properties that don't work with dot notation 
+
+- Inside an object  we can store any type of values
+
+* Built-in Objects
+ 
+ 1> JSON built in object
+
+- helps us work with JSON (js object notation)
+
+- similar to js but less features
+
+- it does'nt support functions //cons
+- it only uses double quotes
+
+- when we send data between computers //use
+- when we store data
+
+- Built in  JSON object
+Convert:
+Javascript Object >  JSON | use stringify | process of converting an object or data structure into a string representation
+
+-Json parse  | convert text into a JavaScript object, the data becomes a JavaScript object.
+
+-Using Local Storage :
+
+-it is used to save value more permanently
+- it only supports strings
+- How to use local storage
+- when something does'nt exist in local storage it throws the null value
+
+* other values also have properties and methods
+
+console.log('hello'.length);

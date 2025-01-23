@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM in JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/BOM.js"></script>
+</head>
+<body>
+    <h1>BOM in JavaScript</h1>
+    <p><strong>BOM</strong> stands for <strong>Browser Object Model</strong>. It refers to the objects provided by the browser to interact with the browser window and its components. Unlike the DOM, which deals with the structure and content of the webpage, the BOM allows developers to interact with the browser itself.</p>
+    <h1>BOM - Browser Object Model</h1>
+
+    <ul>
+      <li>location</li>
+      <li>history</li>
+      <li>innerHeight</li>
+      <li>innerWidth</li>
+      <li>open()</li>
+      <li>close()</li>
+      <li>resizeBy()</li>
+      <li>resizeTo()</li>
+      <li>moveTo()</li>
+      <li>moveBy()</li>
+      <li>scrollBy()</li>
+      <li>scroll()</li>
+      <li>scrollTo()</li>
+      <li>print()</li>
+      <li>document</li>
+    </ul>
+    
+    <h2>Key Features of BOM:</h2>
+        <p>
+            <strong>Window Object:</strong> The global object representing the browser window. It includes methods, properties, and events for controlling the browser window.
+            <pre><code>
+// Example:
+alert("This is part of the BOM!"); // Displays an alert box
+console.log(window.innerWidth); // Logs the width of the browser window
+            </code></pre>
+        </p>
+        <p>
+            <strong>Navigator Object:</strong> Provides information about the browser and device.
+            <pre><code>
+// Example:
+console.log(navigator.userAgent); // Outputs the browser's user agent string
+            </code></pre>
+        </p>
+        <p>
+            <strong>Location Object:</strong> Represents the current URL and allows manipulation of it.
+            <pre><code>
+// Example:
+console.log(location.href); // Logs the current URL
+location.reload(); // Reloads the page
+            </code></pre>
+        </p>
+        <p>
+            <strong>History Object:</strong> Allows navigation through the browser's history.
+            <pre><code>
+// Example:
+history.back(); // Goes to the previous page in history
+history.forward(); // Goes to the next page in history
+            </code></pre>
+        </p>
+        <p>
+            <strong>Screen Object:</strong> Provides information about the user's screen.
+            <pre><code>
+// Example:
+console.log(screen.width); // Logs the width of the screen
+console.log(screen.height); // Logs the height of the screen
+            </code></pre>
+        </p>
+
+    <h2>Why is BOM Important?</h2>
+    <p>The BOM gives developers tools to:</p>
+    <ul>
+        <li>Interact with and control the browser environment.</li>
+        <li>Redirect or reload pages.</li>
+        <li>Access browser-specific information.</li>
+        <li>Perform actions like alerts, prompts, or console logging.</li>
+    </ul>
+    <p>It helps in making web pages more interactive and adaptable to the user's environment.</p>
+    <a class="link-button" href="34-Destructuring.html">PreviousPage</a>
+    <a class="link-button" href="36-Introduction to DOM.html">NextPage</a>
+</body>
+</html>

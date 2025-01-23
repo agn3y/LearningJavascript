@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+    <body>
+        <script>
+
+            //creating an object and creating an object within a function
+            const product = {
+            company_name : 'safari',
+            product_name : '35L Tracking Bag',
+            price : `380.20$`,
+                more : {
+                        another_value: 21,
+                        second_other_value:23,
+                        third_value: 'One piece is Real'
+                    },
+
+            // adding a function into an object
+            fun: function newfunction(){
+                console.log('One Piece is Real Coming from a function');
+            }
+
+            };
+
+            console.log(product.more.third_value); // accessing element within ann object
+
+            product.fun()
+
+            console.log(JSON.stringify(product)); // using stringify transform JavaScript object to JSON
+            
+            //console.log(product);                       // print product object
+
+            //console.log(product.company_name);          // print particular property of an object
+
+            //product.company_name = 'Tommy Hilfiger';    // re-assigning a value to the object
+
+            //product.Extra_Discount = '10 Percent';      // adding new property to the object
+
+            //delete product.Extra_Discount;              // deleting a property from an object 
+
+            //console.log (product);                      // print object
+
+            //console.log(typeof product)                 // shows type of product
+
+            //console.log(product['company_name']);       // accessing values by using blocks 
+
+         /* this bracket notation help us when we use property-names such as first-name however if we use dot notation it may   not go aw we think it will.
+            we can also use bracket to define property of an object e.g ['shirt-color'] : 'red' */
+
+            // we could also use object nesting
+            /*
+            const product = {
+            company_name: 'safari',
+            product_name: '35L Tracking Bag',
+            price: '380.20$',
+
+            rating: {
+             stars: 4.4,
+            count: 90
+            }
+};
+*/
+            // using stringify 
+            //console.log(JSON.stringify(product)); //Converts the product JavaScript object into a JSON string
+    
+            //using JSON.parse()
+            //const newVariable = JSON.stringify(product);
+            //console.log(JSON.parse(newVariable));   
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/Function.js"></script>
+</head>
+
+<body>
+    <h1>Functions</h1>
+    <ol>
+        <li>Functions only execute when they are called</li>
+        <li>Arguments are the values assigned to parameters</li>
+        <li>With the return keyword in JavaScript, you can return almost anything—numbers, strings, objects, arrays, functions, booleans, and even null or undefined. Functions are very flexible in terms of what they can return, so you can use them to produce any kind of result you need</li>
+        <li>However, you cannot directly return control structures like if or while loops themselves, but you can return values from them</li>
+        <li>You can’t return multiple values directly (but you can return an array or an object containing multiple values)</li>
+        <li>You can think of return as a mechanism that provides the result or output of a function</li>
+    </ol>
+    <h4>Syntax:</h4>
+    <p>
+        <pre>
+            <code>
+ function userNames(userNames, optional) { 
+ console.log(`Hi, My name is ${userNames} and I am a Java-script Engineer.`);
+ console.log(`I don't like Idli-Dhosa. Also, the ${optional} people.`);
+ }
+ userNames('agney','South-Indian');
+ userNames();
+            </code>
+        </pre>    
+    </p>
+
+    <h4>Adding default parameters:</h4>
+    <p>1st Way :</p>
+    <p>
+        <pre>
+            <code>
+ function userNames(userNames = 'Unknown', optional = 'No specific') {
+ console.log(`Hi, My name is ${userNames} and I am a JavaScript Engineer.`);
+ console.log(`I don't like Idli-Dhosa. Also, the ${optional} people.`);
+ }
+ userNames('Agney', 'South-Indian');
+ userNames();
+            </code>
+        </pre>    
+    </p>
+    <p>2nd Way: Using (||) in the template string</p>
+    <p>
+        <pre>
+            <code>
+                function userNames(userNames , optional ) {
+                console.log(`Hi, My name is ${userNames || 'Unknown'} and I am a JavaScript Engineer.`);
+                console.log(`I don't like Idli-Dhosa Also, the ${optional || 'No specific'} people.`);
+                }
+                userNames('Agney', 'South-Indian');
+                userNames();
+            </code>
+        </pre>
+    </p>
+
+    <h1>return</h1>
+    <p>The <code>return</code> statement in a JavaScript function sends a value back to the caller and ends the function's execution. If omitted, the function returns <code>undefined</code></p>
+    <p>Suppose we have a code like this:</p>
+    <code><pre>
+ function addTwoNumbers(){
+     console.log(5 + 6);  // Fixed syntax: changed curly braces to parentheses
+ }
+ addTwoNumbers();  // This will log 11 to the console
+
+ // Code for returning two arguments
+ function sumOfTwo(a, b){
+     const x = 5;
+     const y = 7;
+     return x + y;  // This function will return the sum of x and y
+ }
+
+ const result1 = sumOfTwo(1, 22222);  // You can capture the return value here
+ console.log(result1);  // Output: 12 (since 5 + 7 = 12)
+ 
+ const result2 = sumOfTwo(12, 332);  
+ console.log(result2);  // Output: 12 (same sum 5 + 7)
+
+ const result3 = sumOfTwo(111, 2);
+ console.log(result3);  // Output: 12 (same sum 5 + 7)
+
+ const result4 = sumOfTwo(122, 34);
+ console.log(result4);  // Output: 12 (same sum 5 + 7)
+ </pre></code>
+    <p>It will output 12, because the return value is always 5 + 7 (from the sumOfTwo function).</p>
+    <p>Return is also known as the result of a function, and in our case 12 is the result, not 11.</p>
+    <p> <code>return</code> keyword in a function essentially replaces the function call with its return value.</p>
+    <h2>JavaScript Code Examples</h2>
+    <pre><code>
+        // Basic syntax
+        function userNames(userNames, optional) {
+            console.log(`Hi, My name is ${userNames} and I am a Java-script Engineer.`);
+            console.log(`I don't like Idli-Dhosa. Also, the ${optional} people.`);
+        }
+        userNames('agney', 'South-Indian');
+        userNames();
+
+        // Default parameters
+        function userNames(userNames = 'Unknown', optional = 'No specific') {
+            console.log(`Hi, My name is ${userNames} and I am a JavaScript Engineer.`);
+            console.log(`I don't like Idli-Dhosa. Also, the ${optional} people.`);
+        }
+        userNames('Agney', 'South-Indian');
+        userNames();
+
+        // Another way to handle default parameters
+        function userNames(userNames, optional) {
+            console.log(`Hi, My name is ${userNames || 'Unknown'} and I am a JavaScript Engineer.`);
+            console.log(`I don't like Idli-Dhosa. Also, the ${optional || 'No specific'} people.`);
+        }
+        userNames('Agney', 'South-Indian');
+        userNames();
+    </code></pre>
+
+    <a class="link-button" href="14-Loops.html">PreviousPage</a>
+    <a class="link-button" href="16-Execution Context.html">NextPage</a>
+</body>
+
+</html>

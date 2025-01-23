@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seal and Freeze</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Seal and Freeze</h1>
+
+    <h2>Object.seal(objectName)</h2>
+    <ul>
+        <li><code>Object.seal()</code> prevents adding new properties and deleting existing properties of an object.</li>
+        <li>It does not prevent modifying the values of existing properties, as long as they are writable.</li>
+        <li>It works only with the keys (properties) of the object, not the values directly. The ability to modify a value depends on whether the property is writable.</li>
+        <p>After sealing an object:</p>
+        <li>You can change the values of existing properties (if they are writable).</li>
+        <li>You cannot add new properties or delete existing ones.</li>
+    </ul>
+
+    <h2>Object.freeze()</h2>
+    <ul>
+        <li><code>Object.freeze()</code> makes an object **immutable**.</li>
+        <li>It prevents **adding**, **deleting**, and **modifying** both the keys and the values of an object.</li>
+        <li>After freezing an object, the properties become **non-writable**, **non-configurable**, and **non-enumerable**.</li>
+        <li>Note: <code>Object.freeze()</code> is shallow, meaning it only freezes the immediate properties of the object, not the nested ones.</li>
+    </ul>
+
+    <h2>Using the <code>in</code> Keyword with Objects</h2>
+    <p class="codeBox">
+        'key of object' in ObjectName<br>
+        <code>'firstName' in user</code>
+    </p>
+    <p>It does not check the value, it just checks whether a key exists in the object.</p>
+
+    <h3>Code Example:</h3>
+    <pre class="codeBox">
+        const user = {
+            firstName: 'Agney',
+            lastName: 'Patel',
+            pata: {
+                city: 'Bangalore',
+                pincode: '879888',
+                state: 'Karnataka',
+                moreDetails: {
+                    population: 99999999999,
+                    area: '798 sq km',
+                },
+            },
+            age: 15,
+            isGraduate: false,
+        }
+
+        console.log(user.isGraduate);  // Outputs: false
+
+        // Sealing the object
+        Object.seal(user);
+
+        // Attempting to add new properties (will fail)
+        user.middleName = 'Jasmin';  // This will not work
+        console.log(user.middleName);  // Outputs: undefined
+
+        // Attempting to delete a property (will fail)
+        delete user.age;  // This will not work
+        console.log(user.age);  // Outputs: 15
+
+        // Modifying existing properties (works if writable)
+        user.firstName = 'Anjali';  // This will work
+        console.log(user.firstName);  // Outputs: Anjali
+
+        // Freezing the object
+        Object.freeze(user);
+
+        // Attempting to modify properties (will fail)
+        user.firstName = 'Ravi';  // This will not work
+        console.log(user.firstName);  // Outputs: Anjali (remains unchanged)
+    </pre>
+
+    <a class="link-button" href="9-Objects.html">PreviousPage</a>
+    <a class="link-button" href="11-Arrays.html">NextPage</a>
+</body>
+
+</html>

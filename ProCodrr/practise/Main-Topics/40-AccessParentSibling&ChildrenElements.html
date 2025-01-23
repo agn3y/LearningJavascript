@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Parent, Sibling & Children Elements in JavaScript</title>
+    <script src="../externJsFile/AccessParentSibling&ChildrenElements.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Access Parent, Sibling, and Children Elements Using JavaScript</h1>
+
+    <section>
+        <h2>1. Accessing Parent Element</h2>
+        <p>
+            To move upwards in the DOM hierarchy and access the parent element of an element:
+        </p>
+        <p><strong>Property:</strong> <code>parentElement</code></p>
+        <p>Returns the immediate parent of an element.</p>
+
+        <h3>Example:</h3><pre><code>
+let childElement = document.querySelector('.child');
+let parentElement = childElement.parentElement; // Access parent
+console.log(parentElement);
+</code></pre>
+        <p><strong>Note:</strong> If there is no parent, <code>parentElement</code> will return <code>null</code>.</p>
+    </section>
+
+    <section>
+        <h2>2. Accessing Sibling Elements</h2>
+        <p>To navigate between sibling elements at the same level in the DOM hierarchy:</p>
+        <p><strong>Properties:</strong></p>
+        <ul>
+            <li><code>previousElementSibling</code>: Access the previous sibling element.</li>
+            <li><code>nextElementSibling</code>: Access the next sibling element.</li>
+        </ul>
+
+        <h3>Example:</h3><pre><code>
+let currentElement = document.querySelector('.current');
+let previousSibling = currentElement.previousElementSibling; // Access previous sibling
+let nextSibling = currentElement.nextElementSibling; // Access next sibling
+console.log(previousSibling);
+console.log(nextSibling);
+</code></pre>
+        <p><strong>Note:</strong> If there are no siblings in that direction, these properties return <code>null</code>.</p>
+    </section>
+
+    <section>
+        <h2>3. Accessing Children Elements</h2>
+        <p>To access the child elements (nested inside the current element):</p>
+        <p><strong>Properties:</strong></p>
+        <ul>
+            <li><code>children</code>: Returns an HTMLCollection (live list of all child elements).</li>
+            <li><code>firstElementChild</code>: Access the first child element.</li>
+            <li><code>lastElementChild</code>: Access the last child element.</li>
+        </ul>
+
+        <h3>Example:</h3><pre><code>
+let parentElement = document.querySelector('.parent');
+let allChildren = parentElement.children; // Access all children
+let firstChild = parentElement.firstElementChild; // Access first child
+let lastChild = parentElement.lastElementChild; // Access last child
+
+console.log(allChildren); // HTMLCollection
+console.log(firstChild);
+console.log(lastChild);
+</code></pre>
+        <p><strong>Note:</strong> <code>children</code> excludes text nodes, while <code>childNodes</code> includes text nodes and comments.</p>
+    </section>
+
+    <section>
+        <h2>4. Traversing Using <code>childNodes</code></h2>
+        <p><code>childNodes</code>: Returns a NodeList of all children, including text nodes, comments, and element nodes.</p>
+
+        <h3>Example:</h3>
+        <pre>
+<code>
+let parent = document.querySelector('.parent');
+let allNodes = parent.childNodes; // Includes text and comment nodes
+console.log(allNodes);
+</code>
+        </pre>
+        <p><strong>Filter Node Types:</strong> Use <code>nodeType</code> to distinguish between node types (1 = element, 3 = text).</p>
+    </section>
+
+    <section>
+        <h2>5. Combining Parent, Sibling, and Child Access</h2>
+        <p>You can chain these properties for advanced DOM navigation.</p>
+
+        <h3>Example:</h3>
+        <pre>
+<code>
+let grandParent = document.querySelector('.grandparent');
+let firstChild = grandParent.firstElementChild; // First child
+let firstChildSibling = firstChild.nextElementSibling; // Next sibling of first child
+let childOfFirstChild = firstChild.firstElementChild; // Child of first child
+
+console.log(firstChild);
+console.log(firstChildSibling);
+console.log(childOfFirstChild);
+</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Use specific selectors (like <code>querySelector</code>) to minimize errors.</li>
+            <li>Always check for <code>null</code> values when navigating, to avoid runtime errors.</li>
+            <li>Be mindful of text nodes when using <code>childNodes</code>.</li>
+        </ul>
+    </section>
+    <a class="link-button" href="../extra-topic/AccessParentSibling&ChildrenElements.html"target="_blank">INteresting</a>
+    <a class="link-button" href="39-HowToApplyStylesInJavaScript.html">PreviousPage</a>
+    <a class="link-button" href="41-Difference Between Element and Node.html">NextPage</a>
+</body>
+</html>

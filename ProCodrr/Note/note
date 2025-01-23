@@ -1,0 +1,85 @@
+*  If we put {defer} after js like 
+    <script src='script.js' defer></script>
+    engine will go ahead and start compiling the code instead if staying at one place and waiting for on thing which may not be
+    awailable.
+
+* Order of Operation
+
+    * / are done first
+    + - are done after
+
+* Order of operation
+
+    1. (....)
+    2. * and /
+    3. + and -
+    4. Comparison Operators {listed below 136}
+    5. Logical Operator
+
+* Primitive Data-Types 
+
+    1. number
+    2. string
+    3. boolean
+    4. undefined
+    5. null
+    6. bigint
+    7. symbol
+
+* Strings / Using strings
+
+    1. ''
+    2. ""
+    3. `` (left side of / shift of ~ / shift+1) // its called template literal  or template strings
+
+* To convert string to number
+
+    +'100' >  100  // this will do it
+    -'100' > -100  // this will do it
+ 
+    we could also use 
+
+    parseInt('100agney') > 100
+    
+* To convert Number to strings
+
+    100 + '' // addition of empty strings to number
+
+*  Variables / can be defined Using
+
+    1. let name = 'ANU';        //  USES SCOPE
+    2. const name = 'ANU';      //  USES SCOPE
+    3. var name = 'ANU';
+
+* Naming Conventions
+
+    1. camelCase		cartQuantity
+    2. PascalCase		CartQuantity
+
+* Code execution in Javaa-script (Happens in two stages however they are not visible)  
+    
+    {memory creation and at time of creation or execution of code it assigns the value} 
+
+    1. Whenever we define any variable in js first it creates a memory / box and assign value undefined 
+    2. In the second-half it assigns the value which is assigned to the variable
+
+* length
+
+    var.length = gives length of variables value if its a string
+
+* Methods without Arguments
+
+    toUpperCase() - convert string to uppercase
+    toLowerCase() - convert string to lowecase
+    trim()        - will remove unncesessary spaces
+    trimStart()   - remove spaces in begining
+    trimEnd()     - remove spaces in back
+    includes()    - method returns true if a string contains a specified string.
+
+*Infinity and Calculus:
+
+    In calculus, when you take the limit of a function as the denominator approaches zero, you can see the behavior of division:
+
+    For a positive number divided by smaller and smaller values approaching zero, the limit approaches positive infinity.
+    For a negative number divided by smaller and smaller positive values approaching zero, the limit approaches negative infinity.
+    If you try dividing zero by zero, the limit is undefined, which is why this results in NaN (Not a Number).

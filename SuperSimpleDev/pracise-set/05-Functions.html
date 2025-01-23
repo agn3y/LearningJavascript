@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        pickComputermove();
+        "></button>
+    <script>
+        let computerMove = '';
+        function pickComputermove () {           
+            const randomNumber = Math.random();
+                if(randomNumber >= 0 && randomNumber <= 1/3 ) 
+                {
+                    computerMove = 'Rock';
+                }
+                else if (randomNumber>= 1/3 && randomNumber <= 2/3 )
+                {
+                    computerMove = 'Paper';
+                }
+                else if (randomNumber >= 2/3 && randomNumber <= 1 ) {
+                    computerMove = 'Scissors';
+                }
+        };
+            /*
+            - A function can have more than one parameter
+
+            function callOutmyName (firstName, lastName) {
+            console.log(ayush,patel)
+            }
+            callOutmyName()
+
+            - we could assign a default value into parameters
+
+            function calculateTax (cost,taxPercent = 0.1 // aassigning default value) {
+                console.log(cost * taaxPercent);
+            }
+
+            calculateTax(2000, 0.1)
+            
+            calculateTax(300)
+            */
+    </script>
+</body>
+</html>
+

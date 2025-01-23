@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments Keyword</title>
+    <script src="../externJsFile/ArgumentKeyword.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Arguments Keyword</h1>
+    <p>The <code>arguments</code> object is a special variable that is available within all non-arrow functions. It
+        holds the values of all the arguments passed to the function, even if they aren't explicitly named in the
+        function's parameter list.</p>
+
+    <h2>Key Points about <code>arguments</code>:</h2>
+    <ul>
+        <li><strong>Availability</strong>: It works in regular functions, but not in arrow functions (since arrow
+            functions don’t have their own <code>arguments</code> object).</li>
+        <li><strong>Array-like</strong>: <code>arguments</code> is not an array, but it is array-like. It means you can
+            access arguments using indices like an array (e.g., <code>arguments[0]</code>, <code>arguments[1]</code>),
+            but it doesn't have array methods like <code>push()</code> or <code>pop()</code>.</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <pre>
+        <code>
+function myFunction() {
+console.log(arguments[0]); // First argument
+console.log(arguments[1]); // Second argument
+}
+
+myFunction('apple', 'banana');  // Output: apple, banana
+        </code>
+    </pre>
+
+    <h2>Limitations:</h2>
+    <p>It doesn't work with arrow functions:
+    <pre>
+        <code>
+const myArrowFunction = () => {
+console.log(arguments);  // Error: arguments is not defined
+};
+        </code>
+      </pre>
+    </p>
+
+    <p>In modern JavaScript, you can use the <strong>rest parameters (<code>...args</code>)</strong> for a cleaner
+        way to handle variable arguments:
+    <pre>
+        <code>
+function myFunction(...args) {
+console.log(args[0]); // First argument
+console.log(args[1]); // Second argument
+}
+
+myFunction('apple', 'banana');  // Output: apple, banana
+        </code>
+      </pre>
+    </p>
+
+    <p><strong>Rest parameters</strong> are preferred in modern code as they are more flexible and easier to work with
+        than <code>arguments</code>.</p>
+    <a class="link-button" href="29-SomeAndEveryArrayMethod.html">PreviousPage</a>
+    <a class="link-button" href="31-DefaultParameters.html">NextPage</a>     
+</body>
+
+</html>

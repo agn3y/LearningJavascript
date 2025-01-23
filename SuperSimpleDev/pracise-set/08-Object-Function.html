@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const product = {
+          product_name : 'face-wash',
+          product_ratings : '4.5/5',
+          delivery : {
+            Date : '23-10-2006',
+            MOD : 'On-ROAD'
+          },
+          // funcntion is another type of value in js so we can use it with objects
+          // when we save function inside an object its called method
+          // we use json to send data between computers and to store data
+          
+          // JSON.stringify(): This method converts a JavaScript object into a JSON string
+          // JSON.parse(): This method converts a JSON string back into a JavaScript object.
+
+          fun : function function1() {
+            console.log(product);
+          }
+        }
+        product.fun();
+        console.log(typeof product.fun);
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <script src="../externJsFile/ArrowFunction.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+     <h1>Arrow Functions in JavaScript</h1>
+
+    <p>Arrow functions in JavaScript provide a shorter syntax for writing functions. They are introduced with the <code>&#8594;</code> syntax and are often used for functions that are small or used as arguments for other functions.</p>
+
+    <h2>Basic Syntax</h2>
+    <pre><code>const functionName = (parameters) => {
+  // function body
+}</code></pre>
+
+    <h2>Key Features of Arrow Functions:</h2>
+
+    <h3>1. Shorter Syntax</h3>
+    <p>Instead of using <code>function</code> keyword, you can write functions more concisely.</p>
+    <pre><code>const add = (a, b) => a + b;</code></pre>
+
+    <h3>2. Implicit Return</h3>
+    <p>If the function consists of a single expression, the return is implicit, so you don’t need to write the <code>return</code> keyword.</p>
+    <pre><code>const square = x => x * x; // Implicit return</code></pre>
+
+    <h3>3. No <code>this</code> Binding</h3>
+    <p>Arrow functions do not have their own <code>this</code> value. Instead, they inherit the <code>this</code> value from the surrounding (lexical) context, which can be useful in certain situations, especially in callbacks.</p>
+    <pre><code>const person = {
+  name: "Agney",
+  greet: function() {
+    setTimeout(() => {
+      console.log(`Hello, ${this.name}`);
+    }, 1000);
+  }
+};
+person.greet(); // Outputs: Hello, Agney</code></pre>
+
+    <h2>Example:</h2>
+    <pre><code>// Normal function
+function multiply(a, b) {
+  return a * b;
+}
+
+// Arrow function
+const multiply = (a, b) => a * b;</code></pre>
+
+    <p>Arrow functions are widely used for their concise syntax, especially in cases where functions are used as arguments (e.g., with <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> methods).</p>
+    
+    <a class="link-button" href="24-DifferencebetweenMethods&Functions.html">PreviousPage</a>
+    <a class="link-button" href="26-for of vs for in Loop.html">NextPage</a> 
+</body>
+</html>

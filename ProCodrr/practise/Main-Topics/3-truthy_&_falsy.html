@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy Values</title>
+    <link rel="stylesheet" href="../css/style.css">
+ </head>
+
+<body>
+    <header>
+        <h1>Truthy and Falsy Values in JavaScript</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                In boolean contexts, the following values are considered <strong>falsy</strong>:
+                <code>0</code>, <code>NaN</code>, <code>undefined</code>, <code>null</code>, and empty strings 
+                (<code>''</code>). Any other value is considered <strong>truthy</strong>.
+            </p>
+            <p>
+                <strong>Note:</strong> Even a single space (<code>' '</code>) is truthy, unlike an empty string.
+            </p>
+            <p>
+                We can use the <strong>ternary operator</strong> to toggle values between <code>true</code> and 
+                <code>false</code>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Examples of Truthy and Falsy Values</h2>
+            <div id="output"></div>
+        </section>
+
+        <nav>
+            <a class="link-button" href="2-Math-Object.html">Previous Page</a>
+            <a class="link-button" href="4-ComparisonOperator.html">Next Page</a>
+        </nav>
+    </main>
+
+    <script>
+        // Function to display examples of truthy and falsy values
+        function displayValues() {
+            const output = document.getElementById('output');
+            output.innerHTML = `
+                <ul>
+                    <li><code>Boolean(0):</code> ${Boolean(0)}</li>
+                    <li><code>Boolean('1'):</code> ${Boolean('1')}</li>
+                    <li><code>Boolean(null):</code> ${Boolean(null)}</li>
+                    <li><code>Boolean(undefined):</code> ${Boolean(undefined)}</li>
+                    <li><code>Boolean(NaN):</code> ${Boolean(NaN)}</li>
+                    <li><code>Boolean('string'):</code> ${Boolean('string')}</li>
+                    <li><code>Boolean(' '):</code> ${Boolean(' ')} <em>// A single space is truthy</em></li>
+                </ul>
+            `;
+        }
+
+        // Call the function to populate the output section
+        displayValues();
+    </script>
+</body>
+
+</html>
