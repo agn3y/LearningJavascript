@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Array Methods</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Basic Array Methods</h1>
+    <ol>
+        <li><strong> pop()</strong>:</li>
+        <p>-> Removes the last item of an array.</p>
+        <code class="codeBox">fruitCollection.pop();</code>
+
+        <li><strong> push()</strong>:</li>
+        <p>-> Adds one or more items to the end of an array and returns the new length.</p>
+        <code class="codeBox">fruitCollection.push('Pineapple');</code>
+        <p>-> You can insert multiple items: <code class="codeBox">fruitCollection.push('fruit1', 'fruit2');</code></p>
+
+        <li><strong> shift()</strong>:</li>
+        <p>-> Removes the very first item of an array. It shifts all the remaining elements down, which can affect performance for large arrays.</p>
+        <code class="codeBox">originalArray.shift();</code>
+
+        <li><strong> unshift()</strong>:</li>
+        <p>-> Adds new items to the beginning of an array, shifting the existing elements to the right.</p>
+        <code class="codeBox">originalArray.unshift(12);</code>
+
+        <li><strong> concat()</strong>:</li>
+        <p>-> Concatenates (joins) two or more arrays without changing the original arrays.</p>
+        <code class="codeBox">originalArray.concat(fruitCollection);</code>
+
+        <li><strong> indexOf()</strong>:</li>
+        <p>-> Returns the index (position) of the first occurrence of a specified value. Returns -1 if not found.</p>
+        <code class="codeBox">originalArray.indexOf(8);</code>
+        <h4>Note:</h4>
+        <p>-> In strings, it returns the index of a particular string. In arrays, it finds the position of a specified element.</p>
+
+        <li><strong> includes()</strong>:</li>
+        <p>-> Checks if a specified element exists in an array. Returns true or false.</p>
+        <code class="codeBox">originalArray.includes(2);</code>
+
+        <li><strong> reverse()</strong>:</li>
+        <p>-> Reverses the order of elements in an array and overwrites the original array.</p>
+        <code class="codeBox">originalArray.reverse();</code>
+
+        <li><strong> sort()</strong>:</li>
+        <p>-> Sorts the elements in an array in alphabetical or numerical order. This method modifies the original array.</p>
+        <code class="codeBox">fruitCollection.sort();</code>
+        <h4>Note:</h4>
+        <p>-> It sorts strings alphabetically, but it may not sort numbers as expected. For example, sorting numbers as strings results in this order: {0, 01, 2, 12, 3, 23}.</p>
+
+        <li><strong> slice()</strong>:</li>
+        <p>-> Returns a shallow copy of a portion of an array, as a new array. The start index is included, but the end index is excluded.</p>
+        <code class="codeBox">array.slice(start, end);</code>
+
+        <li><strong> splice()</strong>:</li>
+        <p>-> Adds and/or removes array elements. This method modifies the original array.</p>
+        <code class="codeBox">array.splice(index, count, item1, ..., itemX);</code>
+    </ol>
+
+    <a class="link-button" href="11-Arrays.html">PreviousPage</a>
+
+    <script>
+        // Example usage of array methods:
+
+        // Pop and Push method
+        const fruitCollection = ['Apple', 'Mango', 'Dates', 'Grapes', 'ORange'];
+        fruitCollection.pop();                   // Removes the last item
+        fruitCollection.push('Pineapple');       // Adds new item
+
+        // Shift and Unshift method
+        const originalArray = [0, 2, 4, 6, 8, 10];
+        originalArray.shift();                   // Removes the first item
+        originalArray.unshift(12);               // Adds new element to the beginning
+
+        // Concat, indexOf, Includes, and Reverse methods
+        originalArray.concat(fruitCollection);
+        console.log(originalArray.indexOf(8));    // Finds index of value
+        console.log(originalArray.includes(2));  // Checks if value exists
+        originalArray.reverse();                 // Reverses the array
+
+        // Sort method
+        const originalArray1 = [0, 1, 2, 12, 3, 23];
+        originalArray1.sort();                   // Sorts the array in alphabetical order
+        fruitCollection.sort();                  // Sorts the fruitCollection array
+
+        // Slice method
+        const slicedArray = fruitCollection.slice(0, 1); // Slices the array from index 0 to 1
+    </script>
+</body>
+
+</html>

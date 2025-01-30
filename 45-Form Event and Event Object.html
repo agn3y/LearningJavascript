@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events and Event Object in JavaScript</title>
+    <link rel="stylesheet" href="..//css/style.css">
+</head>
+<body>
+    <h1>Form Events and Event Object in JavaScript</h1>
+
+    <h2>1. Form Events in JavaScript</h2>
+    <p>Form events are triggered when the user interacts with form elements (like input fields, buttons, checkboxes, etc.) in various ways. Common form events include typing into a field, submitting the form, selecting an option, or focusing on a field.</p>
+
+    <h3>Common Form Events:</h3>
+    <ol>
+        <li>
+            <strong>`submit`</strong>
+            <p>Triggered when the form is submitted. Commonly used to validate form data before sending it to the server.</p>
+            <pre><code>const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevents the form from submitting
+    console.log("Form submitted!");
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`input`</strong>
+            <p>Fires whenever the user types into an input or textarea.</p>
+            <pre><code>const inputField = document.querySelector("input");
+inputField.addEventListener("input", (event) => {
+    console.log("Input value:", event.target.value);
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`change`</strong>
+            <p>Triggered when the value of an input or select element changes and the user moves focus away.</p>
+            <pre><code>const dropdown = document.querySelector("select");
+dropdown.addEventListener("change", (event) => {
+    console.log("Selected option:", event.target.value);
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`focus`</strong>
+            <p>Fires when an element (like input or textarea) gains focus (i.e., when the user clicks or tabs into it).</p>
+            <pre><code>const inputField = document.querySelector("input");
+inputField.addEventListener("focus", () => {
+    console.log("Input field is focused.");
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`blur`</strong>
+            <p>Triggered when an element loses focus.</p>
+            <pre><code>const inputField = document.querySelector("input");
+inputField.addEventListener("blur", () => {
+    console.log("Input field lost focus.");
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`reset`</strong>
+            <p>Fires when the form’s reset button is clicked, clearing all form fields.</p>
+            <pre><code>const form = document.querySelector("form");
+form.addEventListener("reset", () => {
+    console.log("Form has been reset.");
+});
+</code></pre>
+        </li>
+    </ol>
+
+    <h2>2. Event Object in JavaScript</h2>
+    <p>The Event Object represents the event that occurred and provides information about it. It is automatically passed to event handler functions and contains useful properties and methods to handle the event.</p>
+
+    <h3>Common Properties of the Event Object:</h3>
+    <ol>
+        <li>
+            <strong>`type`</strong>
+            <p>Specifies the type of the event (e.g., `click`, `submit`, `input`).</p>
+            <pre><code>document.querySelector("button").addEventListener("click", (event) => {
+    console.log("Event type:", event.type); // Output: click
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`target`</strong>
+            <p>Refers to the element that triggered the event.</p>
+            <pre><code>document.querySelector("form").addEventListener("submit", (event) => {
+    console.log("Event target:", event.target); // Output: &lt;form&gt;...&lt;/form&gt;
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`currentTarget`</strong>
+            <p>Refers to the element the event listener is attached to.</p>
+            <pre><code>const button = document.querySelector("button");
+button.addEventListener("click", (event) => {
+    console.log("Current Target:", event.currentTarget); // Output: &lt;button&gt;...&lt;/button&gt;
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`preventDefault()`</strong>
+            <p>Prevents the default action associated with the event.</p>
+            <pre><code>const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevents form submission
+    console.log("Default form submission prevented.");
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`stopPropagation()`</strong>
+            <p>Stops the event from bubbling up to parent elements.</p>
+            <pre><code>document.querySelector("div").addEventListener("click", () => {
+    console.log("Div clicked.");
+});
+document.querySelector("button").addEventListener("click", (event) => {
+    event.stopPropagation();
+    console.log("Button clicked.");
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`key`</strong>
+            <p>Captures the key pressed during a keyboard event.</p>
+            <pre><code>document.addEventListener("keydown", (event) => {
+    console.log("Key pressed:", event.key); // Outputs the key pressed, like 'Enter'
+});
+</code></pre>
+        </li>
+
+        <li>
+            <strong>`value`</strong>
+            <p>Not directly part of the Event Object but available via `event.target` for input elements.</p>
+            <pre><code>document.querySelector("input").addEventListener("input", (event) => {
+    console.log("Current value:", event.target.value);
+});
+</code></pre>
+        </li>
+    </ol>
+
+    <h2>Form Event and Event Object in Action:</h2>
+    <p>Here’s an example combining a form event and the event object:</p>
+    <pre><code>&lt;form id="myForm"&gt;
+    &lt;input type="text" id="name" placeholder="Enter your name" /&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+    const form = document.querySelector("#myForm");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Stop the form from reloading the page
+        const nameInput = event.target.querySelector("#name").value;
+        console.log("Submitted name:", nameInput);
+    });
+&lt;/script&gt;
+</code></pre>
+
+    <h2>Key Points:</h2>
+    <ul>
+        <li><strong>Form Events</strong> are specific to user actions on form elements.</li>
+        <li><strong>Event Object</strong> provides details about the event, helping manage user interactions.</li>
+        <li>Use methods like `preventDefault()` to control the default behavior.</li>
+        <li>Access properties like `target` and `type` to customize responses to user actions.</li>
+    </ul>
+    <a class="link-button" href="../extra-topic/formEvents.html"target="_blank">FormEventListeners</a>
+    <a class="link-button" href="44-EventListeners.html">PreviousPage</a>
+    <a class="link-button" href="46-Keyboardevents.html">NextPage</a>
+</body>
+</html>

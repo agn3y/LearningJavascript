@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script src="../externJsFile/callbackHell.js" defer></script>
+</head>
+<body>
+    <h1>Callback Hell</h1>
+    <section>
+        <code style="font-family: monospace !important;">
+            <pre>function makeHttpRequest (method, url,callback) {
+                const xhr = new XMLHttpRequest()
+                xhr.responseType = 'json'
+                xhr.addEventListener('load', () => {
+            
+                    // console.log(xhr.response);  
+                    // console.log(xhr);  
+            
+                    callback(xhr.response)        
+                })
+                xhr.open(method,url)
+                xhr.send()  
+            }
+            
+            // makeHttpRequest('GET',"https://dummyjson.com/posts/user/5", (data)=>{
+            
+            makeHttpRequest('GET',"https://dummyjson.com/users/", (UsersData)=>{
+                console.log(UsersData);
+                    makeHttpRequest('GET',`https://dummyjson.com/posts/user/${UsersData.users[0].id}`,(postsData)=>{
+                        console.log(postsData);
+                            makeHttpRequest('GET',`https://dummyjson.com/comments/post/${postsData.posts[0].id}`, (commentsData)=>{               
+                                console.log(commentsData)                
+                                    makeHttpRequest('GET',`https://dummyjson.com/users/${commentsData.comments[0].user.id}`, (userData)=> {
+                                        console.log(userData);
+                        })
+                    })
+                })
+            })</pre>
+        </code>
+    </section>
+    <section style="margin-top: 2rem;">
+        <h2>Note:</h2>
+        <ol>
+            <li>as we can see in code the callback hell example</li>
+            <li>there are request depends on one another which is called callback Hell beacuse all request depends on </li>
+            <li>creating hell of callback functions</li>
+            <li>that's why promises were introduced</li>
+        </ol>
+    </section>
+</body>
+</html>

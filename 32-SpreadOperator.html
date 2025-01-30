@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/SpreadOperator.js"></script>
+</head>
+<body>
+    <h1>Spread Operator in JavaScript</h1>
+    <p>
+        The <strong>spread operator (<code>...</code>)</strong> in JavaScript is a powerful tool used to expand elements of an array or object into individual elements or properties. It is commonly used for tasks like cloning arrays/objects, merging them, or passing multiple arguments to functions.
+    </p>
+
+    <h2>Syntax</h2>
+    <pre><code>...iterable</code></pre>
+    <p>The <code>iterable</code> can be an array, string, or object.</p>
+
+    <h2>Use Cases</h2>
+    
+    <h3>1. Copying Arrays</h3>
+    <p>The spread operator makes it easy to copy an array without modifying the original one.</p>
+    <pre><code>
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers]; // Copy
+console.log(newNumbers); // [1, 2, 3]
+    </code></pre>
+
+    <h3>2. Merging Arrays</h3>
+    <p>You can combine two or more arrays into one.</p>
+    <pre><code>
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const mergedArray = [...array1, ...array2];
+console.log(mergedArray); // [1, 2, 3, 4, 5, 6]
+    </code></pre>
+
+    <h3>3. Passing Arguments to Functions</h3>
+    <p>The spread operator can pass an array of arguments to a function.</p>
+    <pre><code>
+function add(a, b, c) {
+    return a + b + c;
+}
+const Number = [1, 2, 3];
+console.log(add(...Number)); // 6
+    </code></pre>
+
+    <h3>4. Cloning Objects</h3>
+    <p>You can use the spread operator to copy the properties of one object into another.</p>
+    <pre><code>
+const person = { name: "John", age: 30 };
+const clonedPerson = { ...person }; // Copy
+console.log(clonedPerson); // { name: "John", age: 30 }
+    </code></pre>
+
+    <h3>5. Merging Objects</h3>
+    <p>You can merge two objects into one.</p>
+    <pre><code>
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+const mergedObj = { ...obj1, ...obj2 };
+console.log(mergedObj); // { a: 1, b: 2, c: 3, d: 4 }
+    </code></pre>
+
+    <h3>6. Destructuring with Rest</h3>
+    <p>The spread operator is the opposite of the <strong>rest operator</strong>, but they look the same. With destructuring, the rest operator can collect the remaining properties or elements.</p>
+    <pre><code>
+const [first, ...rest] = [1, 2, 3, 4];
+console.log(first); // 1
+console.log(rest); // [2, 3, 4]
+    </code></pre>
+
+    <h2>Notes</h2>
+    <ul>
+        <li>Spread works on iterables like arrays and strings.</li>
+        <li>For objects, it is shallow, meaning it only copies one level deep.</li>
+    </ul>
+    <a class="link-button" href="31-DefaultParameters.html">PreviousPage</a>
+    <a class="link-button" href="33-RestParameters.html">NextPage</a>
+</body>
+</html>

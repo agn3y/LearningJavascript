@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Context</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/ExecutionContext.js"></script>
+</head>
+<body>
+    <h1>Execution Context</h1>
+    <h4>What is Execution Context?</h4>
+    <ul>
+        <li>The environment where JavaScript code is evaluated and executed</li>
+        <li>Manages the variables, functions, and objects accessible at runtime</li>
+    </ul>
+    <h4>Types of Execution Context</h4>
+    <ol>
+        <li>Global Execution Context (GEC)
+            <ul>
+                <li>Default context when script runs</li>
+                <li>Handles global variables and functions</li>
+                <li><code>this</code> refers to the global object</li>
+            </ul>
+        </li>
+        <li>Function Execution Context (FEC)</li>
+        <li>Eval Execution Context</li>
+    </ol>
+    <h4>Simple Explanation:</h4>
+    <ul>
+    <li>Since we are done with official talking lets understand it in a simple way</li>
+    <li>We can say that assigning a value to a variable is a two-step process which can be understood by 
+        <a href="8-MemoryLocation.html">Clicking on me</a> </li>
+    </ul>
+    <h4>Understanding the concept with code and image :</h4>
+    
+    <img src="../images/Execution Context in JavaScript.png" alt="Explanation of Execution Context" width="900" style="border: 2px solid sienna; border-radius: 7px;"><br>
+    <img src="../images/Execution Context in JavaScript-2.png" alt="Explanation of Execution Context" width="900" style="border: 2px solid sienna; border-radius: 7px;">
+    <h4>Note:</h4>
+    <ul>
+        <li>In first step Global Execution Phase will get created</li>
+        <li>after that memory creation happens a we can see in the image</li>
+        <li>after that values get assigned and if there are any variable in a function then there will be a Local Execution  Phase takes place</li>
+        <li>First it will happen for the global variables and then for the variables which are in a function</li>
+    </ul>
+    <h4>Use this code to understand Execution:</h4>
+    <code>
+        <pre>
+    debugger
+
+    sayHi()
+
+    const username = 'Anirudh'
+    const userAge = 25
+
+    function sayHi() {
+        const a = 14
+        const b = 12
+        add(7, 9)
+    }
+
+    function add(x, y) {
+        kuchhBhi()
+        return x + y
+    }
+
+    function kuchhBhi() {
+        console.log('Kuchh bhi');
+    }
+
+    console.log('Program Ended');
+        </pre>
+    </code>
+    <script>
+        debugger
+
+    sayHi()
+
+    const username = 'Agney'
+    const userAge = 25
+
+    function sayHi() {
+    const a = 14
+    const b = 12
+    add(7, 9)
+    }
+
+    function add(x, y) {
+    kuchhBhi()
+    return x + y
+    }
+
+    function kuchhBhi() {
+    console.log('Kuchh bhi');
+    }
+
+    console.log('Program Ended');
+    </script>
+    <a class="link-button" href="15-function.html">PreviousPage</a>
+    <a class="link-button" href="17-CallStack.html">NextPage</a>
+</body>
+</html>

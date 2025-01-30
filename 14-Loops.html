@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>While Loop</h1>
+    <p>Three types of loop are there:</p>
+    <ol>
+        <li>WhileLoop</li>
+        <li>ForLoop</li>
+        <li>DoWhile</li>
+    </ol>
+    <h2>While loop</h2>
+    <p>Syntax:</p>
+    <code><pre>
+let num = 1;
+while(num<=100){
+console.log(num);
+num++;
+}
+</pre></code>
+    <p>In a `while` loop, the condition is placed inside `( )`, and the code to execute as long as the condition is true
+        is written inside `{ }`</p>
+    <h2>for loop</h2>
+    <p>Syntax:</p>
+    <code><pre>
+for (let p = 0; p <= 1000; p++) {
+if (p % 2 === 0) {
+console.log(p);
+}
+}
+    </pre></code>
+    <h2>Do WhileLoop</h2>
+    <p>Syntax:</p>
+    <code><pre>
+let i = 10;
+do {
+console.log(i);
+i++
+} while(i < 5);
+    </pre></code>
+    <h3>Note:</h3>
+    <p>Now we have gone through all loops we could see our self using for loop more often. Why?</p>
+    <p>Because it is simple and easy to use, and we can use scope with it, which other loops don't allow</p>
+
+    <h2>JavaScript Code Examples</h2>
+    <pre><code>
+// While Loop
+console.log('Program started');
+let num = 1;
+while (num <= 10) {
+    console.log(num);
+    num++;
+}
+console.log('Program Died');
+
+// while loop with array
+let sixFriends = ['Ayush', 'Anirudh', 'Harmin', 'Guruvesh', 'Viren', 'Wajid', 'Krunal', 'Tumil', 'Ketan', 'Harshal'];
+let i = 0;
+while (i < sixFriends.length) {
+    console.log(i + 1, sixFriends[i] + '-proCoder');
+    i++;
+}
+
+// for loop to print even numbers
+for (let p = 0; p <= 10; p++) {
+    if (p % 2 === 0) {
+        console.log(p);
+    }
+}
+
+// Do while loop
+let i22 = 10;
+do {
+    console.log('first line printed, before checking condition');
+    console.log(i22);
+    i22++;
+} while (i22 < 5);
+    </code></pre>
+
+    <a class="link-button" href="13-Increment and Decrement Operator.html">PreviousPage</a>
+    <a class="link-button" href="15-function.html">NextPage</a>
+</body>
+
+</html>

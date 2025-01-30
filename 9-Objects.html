@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Objects</h1>
+    <section>
+        <h4>Object is a Non-Primitive Data-Type</h4>
+        <p>Objects are further divided into three categories:</p>
+        <ol>
+            <li>Object Literal</li>
+            <li>Arrays</li>
+            <li>Functions</li>
+        </ol>
+        <ul>
+            <li>To compare objects, we compare their memory addresses.</li>
+            <li>Whenever we want to compare objects, we compare their addresses.</li>
+        </ul><br>
+        <code class="codeBox">const car = {type:"Fiat", model:"500", color:"white"};</code>
+    </section>
+
+    <pre class="codeBox">
+        const myName = 'Chirag';
+        const userName1 = ''; // Both have the same memory address
+        const userName2 = '';
+        
+        const user1 = {}; // Different memory addresses
+        const user2 = {};
+    </pre><br>
+
+    <p>We can access elements of an object in two ways:</p>
+    <ol>
+        <li>Dot notation</li>
+        <li>Bracket notation</li>
+    </ol>
+
+    <pre class="codeBox">
+        const product = {                       
+            'product-price': '290',
+            product_rating: {
+                stars: '3.5/5',
+                count: 98
+            },
+            'ramada-price': '$9.89/kg'  // Using bracket notation
+        };
+
+        product.transport = 'By-Road';          // Using dot notation
+        product['delivery-time'] = '3 days';  
+    </pre><br>
+
+    <p>Creating an object within a function:</p>
+    <pre class="codeBox">
+        const product = {
+            company_name: 'Safari',
+            product_name: '35L Tracking Bag',
+            price: `380.20$`,
+            more: {
+                another_value: 21,
+                second_other_value: 23,
+                third_value: 'One piece is Real'
+            },
+
+            // Adding a function to the object
+            fun: function() {
+                console.log('One Piece is Real Coming from a function');
+            }
+        };
+
+        console.log(product.more.third_value); // Accessing an element within an object
+        product.fun();  // Calling a function within an object
+    </pre>
+
+    <ul>
+        <li>**Special Characters**: You can access properties with spaces or symbols (e.g., `['delivery-time']`).</li>
+        <li>**Dynamic Access**: Use variables or expressions for property names.</li>
+        <li>**Non-String Keys**: Works for numbers or other data types.</li>
+        <li>**Reserved Keywords**: You can access properties like `class`, `export` without errors.</li>
+    </ul>
+
+    <p>We could also use object nesting:</p>
+    <pre class="codeBox">
+        const product = {
+            company_name: 'Safari',
+            product_name: '35L Tracking Bag',
+            price: '380.20$',
+            rating: {
+                stars: 4.4,
+                count: 90
+            }
+        };
+    </pre>
+
+    <h3>Notes:</h3>
+    <ul>
+        <li>Bracket notation allows access to properties with special characters or spaces, such as `['delivery-time']`.</li>
+        <li>When using bracket notation, you can use variables or expressions to define property names.</li>
+        <li>Inside an object, you can store any type of value, including other objects, arrays, and functions.</li>
+        <li>Bracket notation is helpful for properties like `first-name`, where dot notation might not work properly.</li>
+    </ul>
+
+    <script>
+        const user = {
+            firstName: 'Patel',
+            'last-Name': 'Agney',  // Using '' or "" for special characters in keys
+            age: '22 years'
+        };
+
+        const user2 = {
+            firstName: 'Rathod',
+            'last-Name': 'Krunal',
+            age: '22 years'
+        };
+
+        user2.interest = 'cricket'; // Adding a new key-value pair
+
+        console.log(user.firstName); // Dot notation
+        console.log(user2.interest);
+        console.log(user['last-Name']); // Bracket notation
+        console.log(user['first' + 'Name']); // Dynamic property access
+    </script>
+
+    <h3>Nesting Objects Example:</h3>
+    <script>
+        const address = {
+            username: 'chigu367',
+            ID: '98078734879538',
+            streets: {
+                name: 'chirag',
+                mobileNumber: '90330 88367',
+                building: 'F2A-203',
+                district: 'Surat',
+                state: 'Gujarati',
+                pincode: '389771'
+            }
+        };
+    </script>
+
+    <a class="link-button" href="8-MemoryLocation.html">PreviousPage</a>
+    <a class="link-button" href="10-SealAndFreeze.html">NextPage</a>
+</body>
+
+</html>

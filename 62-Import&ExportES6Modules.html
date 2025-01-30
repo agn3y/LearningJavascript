@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 Modules</title>
+    <script src="../externJsFile/modulesImportAndExport.js" type="module" defer></script>
+  </head>
+  <body style="font-family: cursive">
+    <h1>ES6 Modules</h1>
+    <p>* We can change names of variable while we try to import or export any variable.</p>
+    <p>* refer js file to understand better.</p>
+    <p>* we need to write js extension at the end of url when we use js onlyin react it will work without extension</p>
+    <p>* we can also use both type of export method if there are multiple variables and its same for import aswell</p>
+    <p>* in named export we can write it dorectly like <code style="font-family: monospace;">export default varname</code></p>
+    <p>* there can only be one export default and multiple named export</p>
+    <p>* when we use type="module" we cannot access any variable globally becuase we dont want to pollute globel space, workspace and we wont be able to access any variablr on our will</p>
+    <p>* And very important whenever we use type="module" defer get applied automatically</p>
+    <p>* whenever there is a console.log or something in a file that we import that console will be logged in first that whole file code will be compiled first then the main files code will run that's why if we have console log in both file the one which is in imported file will be logged first and our main js file code will run</p>
+  </body>
+</html>

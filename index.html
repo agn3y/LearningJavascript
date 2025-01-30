@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals</title>
+    <link rel="stylesheet" href="../css/style.css">
+ </head>
+
+<body>
+    <header>
+        <h1>JavaScript Fundamentals</h1>
+        <p>A quick reference for basic information and important concepts in JavaScript.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Key Concepts</h2>
+            <ul>
+                <li>
+                    <strong>Script Loading with <code>defer</code>:</strong>
+                    <pre>&lt;script src="script.js" defer&gt;&lt;/script&gt;</pre>
+                    Allows the HTML to continue parsing and compiling while the script loads in the background. The script will execute after the HTML parsing is complete.
+                </li>
+                <li>
+                    <strong>Order of Operations:</strong>
+                    <ul>
+                        <li>1. Parentheses: <code>(...)</code></li>
+                        <li>2. Multiplication (<code>*</code>) and Division (<code>/</code>)</li>
+                        <li>3. Addition (<code>+</code>) and Subtraction (<code>-</code>)</li>
+                        <li>4. Comparison Operators</li>
+                        <li>5. Logical Operators</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Data Types:</strong>
+                    <ul>
+                        <li><strong>Primitive:</strong> number, string, boolean, undefined, null, bigint, symbol</li>
+                        <li>
+                            <strong>Non-Primitive:</strong> Object
+                            <ul>
+                                <li>Object Literal</li>
+                                <li>Arrays</li>
+                                <li>Functions</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Working with Strings</h2>
+            <ul>
+                <li>Strings can be written with single quotes (<code>' '</code>), double quotes (<code>" "</code>), or backticks (<code>` `</code> for template literals).</li>
+                <li><strong>Converting Strings to Numbers:</strong>
+                    <ul>
+                        <li><code>+'100'</code> → <code>100</code></li>
+                        <li><code>parseInt('100agney')</code> → <code>100</code></li>
+                    </ul>
+                </li>
+                <li><strong>Converting Numbers to Strings:</strong>
+                    <ul>
+                        <li><code>100 + ''</code> → <code>'100'</code></li>
+                    </ul>
+                </li>
+                <li><strong>String Methods:</strong>
+                    <ul>
+                        <li><code>length</code>: Returns the length of the string.</li>
+                        <li><code>toUpperCase()</code>: Converts to uppercase.</li>
+                        <li><code>toLowerCase()</code>: Converts to lowercase.</li>
+                        <li><code>trim()</code>: Removes unnecessary spaces.</li>
+                        <li><code>includes()</code>: Checks for a substring.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Variable Declaration</h2>
+            <ul>
+                <li><code>let</code>: Block-scoped variable.</li>
+                <li><code>const</code>: Block-scoped constant.</li>
+                <li><code>var</code>: Function-scoped variable (not recommended).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Execution Process in JavaScript</h2>
+            <p>JavaScript code executes in two stages:</p>
+            <ol>
+                <li><strong>Memory Creation:</strong> Variables are declared and initialized with <code>undefined</code>.</li>
+                <li><strong>Execution:</strong> Values are assigned to the variables.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Infinity and NaN</h2>
+            <ul>
+                <li>Dividing a positive number by a very small number → <code>Infinity</code>.</li>
+                <li>Dividing a negative number by a very small number → <code>-Infinity</code>.</li>
+                <li>Dividing zero by zero → <code>NaN</code> (Not a Number).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Uses of JavaScript</h2>
+            <ol>
+                <li>Dynamic Page Updates</li>
+                <li>Event Handling</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <a class="link-button" href="1-StringMethods&Properties.html">Next Page</a>
+    </footer>
+</body>
+
+</html>

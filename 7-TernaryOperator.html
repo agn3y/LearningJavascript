@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ternary Operator</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is a Ternary Operator?</h2>
+            <ul>
+                <li><strong>Ternary means three</strong></li>
+                <li>Syntax: <code>condition ? trueValue : falseValue</code></li>
+                <br><br>
+                <li>Example: <code>5 ? '' : 1</code></li>
+                <li>Explanation: In the example above, the condition is <strong>5</strong>, which is a truthy value.</li>
+                <li>The ternary operator evaluates the condition. Since 5 is truthy, it moves to the <strong>trueValue</strong>, which is <strong>'' (empty string)</strong>.</li>
+                <li>Despite <strong>''</strong> being falsy, it is still the result of the ternary operator because it's the value for the true branch.</li>
+                <li>Thus, the result of <code>5 ? '' : 1</code> will be <strong>'' (empty string)</strong>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Another Example:</h3>
+            <code><pre>let result = (5 > 3) ? 'Greater' : 'Smaller';</pre></code>
+            <p>This evaluates to <strong>'Greater'</strong> because <code>5 > 3</code> is true.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a class="link-button" href="6.0-Switch-statement.html">Previous Page</a>
+        <a class="link-button" href="8-MemoryLocation.html">Next Page</a>
+    </footer>
+</body>
+
+</html>

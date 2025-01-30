@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Difference Between Methods and Functions</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../externJsFile/Methods.js"></script>
+</head>
+
+<body>
+  <h1>Difference Between Methods and Functions in JavaScript</h1>
+
+  <h2>1. Functions</h2>
+  <p> A <strong>function</strong> is a block of code that performs a specific task. You can call it to run the task
+    whenever you need.</p>
+  <pre>
+function sayHello() {
+  console.log("Hello!");
+}
+
+sayHello(); // Calls the function and prints "Hello!"
+  </pre>
+
+  <h2>2. Methods</h2>
+  <p> A <strong>method</strong> is just a function that is attached to an object. It belongs to an object and is called
+    using that object.</p>
+  <pre>
+let person = {
+  name: "John",
+  sayHello: function() {
+    console.log("Hello, " + this.name);
+  }
+};
+
+person.sayHello(); // Calls the method and prints "Hello, John"
+  </pre>
+
+  <h2>Key Difference</h2>
+  <p> A <strong>function</strong> is independent and can be called by itself.</p>
+  <p> A <strong>method</strong> is a function that belongs to an object and is called using that object.</p>
+  <h2>Example</h2>
+  <code><pre>
+const methodExplain = {
+  name : 'Method Explanation',
+  add : function(a,b){
+    return a + b;
+  },
+  sub : function(a,b){
+    return a - b;
+  },
+  mul : function(a,b){
+    return a * b;
+  },
+}
+console.dir(methodExplain.add(2,312222));
+console.dir(methodExplain.sub(88,3));
+console.dir(methodExplain. mul(222,3));
+</pre></code>
+<a class="link-button" href="23-ReturningFunctionswithClosures.html">PreviousPage</a>
+<a class="link-button" href="25-ArrowFunction.html">NextPage</a> 
+</body>
+
+</html>

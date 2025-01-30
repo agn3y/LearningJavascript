@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Assignment Operators</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <h1>Combined Assignment Operators</h1>
+    <h2>Compound (Combined Assignment) Operators</h2>
+    <ul>
+        <li><strong>+= Addition Assignment Operator</strong></li>
+        <p class="codeBox"><code>let a = 5;<br>a += 5;<br>console.log(a);</code></p>
+
+        <li><strong>-= Subtraction Assignment Operator</strong></li>
+        <p class="codeBox"><code>let b = 5;<br>b -= 5;<br>console.log(b);</code></p>
+
+        <li><strong>%= Remainder Assignment Operator</strong></li>
+        <p class="codeBox"><code>let c = 5;<br>c %= 5;<br>console.log(c);</code></p>
+
+        <li><strong>*= Multiplication Assignment Operator</strong></li>
+        <p class="codeBox"><code>let d = 5;<br>d *= 5;<br>console.log(d);</code></p>
+
+        <li><strong>/= Division Assignment Operator</strong></li>
+        <p class="codeBox"><code>let e = 5;<br>e /= 5;<br>console.log(e);</code></p>
+
+        <li><strong>**= Exponential Assignment Operator</strong></li>
+        <p class="codeBox"><code>let f = 5;<br>f **= 5;<br>console.log(f);</code></p>
+    </ul>
+
+    <h2>Increment and Decrement Operators</h2>
+    <ol>
+        <li><strong>Increment (++)</strong></li>
+        <p>Addition by 1</p>
+        <ul>
+            <li><strong>Postfix Increment</strong></li>
+            <p class="codeBox"><code>let y = 5;<br>let x = y++;</code></p>
+            <p>First, return the variable value, then increment it.</p>
+
+            <li><strong>Prefix Increment</strong></li>
+            <p class="codeBox"><code>let y = 5;<br>let x = ++y;</code></p>
+            <p>Increment the variable first, then return the value.</p>
+        </ul>
+
+        <li><strong>Decrement (--)</strong></li>
+        <p>Subtraction by 1</p>
+        <ul>
+            <li><strong>Postfix Decrement</strong></li>
+            <p class="codeBox"><code>let y = 5;<br>let x = y--;</code></p>
+            <p>First, return the variable value, then decrement it.</p>
+
+            <li><strong>Prefix Decrement</strong></li>
+            <p class="codeBox"><code>let y = 5;<br>let x = --y;</code></p>
+            <p>Decrement the variable first, then return the value.</p>
+        </ul>
+    </ol>
+
+    <h2>JavaScript Code Examples</h2>
+    <pre><code>
+// Addition Assignment Operator
+let a = 5;
+a += 5; // a is now 10
+console.log(a); // Output: 10
+
+// Subtraction Assignment Operator
+let b = 30;
+b -= 5; // b is now 25
+console.log(b); // Output: 25
+
+// Remainder Assignment Operator
+let c = 500;
+c %= 5; // c is now 0 (remainder of 500 divided by 5)
+console.log(c); // Output: 0
+
+// Multiplication Assignment Operator
+let d = 1;
+d *= 5; // d is now 5
+console.log(d); // Output: 5
+
+// Division Assignment Operator
+let e = 300;
+e /= 5; // e is now 60
+console.log(e); // Output: 60
+
+// Exponential Assignment Operator
+let f = 2;
+f **= 2; // f is now 4 (2 to the power of 2)
+f **= 2; // f is now 16 (4 to the power of 2)
+console.log(f); // Output: 16
+
+// Increment Operators
+let x = 5; // Postfix Increment
+let x1 = x++; // x1 is 5, x becomes 6
+let y = 5; // Prefix Increment
+let y1 = ++y; // y1 is 6, y becomes 6
+console.log('Post Increment: ' + x1 + ', ' + 'Pre Increment: ' + y1);
+
+// Decrement Operators
+let x11 = 5; // Postfix Decrement
+let x111 = x11--; // x111 is 5, x11 becomes 4
+let y11 = 5; // Prefix Decrement
+let y111 = --y11; // y111 is 4, y11 becomes 4
+console.log('Post Decrement: ' + x111 + ', ' + 'Pre Decrement: ' + y111);
+</code></pre>
+
+    <script>
+        // Addition Assignment Operator
+        let a = 5;
+        a += 5; // a is now 10
+        console.log(a); // Output: 10
+
+        // Subtraction Assignment Operator
+        let b = 30;
+        b -= 5; // b is now 25
+        console.log(b); // Output: 25
+
+        // Remainder Assignment Operator
+        let c = 500;
+        c %= 5; // c is now 0 (remainder of 500 divided by 5)
+        console.log(c); // Output: 0
+
+        // Multiplication Assignment Operator
+        let d = 1;
+        d *= 5; // d is now 5
+        console.log(d); // Output: 5
+
+        // Division Assignment Operator
+        let e = 300;
+        e /= 5; // e is now 60
+        console.log(e); // Output: 60
+
+        // Exponential Assignment Operator
+        let f = 2;
+        f **= 2; // f is now 4 (2 to the power of 2)
+        f **= 2; // f is now 16 (4 to the power of 2)
+        console.log(f); // Output: 16
+
+        // Increment Operators
+        let x = 5; // Postfix Increment
+        let x1 = x++; // x1 is 5, x becomes 6
+        let y = 5; // Prefix Increment
+        let y1 = ++y; // y1 is 6, y becomes 6
+        console.log('Post Increment: ' + x1 + ', ' + 'Pre Increment: ' + y1);
+
+        // Decrement Operators
+        let x11 = 5; // Postfix Decrement
+        let x111 = x11--; // x111 is 5, x11 becomes 4
+        let y11 = 5; // Prefix Decrement
+        let y111 = --y11; // y111 is 4, y11 becomes 4
+        console.log('Post Decrement: ' + x111 + ', ' + 'Pre Decrement: ' + y111);
+    </script>
+
+    <br>
+    <a class="link-button" href="12-Deep Vs Shallow Copy.html">Previous Page</a>
+    <a class="link-button" href="14-Loops.html">Next Page</a>
+</body>
+
+</html>

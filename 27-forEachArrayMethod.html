@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach Array Method</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/forEachArrayMethod.js"></script>
+</head>
+<body>
+  <h1>Understanding the <code>forEach</code> Method in JavaScript</h1>
+  <p>The <code>forEach</code> method is used to execute a function for each element in an array. It’s commonly used to perform actions like logging or updating data.</p>
+
+  <h2>Example:</h2>
+  <p>In the following example, we have an array of fruits. The <code>forEach</code> method iterates over each item and logs it to the console:</p>
+  
+  <pre>
+// JavaScript Code:
+const fruits = ['apple', 'banana', 'cherry'];
+
+fruits.forEach((fruit, index) => {
+  console.log(`Fruit at index ${index}: ${fruit}`);
+});
+  </pre>
+
+  <h3>Output in Console:</h3>
+  <pre>
+Fruit at index 0: apple
+Fruit at index 1: banana
+Fruit at index 2: cherry
+  </pre>
+
+  <h2>Key Points:</h2>
+  <ul>
+    <li>The <code>forEach</code> method does not return a new array.</li>
+    <li>It cannot break or stop early (unlike a regular <code>for</code> loop).</li>
+    <li>Useful for performing actions on each element, such as logging or modifying data.</li>
+    <li>we can not assign it a return value by default undefined</li>
+  </ul>
+  <a class="link-button" href="26-for of vs for in Loop.html">PreviousPage</a>
+  <a class="link-button" href="28-Map,Filter&Reduce.html">NextPage</a> 
+</body>
+</html>

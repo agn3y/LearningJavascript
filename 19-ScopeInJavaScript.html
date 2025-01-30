@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/Scope.js"></script>
+    <script src="../externJsFile/Scope2.js"></script>
+</head>
+<body>
+    <section>
+        <h1>Scope in javascript</h1>
+        <ul>
+            <li>In JavaScript, scope refers to the context in which variables, functions, and objects are accessible. It determines where in your code you can use or reference a particular variable or function. <br>
+            In simple words, Scope in JavaScript means where you can use a variable or function in your code</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Types of Scope in JavaScript:</h2>
+        <h4>1. Global Scope</h4>
+        <ul>
+            <li>Variables or functions declared outside any function or block belong to the global scope</li>
+            <li>They are accessible anywhere in the code after their declaration</li>
+            <li>Variables outside any function or block</li>
+            <li>Can be used anywhere in the code</li>
+        </ul>
+        <code>
+            <pre>
+let globalVar = "I'm global";
+    
+function showGlobalVar() {
+console.log(globalVar); // Accessible
+}
+            
+showGlobalVar();
+console.log(globalVar); // Accessible               
+            </pre>
+        </code>
+    </section>
+    <section>
+        <h4>2. Local Scope</h4>
+        <ul>
+            <li>Variables declared inside a function are in the local scope of that function</li>
+            <li>They can only be accessed within the function where they are defined</li>
+            <li>Variables inside a function.</li>
+            <li>Can only be used inside that function</li>
+        </ul>
+        <code>
+            <pre>
+function localScopeExample() {
+let localVar = "I'm local";
+console.log(localVar); // Accessible
+}
+                
+localScopeExample();
+console.log(localVar); // Error: localVar is not defined                
+            </pre>
+        </code>
+    </section>
+    <section>
+        <h4>3. Block Scope</h4>
+        <ul>
+            <li>Introduced in ES6 with let and const</li>
+            <li>Variables declared inside a block ( { } ) are only accessible within that block</li>
+            <li>Does not apply to var (it ignores block scope and is function-scoped)</li>
+            <li>Variables inside { } using let or const</li>
+            <li>Can only be used inside the { } block</li>
+        </ul>
+        <code>
+            <pre>
+{
+let blockVar = "I am block-scoped";
+console.log(blockVar); // Can use it here
+}
+                
+console.log(blockVar); // Error: Cannot use it here                
+            </pre>
+        </code>
+    </section>
+    <section>
+        <h4>4. Function Scope</h4>
+        <ul>
+            <li>Applies to variables declared with var inside a function</li>
+            <li>The variable is confined to the entire function, regardless of block nesting</li>
+        </ul>
+        <code>
+            <pre>
+function functionScopeExample() {
+if (true) {
+var funcVar = "I'm function-scoped";
+}
+console.log(funcVar); // Accessible
+}
+                
+functionScopeExample();
+            </pre>
+        </code>
+    </section>
+    <section>
+        <h3>Lexical Scope</h3>
+        <p>Lexical scope means that the scope of a variable is determined by its position in the source code. Inner functions can access variables defined in their outer functions due to this rule</p>
+        <code>
+            <pre>
+function outerFunction() {
+let outerVar = "Outer";
+                
+function innerFunction() {
+console.log(outerVar); // Accessible due to lexical scope
+}
+                
+innerFunction();
+}
+outerFunction();                
+            </pre>
+        </code>
+    </section>
+    <a class="link-button" href="18-Hoisting.html">PreviousPage</a>    
+    <a class="link-button" href="20-HigherOrderFunctionsAndCallbacks.html">NextPage</a>
+</body>
+</html>

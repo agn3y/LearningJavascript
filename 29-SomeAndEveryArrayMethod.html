@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some and Every Array Method</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/SomeAndEvery.js"></script>
+</head>
+<body>
+    <h1>Some() and Every() Array Method</h1>
+    
+    
+    <section>
+        <h2>some() Method</h2>
+        <p><strong>Purpose:</strong> Checks if <strong>at least one</strong> element in the array satisfies a given condition.</p>
+        <p><strong>Returns:</strong> <code>true</code> if at least one element satisfies the condition, otherwise <code>false</code>.</p>
+        
+        <h3>Example:</h3>
+        <pre>
+const numbers = [1, 2, 3, 4, 5];
+
+// Check if there's any number greater than 3
+const hasGreaterThanThree = numbers.some(num => num > 3);
+console.log(hasGreaterThanThree); // true
+        </pre>
+        <p>In this example, <code>some()</code> returns <code>true</code> because there are numbers greater than 3 (like 4 and 5).</p>
+    </section>
+    
+    <section>
+        <h2>every() Method</h2>
+        <p><strong>Purpose:</strong> Checks if <strong>every</strong> element in the array satisfies a given condition.</p>
+        <p><strong>Returns:</strong> <code>true</code> if all elements satisfy the condition, otherwise <code>false</code>.</p>
+        
+        <h3>Example:</h3>
+        <pre>
+const numbers = [1, 2, 3, 4, 5];
+
+// Check if all numbers are greater than 0
+const allGreaterThanZero = numbers.every(num => num > 0);
+console.log(allGreaterThanZero); // true
+        </pre>
+        <p>In this example, <code>every()</code> returns <code>true</code> because all numbers in the array are greater than 0.</p>
+    </section>
+
+    <section>
+        <h2>Key Differences</h2>
+        <ul>
+            <li><strong>some()</strong>: Returns <code>true</code> if at least one element satisfies the condition.</li>
+            <li><strong>every()</strong>: Returns <code>true</code> only if all elements satisfy the condition.</li>
+        </ul>
+    </section>
+    <a class="link-button" href="28-Map,Filter&Reduce.html">PreviousPage</a>
+    <a class="link-button" href="30-ArgumentsKeyword.html">NextPage</a> 
+</body>
+</html>

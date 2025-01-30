@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/berserk-favicon.png" type="image/x-icon">
+    <script src="../externJsFile/XMLHttpRequest.js" defer></script>
+    <title>XMLHttpRequest</title>
+    <style>
+        body {
+            background-color: black;
+            color:white;
+        }
+        .image-class {
+            max-width: 500px;
+            max-height: 500px;
+            padding: 2rem;
+            border: 2px solid white;
+            background-color: rgb(0, 0, 0);
+            border-radius: 6px;
+            overflow: auto;
+        }
+
+        .image-class img {
+            max-width: 500px;
+        }
+
+        button {
+            margin-bottom: 1rem;
+        }
+        code {
+            background-color: rgba(95, 158, 160, 0.581);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>XMLHttpRequest</h1>
+        <button>Random Dog Image</button>
+        <div class="image-class" >
+            <img src="" alt="dog-image">
+        </div>
+    </section>
+
+    <section>
+        <h1>notes:</h1>
+        <ol>
+            <li>check js code</li>
+            <li>analyze how event listeners are used</li>
+            <li>we use <code>xhr.open('request type', 'URL')</code> to create a request to particular url</li>
+            <li>use <code>xhr.send()</code> to send the request</li>
+            <li>when API is slow we have to use <code>load</code> event listener</li>
+            <li>see how we stored XMLHttpRequest into variable and utilized its nodes value to achieve our target</li>
+            <li>it was the way to call api before fetch this is just for general knowledge</li>
+        </ol>
+    </section>
+
+</body>
+</html>

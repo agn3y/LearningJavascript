@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/RestParameter.js"></script>
+</head>
+<body>
+    <h1>Rest Parameters</h1>
+
+    <p>In JavaScript, <strong>rest parameters</strong> allow a function to accept an <strong>indefinite number of arguments</strong> as an array. This feature is useful when the number of inputs to a function is not fixed.</p>
+
+    <h2>Syntax</h2>
+    <pre>
+<code>
+function myFunction(...args) {
+    console.log(args); // Logs an array of all arguments
+}
+</code>
+    </pre>
+
+    <h2>Key Points</h2>
+    <ul>
+        <li>Rest parameters must be the <strong>last parameter</strong> in the function definition.</li>
+        <li>A function can have other parameters before the rest parameter.</li>
+    </ul>
+
+    <h2>Examples</h2>
+
+    <h3>1. Collecting Arguments</h3>
+    <pre>
+<code>
+function sum(...numbers) {
+    let total = 0;
+    for (let num of numbers) {
+        total += num;
+    }
+    return total;
+}
+
+console.log(sum(1, 2, 3)); // 6
+console.log(sum(10, 20, 30, 40)); // 100
+</code>
+    </pre>
+    <p>Here, <code>numbers</code> is an array containing all the arguments passed to the function.</p>
+
+    <h3>2. Using Rest with Other Parameters</h3>
+    <pre>
+<code>
+function greet(greeting, ...names) {
+    return `${greeting} ${names.join(', ')}`;
+}
+
+console.log(greet("Hello", "Alice", "Bob", "Charlie"));
+// Output: "Hello Alice, Bob, Charlie"
+</code>
+    </pre>
+    <p>In this case, <code>greeting</code> captures the first argument, and <code>names</code> collects the rest as an array.</p>
+
+    <h3>3. Combining Rest with Destructuring</h3>
+    <pre>
+<code>
+function display(first, second, ...others) {
+    console.log("First:", first);
+    console.log("Second:", second);
+    console.log("Others:", others);
+}
+
+display(1, 2, 3, 4, 5);
+// First: 1
+// Second: 2
+// Others: [3, 4, 5]
+</code>
+    </pre>
+
+    <h2>Difference Between Rest Parameters and Arguments Object</h2>
+    <ol>
+        <li>
+            <strong><code>arguments</code> Object</strong>:
+            <ul>
+                <li>A special object available in non-arrow functions.</li>
+                <li>Contains all arguments as an array-like object but does not support array methods.</li>
+            </ul>
+            <pre>
+<code>
+function example() {
+    console.log(arguments);
+}
+example(1, 2, 3); // [1, 2, 3]
+</code>
+            </pre>
+        </li>
+        <li>
+            <strong>Rest Parameters</strong>:
+            <ul>
+                <li>Provide an actual array of arguments.</li>
+                <li>Work in both regular and arrow functions.</li>
+                <li>Easier and more modern alternative.</li>
+            </ul>
+            <pre>
+<code>
+const example = (...args) => {
+    console.log(args); // An array
+};
+example(1, 2, 3); // [1, 2, 3]
+</code>
+            </pre>
+        </li>
+    </ol>
+
+    <h2>Use Cases</h2>
+    <ul>
+        <li>Handling variable-length function arguments.</li>
+        <li>Writing flexible functions like <code>sum</code> or <code>greet</code>.</li>
+        <li>Simplifying functions instead of using the <code>arguments</code> object.</li>
+    </ul>
+
+    <h2>Best Practices</h2>
+    <ul>
+        <li>Always use <strong>rest parameters</strong> instead of <code>arguments</code> for new code.</li>
+        <li>Keep rest parameters at the end of the function parameter list.</li>
+        <li>Avoid overusing rest parameters as they may reduce function clarity.</li>
+    </ul>
+    <a class="link-button" href="32-SpreadOperator.html">PreviousPage</a>
+    <a class="link-button" href="34-Destructuring.html">NextPage</a>
+</body>
+</html>

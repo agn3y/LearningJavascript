@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText and textContent</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../externJsFile/innerTextandtextContent.js"></script>
+</head>
+<body>
+    <h1>Difference between innerText and innerContent</h1>
+
+    <h2>1. innerText</h2>
+    <p>Gets the <strong>visible text</strong> inside an element (what you see on the page).</p>
+    <p>It ignores hidden text or text inside hidden elements.</p>
+    
+    <p>Example:</p>
+    <div id="example1">
+        Hello <span style="display:none;">World</span>
+    </div>
+    <p><strong>innerText of above div:</strong> "Hello" (because "World" is hidden)</p>
+
+    <h2>2. innerContent</h2>
+    <p><strong>innerContent</strong> is <strong>not a standard property</strong> in JavaScript.</p>
+    <p>It might be confused with <strong>innerHTML</strong> or <strong>textContent</strong>.</p>
+
+    <p><strong>innerHTML</strong>: Gives <strong>HTML tags and text</strong> inside an element.</p>
+    <p><strong>textContent</strong>: Gives <strong>only the text</strong> (ignores HTML tags and doesn't care about hidden text).</p>
+
+    <a class="link-button" href="36-Introduction to DOM.html">PreviousPage</a>
+    <a class="link-button" href="38-getAttributeAndsetAttribute.html">NextPage</a>
+</body>
+</html>

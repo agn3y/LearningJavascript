@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep vs Shallow Copy</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Deep vs Shallow Copy</h1>
+        <p>Learn how to copy objects and arrays correctly in JavaScript.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Understanding Copying in JavaScript</h2>
+            <p>
+                When two variables reference the same object, changes to one affect the other because they share the same memory address. 
+                To avoid this, we need to create a copy. There are two types of copies:
+            </p>
+            <ol>
+                <li><strong>Shallow Copy:</strong> Copies only the top-level properties. Nested objects/arrays are still referenced.</li>
+                <li><strong>Deep Copy:</strong> Creates a complete copy, including all nested objects/arrays.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Shallow Copy Methods</h2>
+            <article>
+                <h3>1. Object.assign()</h3>
+                <p>
+                    The <code>Object.assign()</code> method copies properties from source objects to a target object. 
+                    It works for both objects and arrays but creates a shallow copy.
+                </p>
+                <pre><code>
+const user1 = { firstName: 'Agney', lastName: 'Patel' };
+const user2 = {};
+Object.assign(user2, user1);
+                </code></pre>
+            </article>
+
+            <article>
+                <h3>2. Spread Operator</h3>
+                <p>
+                    A modern and concise way to create shallow copies. 
+                    It works for both objects and arrays.
+                </p>
+                <pre><code>
+const user1 = { firstName: 'Agney', lastName: 'Patel' };
+const user2 = { ...user1 };
+                </code></pre>
+            </article>
+
+            <article>
+                <h3>3. Array Methods: concat() and slice()</h3>
+                <p>Both methods create shallow copies of arrays.</p>
+                <pre><code>
+// Using concat
+const myFruits = [].concat(fruits);
+
+// Using slice
+const myFruits = fruits.slice();
+                </code></pre>
+            </article>
+
+            <p>Note: Shallow copies only duplicate the top level. Nested objects/arrays remain shared between the original and the copy.</p>
+        </section>
+
+        <section>
+            <h2>Deep Copy Methods</h2>
+            <p>To create a true deep copy, use <code>JSON.stringify()</code> and <code>JSON.parse()</code>. This ensures nested objects/arrays are also copied.</p>
+            <pre><code>
+const user1 = {
+    firstName: 'Agney',
+    lastName: 'Singh',
+    pata: { city: 'Delhi', pincode: 989888 },
+    subject: ['Physics', 'CS', 'Maths']
+};
+
+const user2 = JSON.parse(JSON.stringify(user1)); // Deep copy
+            </code></pre>
+            <p>Limitation: This method doesn't work for functions or special objects like <code>Date</code>.</p>
+        </section>
+
+        <section>
+            <h2>Example: Shallow vs Deep Copy</h2>
+            <pre><code>
+const user1 = {
+    firstName: 'Agney',
+    lastName: 'Singh',
+    pata: { city: 'Delhi', pincode: 989888 },
+    subject: ['Physics', 'CS', 'Maths']
+};
+
+// Shallow copy
+const user2 = { ...user1 };
+
+// Deep copy
+const user3 = JSON.parse(JSON.stringify(user1));
+
+// Modifying user2's nested object
+user2.pata.city = 'Mumbai';
+console.log(user1.pata.city); // Outputs: 'Mumbai' (affected by shallow copy)
+console.log(user3.pata.city); // Outputs: 'Delhi' (deep copy unaffected)
+            </code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <a class="link-button" href="11-Arrays.html">Previous Page</a>
+        <a class="link-button" href="13-Increment and Decrement Operator.html">Next Page</a>
+    </footer>
+
+    <script>
+        // Example Code
+        const fruits = ['Mango', 'Apple', 'Orange'];
+        const myFruits = [...fruits]; // Shallow copy using spread operator
+
+        const user1 = {
+            firstName: 'Agney',
+            lastName: 'Singh',
+            pata: { city: 'Delhi', pincode: 989888 },
+            subject: ['Physics', 'CS', 'Maths']
+        };
+
+        const user2 = { ...user1 }; // Shallow copy
+        const user3 = JSON.parse(JSON.stringify(user1)); // Deep copy
+    </script>
+</body>
+
+</html>

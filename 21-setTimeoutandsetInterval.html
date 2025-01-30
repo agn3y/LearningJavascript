@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeout, setInterval, clearTimeout, and clearInterval</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../externJsFile/setTimeoutandsetInterval.js"></script>
+</head>
+<body>
+  <h1>Understanding setTimeout, setInterval, clearTimeout, and clearInterval  </h1>
+
+  <h2>1. What is <code>setTimeout</code>?</h2>
+  <p><strong>Purpose:</strong> It’s like a timer that waits for a certain amount of time before doing something.</p>
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li>You give it a function (the thing to do) and a delay in milliseconds (1000ms = 1 second).</li>
+    <li>After the delay, the function runs once.</li>
+  </ul>
+  <p><strong>Example:</strong></p>
+  <pre>
+setTimeout(() => {
+  console.log("Runs after 3 seconds");
+}, 3000);
+  </pre>
+  <p>This code waits for 3 seconds and then prints "Runs after 3 seconds."</p>
+
+  <h2>2. What is <code>setInterval</code>?</h2>
+  <p><strong>Purpose:</strong> It’s like a clock that does something repeatedly after a fixed time interval.</p>
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li>You give it a function and a time interval in milliseconds.</li>
+    <li>The function runs every time the interval is reached, over and over.</li>
+  </ul>
+  <p><strong>Example:</strong></p>
+  <pre>
+setInterval(() => {
+  console.log("Repeats every 2 seconds");
+}, 2000);
+  </pre>
+  <p>This code prints "Repeats every 2 seconds" every 2 seconds until you stop it.</p>
+
+  <h2>3. What is <code>clearTimeout</code>?</h2>
+  <p><strong>Purpose:</strong> Stops a <code>setTimeout</code> timer before it finishes waiting.</p>
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li><code>setTimeout</code> gives you an ID when you create it.</li>
+    <li>Pass that ID to <code>clearTimeout</code> to cancel the task.</li>
+  </ul>
+  <p><strong>Example:</strong></p>
+  <pre>
+const timeoutID = setTimeout(() => {
+  console.log("This won't run.");
+}, 3000);
+
+clearTimeout(timeoutID); // Cancels the timeout
+  </pre>
+  <p>The scheduled task is canceled, so the message is never shown.</p>
+
+  <h2>4. What is <code>clearInterval</code>?</h2>
+  <p><strong>Purpose:</strong> Stops a <code>setInterval</code> from running again and again.</p>
+  <p><strong>How it works:</strong></p>
+  <ul>
+    <li><code>setInterval</code> gives you an ID when you create it.</li>
+    <li>Pass that ID to <code>clearInterval</code> to stop the task.</li>
+  </ul>
+  <p><strong>Example:</strong></p>
+  <pre>
+const intervalID = setInterval(() => {
+  console.log("Repeating...");
+}, 2000);
+
+clearInterval(intervalID); // Cancels the interval
+  </pre>
+  <p>Stops the repeating task, so the message is no longer shown.</p>
+
+  <h2>What is a Timer ID?</h2>
+  <p>Every <code>setTimeout</code> and <code>setInterval</code> gives you a unique number called a <strong>Timer ID</strong>.</p>
+  <p><strong>Why it’s important:</strong> You need this ID to stop the timeout or interval with <code>clearTimeout</code> or <code>clearInterval</code>.</p>
+  <p><strong>Example of Timer ID:</strong></p>
+  <pre>
+const id = setTimeout(() => {}, 1000); // Timer ID = 1
+clearTimeout(id); // Stops this timeout
+  </pre>
+
+  <h2>Differences Between <code>setTimeout</code> and <code>setInterval</code></h2>
+  <table border="1">
+    <tr>
+      <th>Feature</th>
+      <th><code>setTimeout</code></th>
+      <th><code>setInterval</code></th>
+    </tr>
+    <tr>
+      <td>Runs Once or Repeats</td>
+      <td>Runs <strong>once</strong> after a delay.</td>
+      <td>Runs <strong>repeatedly</strong> every interval.</td>
+    </tr>
+    <tr>
+      <td>Stopped By</td>
+      <td><code>clearTimeout()</code></td>
+      <td><code>clearInterval()</code></td>
+    </tr>
+  </table>
+
+  <h2>Why Are These Useful?</h2>
+  <ul>
+    <li><strong><code>setTimeout</code> Use Cases:</strong> Delaying actions, like showing a message after a few seconds.</li>
+    <li><strong><code>setInterval</code> Use Cases:</strong> Repeating actions, like updating a clock or running animations.</li>
+    <li><strong><code>clearTimeout</code> and <code>clearInterval</code> Use Cases:</strong> Stopping unnecessary tasks to save resources or avoid errors.</li>
+  </ul>
+
+  <h2>Easy-to-Understand Scenario</h2>
+  <p>Imagine a cooking timer:</p>
+  <ul>
+    <li><strong><code>setTimeout:</code></strong> You set a timer to ring <strong>once</strong> after 10 minutes. If you cancel it, the timer doesn’t ring.</li>
+    <li><strong><code>setInterval:</code></strong> You set an alarm to remind you <strong>every 5 minutes</strong> to stir the food. If you stop the alarm, it doesn’t ring again.</li>
+    <li><strong>Timer ID:</strong> It’s like the number of the timer/alarm, so you can tell which one to cancel.</li>
+  </ul>
+  <a class="link-button" href="20-HigherOrderFunctionsAndCallbacks.html">PreviousPage</a>
+  <a class="link-button" href="22-Event Loop and Callback Queue.html">NextPage</a>  
+</body>
+</html>

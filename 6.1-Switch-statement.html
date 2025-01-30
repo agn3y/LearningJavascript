@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Switch Statement</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Determining the Day of the Week</h1>
+    </header>
+
+    <main>
+        <p>Enter a date from November 2024 (1–31) to find the day of the week. Ensure the value is valid (not empty or zero).</p>
+
+        <!-- Method 1 -->
+        <section>
+            <h2>Method 1: Traditional Switch</h2>
+            <script>
+                const takingNumber = +prompt(`Enter a number (1-31) to find the day of the week:`);
+
+                document.write('<p>Entered Number: ' + takingNumber + '</p>');
+
+                if (takingNumber < 1 || takingNumber > 31 || isNaN(takingNumber)) {
+                    document.write('<p style="color: red;">Invalid Date. Please enter a valid number between 1 and 31.</p>');
+                } else {
+                    switch (takingNumber) {
+                        case 3: case 10: case 17: case 24: case 31:
+                            document.write('<p>It\'s Sunday</p>');
+                            break;
+                        case 4: case 11: case 18: case 25:
+                            document.write('<p>It\'s Monday</p>');
+                            break;
+                        case 5: case 12: case 19: case 26:
+                            document.write('<p>It\'s Tuesday</p>');
+                            break;
+                        case 6: case 13: case 20: case 27:
+                            document.write('<p>It\'s Wednesday</p>');
+                            break;
+                        case 7: case 14: case 21: case 28:
+                            document.write('<p>It\'s Thursday</p>');
+                            break;
+                        case 1: case 8: case 15: case 22: case 29:
+                            document.write('<p>It\'s Friday</p>');
+                            break;
+                        case 2: case 9: case 16: case 23: case 30:
+                            document.write('<p>It\'s Saturday</p>');
+                            break;
+                    }
+                }
+            </script>
+        </section>
+
+        <!-- Method 2 -->
+        <section>
+            <h2>Method 2: Using Boolean Logic in Switch</h2>
+            <script>
+                const toTakeInput1 = +prompt('Enter a date (1-31):');
+
+                document.write('<p>Entered Number: ' + toTakeInput1 + '</p>');
+
+                if (toTakeInput1 < 1 || toTakeInput1 > 31 || isNaN(toTakeInput1)) {
+                    document.write('<p style="color: red;">Invalid Date. Please enter a valid number between 1 and 31.</p>');
+                } else {
+                    switch (true) {
+                        case (toTakeInput1 === 3 || toTakeInput1 === 10 || toTakeInput1 === 17 || toTakeInput1 === 24 || toTakeInput1 === 31):
+                            document.write("<p>It's Sunday</p>");
+                            break;
+                        case (toTakeInput1 === 4 || toTakeInput1 === 11 || toTakeInput1 === 18 || toTakeInput1 === 25):
+                            document.write("<p>It's Monday</p>");
+                            break;
+                        case (toTakeInput1 === 5 || toTakeInput1 === 12 || toTakeInput1 === 19 || toTakeInput1 === 26):
+                            document.write("<p>It's Tuesday</p>");
+                            break;
+                        case (toTakeInput1 === 6 || toTakeInput1 === 13 || toTakeInput1 === 20 || toTakeInput1 === 27):
+                            document.write("<p>It's Wednesday</p>");
+                            break;
+                        case (toTakeInput1 === 7 || toTakeInput1 === 14 || toTakeInput1 === 21 || toTakeInput1 === 28):
+                            document.write("<p>It's Thursday</p>");
+                            break;
+                        case (toTakeInput1 === 1 || toTakeInput1 === 8 || toTakeInput1 === 15 || toTakeInput1 === 22 || toTakeInput1 === 29):
+                            document.write("<p>It's Friday</p>");
+                            break;
+                        case (toTakeInput1 === 2 || toTakeInput1 === 9 || toTakeInput1 === 16 || toTakeInput1 === 23 || toTakeInput1 === 30):
+                            document.write("<p>It's Saturday</p>");
+                            break;
+                    }
+                }
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <a class="link-button" href="6.0-Switch-statement.html">Previous Page</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math and Operators</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Understanding Prompt Input and Type Conversion in JavaScript</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                In this example, we explore how JavaScript handles inputs from the <code>prompt()</code> function,
+                especially when dealing with numbers. Inputs from a prompt are treated as strings by default, but
+                JavaScript can perform implicit type conversion in some cases.
+            </p>
+            <p>
+                For example, multiplying width and height strings such as <code>"8" * "5"</code> results in
+                <code>40</code> because JavaScript converts them to numbers automatically. However, during addition,
+                the strings are concatenated, producing results like <code>"8" + "5" = "85"</code>.
+            </p>
+            <p>
+                To ensure correct arithmetic operations, we explicitly convert string inputs to numbers using:
+            <ul>
+                <li><code>+prompt()</code> — a shorthand for converting strings to numbers</li>
+                <li><code>parseInt()</code> — a more flexible method that allows for specifying base values</li>
+            </ul>
+            </p>
+        </section>
+
+        <section>
+            <h2>Example: Handling Prompt Input</h2>
+            <script>
+                const width = prompt('Enter the width of the area:', '10');
+                const height = prompt('Enter the height of the area:', '5');
+
+                document.write('<h3>Results of Arithmetic Operations</h3>');
+                document.write(`<p>Width + Height: ${+width + +height}</p>`); // Addition
+                document.write(`<p>Width * Height: ${+width * +height}</p>`); // Multiplication
+                document.write(`<p>Width - Height: ${+width - +height}</p>`); // Subtraction
+                document.write(`<p>Width / Height: ${+width / +height}</p>`); // Division
+                document.write(`<p>Concatenation (without conversion): ${width + height}</p>`); // Concatenation
+            </script>
+        </section>
+
+        <section>
+            <h2>Handling Default Values</h2>
+            <p>
+                To provide default values for prompts, we can use the <code>||</code> operator:
+            </p>
+            <pre>
+const name = prompt('Enter your name:') || 'Default Name';
+const age = +prompt('Enter your age:') || 18;
+
+document.write(`<p>Name: ${name}</p>`);
+document.write(`<p>Age: ${age}</p>`);
+            </pre>
+            <script>
+                const nameChecker = prompt('Please enter your name:') || 'Default Name';
+                const ageChecker = +prompt('Please enter your age:') || 18;
+                document.write(`<p>Name: ${nameChecker}</p>`);
+                document.write(`<p>Age: ${ageChecker}</p>`);
+            </script>
+        </section>
+
+        <section>
+            <h2>Comparing <code>+prompt()</code> and <code>parseInt()</code></h2>
+            <p>
+                Using <code>+prompt()</code> converts null or empty values to <code>0</code>, whereas
+                <code>parseInt()</code> will return
+                <code>NaN</code> in such cases. Choose the method that best fits your requirements.
+            </p>
+        </section>
+    </main>
+
+    <nav>
+        <a class="link-button" href="../2-Math-Object.html">Previous Page</a>
+    </nav>
+</body>
+
+</html>
