@@ -5,95 +5,105 @@
 /* Body styles */
 body {
     color: #E0E0E0;
-    /* Light gray text for readability */
     background-color: #1E1E2E;
-    /* Dark purple-blue background */
     font-family: "Poppins", sans-serif;
-    /* Modern sans-serif font */
     font-weight: 400;
-    /* Normal weight */
     font-style: normal;
     line-height: 1.8;
-    /* Comfortable line height */
     padding: 20px;
+    margin: 0;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        padding: 8px;
+    }
 }
 
 /* List items */
 li {
     margin-bottom: 0.5rem;
-    /* Space between list items */
 }
 
 /* Links */
 a {
     display: inline-block;
     color: #A6E3E9;
-    /* Light blue text color */
     border: 1px solid #A6E3E9;
-    /* Light blue border */
     background-color: #313244;
-    /* Darker background */
     border-radius: 7px;
-    /* Rounded corners */
     padding: 8px 12px;
-    /* Inner spacing */
     text-decoration: none;
-    /* Removes underline */
     transition: background-color 0.3s, color 0.3s;
-    /* Smooth hover effect */
 }
 
 a:hover {
     color: #313244;
-    /* Dark background on hover */
     background-color: #A6E3E9;
-    /* Light blue background on hover */
 }
 
 /* Paragraphs */
 p {
     text-align: justify;
-    /* Align text for readability */
     margin-bottom: 0.5rem;
-    /* Space below paragraphs */
 }
 
 /* Preformatted text */
 pre {
     font-family: "Fira Code", monospace;
-    /* Monospaced font for code blocks */
     font-size: 1rem;
-    /* Standard font size */
     color: #F9E2AF;
-    /* Light gold for preformatted text */
     background-color: #282A36;
-    /* Darker background for contrast */
     padding: 12px;
-    /* Inner spacing */
     border-radius: 6px;
-    /* Rounded corners */
     overflow-x: auto;
-    /* Enable horizontal scrolling */
+    max-width: 100%;
 }
 
 /* Inline code */
 code {
     font-family: "Fira Code", monospace;
-    /* Monospaced font for inline code */
     font-size: 14px;
-    /* Slightly smaller for inline use */
     font-weight: 400;
-    /* Normal weight */
     line-height: 1.6;
-    /* Spacing for inline code */
     color: #F9E2AF;
-    /* Gold text */
     background-color: #3B4252;
-    /* Subtle background for inline code */
     padding: 3px 6px;
-    /* Subtle padding */
     border-radius: 4px;
     cursor: pointer;
+    white-space: pre-wrap;
+}
+
+/* Responsive Code Block */
+@media (max-width: 768px) {
+    pre {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    code {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    pre {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    code {
+        font-size: 11px;
+    }
 }
 
 ul,
@@ -106,5 +116,4 @@ hr {
     border: none;
     height: 2px;
     background-color: #A6E3E9;
-    /* Light blue divider */
 }
