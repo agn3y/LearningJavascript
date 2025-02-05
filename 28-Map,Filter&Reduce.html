@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map-Filter-Reduce</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../externJsFile/Map-Filter.js"></script>
-    <script src="../externJsFile/Reduce.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map-Filter-Reduce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../externJsFile/Map-Filter.js"></script>
+  <script src="../externJsFile/Reduce.js"></script>
 </head>
 
 <body>
-    <h1>Map</h1>
-    <p>Map is a function which returns everything in array format.</p>
-    <p>The <code>.map()</code> method creates a new array by applying a given function to each element of the original
-        array. It does not modify the original array.</p>
+  <h1>Map</h1>
+  <p>Map is a function which returns everything in array format.</p>
+  <p>The <code>.map()</code> method creates a new array by applying a given function to each element of the original
+    array. It does not modify the original array.</p>
 
-    <h2>Syntax:</h2>
-    <pre><code>let newArray = array.map(function(currentValue, index, array) {
+  <h2>Syntax:</h2>
+  <pre><code>let newArray = array.map(function(currentValue, index, array) {
   // Return the new value
 });</code></pre>
 
-    <h2>Parameters:</h2>
-    <ul>
-        <li><strong>currentValue</strong>: The current element being processed in the array.</li>
-        <li><strong>index</strong> (optional): The index of the current element.</li>
-        <li><strong>array</strong> (optional): The array that .map() was called on.</li>
-    </ul>
+  <h2>Parameters:</h2>
+  <ul>
+    <li><strong>currentValue</strong>: The current element being processed in the array.</li>
+    <li><strong>index</strong> (optional): The index of the current element.</li>
+    <li><strong>array</strong> (optional): The array that .map() was called on.</li>
+  </ul>
 
-    <h2>Example 1: Doubling Numbers</h2>
-    <pre><code>const numbers = [1, 2, 3, 4];
+  <h2>Example 1: Doubling Numbers</h2>
+  <pre><code>const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(num => num * 2);
 console.log(doubled); // [2, 4, 6, 8]</code></pre>
 
-    <h2>Example 2: Extracting Specific Properties</h2>
-    <pre><code>const users = [
+  <h2>Example 2: Extracting Specific Properties</h2>
+  <pre><code>const users = [
   { name: "Alice", age: 25 },
   { name: "Bob", age: 30 },
   { name: "Charlie", age: 35 }
@@ -42,16 +42,18 @@ console.log(doubled); // [2, 4, 6, 8]</code></pre>
 const names = users.map(user => user.name);
 console.log(names); // ['Alice', 'Bob', 'Charlie']</code></pre>
 
-    <h2>Example 3: Using Index</h2>
-    <pre><code>const numbers = [1, 2, 3, 4];
+  <h2>Example 3: Using Index</h2>
+  <pre><code>const numbers = [1, 2, 3, 4];
 const indexedArray = numbers.map((num, index) => num + index);
 console.log(indexedArray); // [1, 3, 5, 7]</code></pre>
 
-<h1>Filter</h1>
+  <h1>Filter</h1>
 
   <h2>What is filter()?</h2>
-  <p>The <code>filter()</code> method in JavaScript creates a new array with all elements that pass a test implemented by the provided function.</p>
-  <p>This method does not change the original array; it returns a new array with the elements that match the condition.</p>
+  <p>The <code>filter()</code> method in JavaScript creates a new array with all elements that pass a test implemented
+    by the provided function.</p>
+  <p>This method does not change the original array; it returns a new array with the elements that match the condition.
+  </p>
 
   <h2>Basic Syntax:</h2>
   <pre><code>
@@ -68,7 +70,8 @@ array.filter(function(element, index, array) {
   <h2>Key Points:</h2>
   <ul>
     <li>The <code>filter()</code> method does not modify the original array.</li>
-    <li>It creates a new array with the elements that pass the test (where the callback function returns <code>true</code>).</li>
+    <li>It creates a new array with the elements that pass the test (where the callback function returns
+      <code>true</code>).</li>
     <li>If no elements pass the test, the new array will be empty.</li>
     <li>The callback function can accept three arguments: the current element, the index, and the original array.</li>
   </ul>
@@ -106,7 +109,8 @@ const longWords = words.filter(function(word) {
 console.log(longWords); // Output: ["banana", "cherry", "orange"]
   </code></pre>
   <h1>Understanding the <code>reduce()</code> Method in JavaScript</h1>
-  <p>The <code>reduce()</code> method is used to process an array and return a single output value. It applies a function (callback) to each element, accumulating a result as it iterates through the array.</p>
+  <p>The <code>reduce()</code> method is used to process an array and return a single output value. It applies a
+    function (callback) to each element, accumulating a result as it iterates through the array.</p>
 
   <h2>Syntax</h2>
   <pre>
@@ -114,18 +118,19 @@ array.reduce(callback, initialValue);
   </pre>
   <p><strong>Parameters:</strong></p>
   <ul>
-      <li>
-          <strong><code>callback</code></strong>: A function executed on each element, with the following arguments:
-          <ul>
-              <li><code>accumulator</code>: The result accumulated from previous iterations.</li>
-              <li><code>currentValue</code>: The current array element.</li>
-              <li><code>currentIndex</code> (optional): The index of the current element.</li>
-              <li><code>array</code> (optional): The original array.</li>
-          </ul>
-      </li>
-      <li>
-          <strong><code>initialValue</code></strong> (optional): The initial value for the accumulator. If omitted, the first array element is used, and iteration starts from the second element.
-      </li>
+    <li>
+      <strong><code>callback</code></strong>: A function executed on each element, with the following arguments:
+      <ul>
+        <li><code>accumulator</code>: The result accumulated from previous iterations.</li>
+        <li><code>currentValue</code>: The current array element.</li>
+        <li><code>currentIndex</code> (optional): The index of the current element.</li>
+        <li><code>array</code> (optional): The original array.</li>
+      </ul>
+    </li>
+    <li>
+      <strong><code>initialValue</code></strong> (optional): The initial value for the accumulator. If omitted, the
+      first array element is used, and iteration starts from the second element.
+    </li>
   </ul>
   <h1>Reduce Method Calculation</h1>
   <p>Here’s a step-by-step breakdown of the reduce operation:</p>
@@ -144,47 +149,48 @@ const sum = numbers.reduce((accumulator, currentValue) => {
 
   <h2>Step-by-Step Calculation</h2>
   <ol>
-      <li>
-          <strong>Initial Value:</strong> <code>accumulator = 99+0</code>
-      </li>
-      <li>
-          <strong>First Iteration:</strong>
-          <ul>
-              <li><code>accumulator = 99</code>, <code>currentValue = 1</code></li>
-              <li><code>accumulator + currentValue = 99 + 1 = 100</code></li>
-              <li>New <code>accumulator</code>: <code>1</code></li>
-          </ul>
-      </li>
-      <li>
-          <strong>Second Iteration:</strong>
-          <ul>
-              <li><code>accumulator = 100</code>, <code>currentValue = 2</code></li>
-              <li><code>accumulator + currentValue = 100 + 2 = 102</code></li>
-              <li>New <code>accumulator</code>: <code>3</code></li>
-          </ul>
-      </li>
-      <li>
-          <strong>Third Iteration:</strong>
-          <ul>
-              <li><code>accumulator = 102</code>, <code>currentValue = 3</code></li>
-              <li><code>accumulator + currentValue = 102 + 3 = 105</code></li>
-              <li>New <code>accumulator</code>: <code>6</code></li>
-          </ul>
-      </li>
-      <li>
-          <strong>Fourth Iteration:</strong>
-          <ul>
-              <li><code>accumulator = 105</code>, <code>currentValue = 4</code></li>
-              <li><code>accumulator + currentValue = 105 + 4 = 109</code></li>
-              <li>New <code>accumulator</code>: <code>109</code></li>
-          </ul>
-      </li>
+    <li>
+      <strong>Initial Value:</strong> <code>accumulator = 99+0</code>
+    </li>
+    <li>
+      <strong>First Iteration:</strong>
+      <ul>
+        <li><code>accumulator = 99</code>, <code>currentValue = 1</code></li>
+        <li><code>accumulator + currentValue = 99 + 1 = 100</code></li>
+        <li>New <code>accumulator</code>: <code>1</code></li>
+      </ul>
+    </li>
+    <li>
+      <strong>Second Iteration:</strong>
+      <ul>
+        <li><code>accumulator = 100</code>, <code>currentValue = 2</code></li>
+        <li><code>accumulator + currentValue = 100 + 2 = 102</code></li>
+        <li>New <code>accumulator</code>: <code>3</code></li>
+      </ul>
+    </li>
+    <li>
+      <strong>Third Iteration:</strong>
+      <ul>
+        <li><code>accumulator = 102</code>, <code>currentValue = 3</code></li>
+        <li><code>accumulator + currentValue = 102 + 3 = 105</code></li>
+        <li>New <code>accumulator</code>: <code>6</code></li>
+      </ul>
+    </li>
+    <li>
+      <strong>Fourth Iteration:</strong>
+      <ul>
+        <li><code>accumulator = 105</code>, <code>currentValue = 4</code></li>
+        <li><code>accumulator + currentValue = 105 + 4 = 109</code></li>
+        <li>New <code>accumulator</code>: <code>109</code></li>
+      </ul>
+    </li>
   </ol>
 
   <h2>Notes:</h2>
   <ul>
     <li>In the code, 99 is the initial value of the accumulator</li>
-    <li>If you don't define an initial value for the accumulator in the reduce method, the first element of the array (numbers[0] in your case) will be used as the initial value of the accumulator.</li>
+    <li>If you don't define an initial value for the accumulator in the reduce method, the first element of the array
+      (numbers[0] in your case) will be used as the initial value of the accumulator.</li>
   </ul>
   <h1>Conclusion</h1>
 
@@ -201,6 +207,7 @@ const sum = numbers.reduce((accumulator, currentValue) => {
   <p><strong>Example:</strong> Log each element to the console.</p>
 
   <a class="link-button" href="27-forEachArrayMethod.html">PreviousPage</a>
-  <a class="link-button" href="29-SomeAndEveryArrayMethod.html">NextPage</a> 
+  <a class="link-button" href="29-SomeAndEveryArrayMethod.html">NextPage</a>
 </body>
+
 </html>

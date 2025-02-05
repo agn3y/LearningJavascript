@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>template</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/Function.js"></script>
 </head>
 
@@ -14,14 +14,18 @@
     <ol>
         <li>Functions only execute when they are called</li>
         <li>Arguments are the values assigned to parameters</li>
-        <li>With the return keyword in JavaScript, you can return almost anything—numbers, strings, objects, arrays, functions, booleans, and even null or undefined. Functions are very flexible in terms of what they can return, so you can use them to produce any kind of result you need</li>
-        <li>However, you cannot directly return control structures like if or while loops themselves, but you can return values from them</li>
-        <li>You can’t return multiple values directly (but you can return an array or an object containing multiple values)</li>
+        <li>With the return keyword in JavaScript, you can return almost anything—numbers, strings, objects, arrays,
+            functions, booleans, and even null or undefined. Functions are very flexible in terms of what they can
+            return, so you can use them to produce any kind of result you need</li>
+        <li>However, you cannot directly return control structures like if or while loops themselves, but you can return
+            values from them</li>
+        <li>You can’t return multiple values directly (but you can return an array or an object containing multiple
+            values)</li>
         <li>You can think of return as a mechanism that provides the result or output of a function</li>
     </ol>
     <h4>Syntax:</h4>
     <p>
-        <pre>
+    <pre>
             <code>
  function userNames(userNames, optional) { 
  console.log(`Hi, My name is ${userNames} and I am a Java-script Engineer.`);
@@ -30,13 +34,13 @@
  userNames('agney','South-Indian');
  userNames();
             </code>
-        </pre>    
+        </pre>
     </p>
 
     <h4>Adding default parameters:</h4>
     <p>1st Way :</p>
     <p>
-        <pre>
+    <pre>
             <code>
  function userNames(userNames = 'Unknown', optional = 'No specific') {
  console.log(`Hi, My name is ${userNames} and I am a JavaScript Engineer.`);
@@ -45,11 +49,11 @@
  userNames('Agney', 'South-Indian');
  userNames();
             </code>
-        </pre>    
+        </pre>
     </p>
     <p>2nd Way: Using (||) in the template string</p>
     <p>
-        <pre>
+    <pre>
             <code>
                 function userNames(userNames , optional ) {
                 console.log(`Hi, My name is ${userNames || 'Unknown'} and I am a JavaScript Engineer.`);
@@ -62,7 +66,8 @@
     </p>
 
     <h1>return</h1>
-    <p>The <code>return</code> statement in a JavaScript function sends a value back to the caller and ends the function's execution. If omitted, the function returns <code>undefined</code></p>
+    <p>The <code>return</code> statement in a JavaScript function sends a value back to the caller and ends the
+        function's execution. If omitted, the function returns <code>undefined</code></p>
     <p>Suppose we have a code like this:</p>
     <code><pre>
  function addTwoNumbers(){

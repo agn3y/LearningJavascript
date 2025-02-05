@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep vs Shallow Copy</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,11 +18,13 @@
         <section>
             <h2>Understanding Copying in JavaScript</h2>
             <p>
-                When two variables reference the same object, changes to one affect the other because they share the same memory address. 
+                When two variables reference the same object, changes to one affect the other because they share the
+                same memory address.
                 To avoid this, we need to create a copy. There are two types of copies:
             </p>
             <ol>
-                <li><strong>Shallow Copy:</strong> Copies only the top-level properties. Nested objects/arrays are still referenced.</li>
+                <li><strong>Shallow Copy:</strong> Copies only the top-level properties. Nested objects/arrays are still
+                    referenced.</li>
                 <li><strong>Deep Copy:</strong> Creates a complete copy, including all nested objects/arrays.</li>
             </ol>
         </section>
@@ -32,7 +34,7 @@
             <article>
                 <h3>1. Object.assign()</h3>
                 <p>
-                    The <code>Object.assign()</code> method copies properties from source objects to a target object. 
+                    The <code>Object.assign()</code> method copies properties from source objects to a target object.
                     It works for both objects and arrays but creates a shallow copy.
                 </p>
                 <pre><code>
@@ -45,7 +47,7 @@ Object.assign(user2, user1);
             <article>
                 <h3>2. Spread Operator</h3>
                 <p>
-                    A modern and concise way to create shallow copies. 
+                    A modern and concise way to create shallow copies.
                     It works for both objects and arrays.
                 </p>
                 <pre><code>
@@ -66,12 +68,14 @@ const myFruits = fruits.slice();
                 </code></pre>
             </article>
 
-            <p>Note: Shallow copies only duplicate the top level. Nested objects/arrays remain shared between the original and the copy.</p>
+            <p>Note: Shallow copies only duplicate the top level. Nested objects/arrays remain shared between the
+                original and the copy.</p>
         </section>
 
         <section>
             <h2>Deep Copy Methods</h2>
-            <p>To create a true deep copy, use <code>JSON.stringify()</code> and <code>JSON.parse()</code>. This ensures nested objects/arrays are also copied.</p>
+            <p>To create a true deep copy, use <code>JSON.stringify()</code> and <code>JSON.parse()</code>. This ensures
+                nested objects/arrays are also copied.</p>
             <pre><code>
 const user1 = {
     firstName: 'Agney',

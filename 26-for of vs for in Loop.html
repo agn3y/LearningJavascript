@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>for of vs for in Loop</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../externJsFile/forOfvsforInLoop.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for of vs for in Loop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../externJsFile/forOfvsforInLoop.js"></script>
 </head>
+
 <body>
-    <h1>for of vs for in Loop</h1>
-    <section>
-        <h2>1. <code>for...in</code> Loop</h2>
-        <p><strong>What does it do?</strong><br>
-        The <code>for...in</code> loop looks inside an object and goes through its keys (property names).</p>
-        
-        <h3>Example: Monkey's Banana Inventory</h3>
-        <pre>
+  <h1>for of vs for in Loop</h1>
+  <section>
+    <h2>1. <code>for...in</code> Loop</h2>
+    <p><strong>What does it do?</strong><br>
+      The <code>for...in</code> loop looks inside an object and goes through its keys (property names).</p>
+
+    <h3>Example: Monkey's Banana Inventory</h3>
+    <pre>
             <code>
 Syntax:
 
@@ -36,16 +38,17 @@ for (let color in monkeyBananas) {
 }
             </code>
         </pre>
-        <p><strong>Explanation:</strong> The loop goes through the "color" keys (like "yellow", "green", "black") in the object and prints each one.</p>
-    </section>
+    <p><strong>Explanation:</strong> The loop goes through the "color" keys (like "yellow", "green", "black") in the
+      object and prints each one.</p>
+  </section>
 
-    <section>
-        <h2>2. <code>for...of</code> Loop</h2>
-        <p><strong>What does it do?</strong><br>
-        The <code>for...of</code> loop goes through each value in a collection like an array or string.</p>
-        
-        <h3>Example: Monkey Counting Numbers 1 to 10</h3>
-        <pre>
+  <section>
+    <h2>2. <code>for...of</code> Loop</h2>
+    <p><strong>What does it do?</strong><br>
+      The <code>for...of</code> loop goes through each value in a collection like an array or string.</p>
+
+    <h3>Example: Monkey Counting Numbers 1 to 10</h3>
+    <pre>
             <code>
 Syntax:
 
@@ -62,19 +65,20 @@ for (let number of numbers) {
 }
             </code>
         </pre>
-        <p><strong>Explanation:</strong> The loop goes through the actual values (1, 2, 3, etc.) in the array and prints each one.</p>
-    </section>
+    <p><strong>Explanation:</strong> The loop goes through the actual values (1, 2, 3, etc.) in the array and prints
+      each one.</p>
+  </section>
 
-    <section>
-        <h2>Summary (For the Monkey!)</h2>
-        <ul>
-            <li><strong><code>for...in</code>:</strong> "Monkey, find all the <em>names</em> of the banana colors."</li>
-            <li><strong><code>for...of</code>:</strong> "Monkey, read the <em>numbers</em> and count them one by one."</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Example :</h2>
-        <code><pre>
+  <section>
+    <h2>Summary (For the Monkey!)</h2>
+    <ul>
+      <li><strong><code>for...in</code>:</strong> "Monkey, find all the <em>names</em> of the banana colors."</li>
+      <li><strong><code>for...of</code>:</strong> "Monkey, read the <em>numbers</em> and count them one by one."</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Example :</h2>
+    <code><pre>
 // Using for...of loop
             
 const numbers = ['Mango','SitaFal','Orange','Apple','Banana','Watermelon','Papaya','Peach','Strawberry','Grapes','Sugarcane']
@@ -118,9 +122,10 @@ console.log(nameAgain);
 console.log(nameAgain1);
 console.log(nameEntries);
         </pre></code>
-    </section>
+  </section>
 
-    <a class="link-button" href="25-ArrowFunction.html">PreviousPage</a>
-    <a class="link-button" href="27-forEachArrayMethod.html">NextPage</a> 
+  <a class="link-button" href="25-ArrowFunction.html">PreviousPage</a>
+  <a class="link-button" href="27-forEachArrayMethod.html">NextPage</a>
 </body>
+
 </html>

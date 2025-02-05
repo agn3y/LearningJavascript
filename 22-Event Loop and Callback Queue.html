@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Loop and Callback Queue</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="../externJsFile/EventLoopandCallbackQueue.js"></script>
 </head>
+
 <body>
 
   <h1>Understanding Event Loop and Callback Queue</h1>
@@ -22,10 +24,14 @@
   <h2>Components of the JavaScript Runtime</h2>
   <p>To understand how JavaScript executes code, we need to know about its main components:</p>
   <ul>
-    <li><strong>Call Stack:</strong> A to-do list where JavaScript keeps track of all the functions it needs to execute.</li>
-    <li><strong>Web APIs:</strong> Handle tasks like timers (<code>setTimeout</code>), network requests (<code>fetch</code>), and DOM events.</li>
-    <li><strong>Callback Queue:</strong> A "waiting room" for tasks that are ready to be executed but cannot run yet because the call stack is busy.</li>
-    <li><strong>Event Loop:</strong> The "supervisor" that checks if the call stack is empty and moves tasks from the callback queue to the stack.</li>
+    <li><strong>Call Stack:</strong> A to-do list where JavaScript keeps track of all the functions it needs to execute.
+    </li>
+    <li><strong>Web APIs:</strong> Handle tasks like timers (<code>setTimeout</code>), network requests
+      (<code>fetch</code>), and DOM events.</li>
+    <li><strong>Callback Queue:</strong> A "waiting room" for tasks that are ready to be executed but cannot run yet
+      because the call stack is busy.</li>
+    <li><strong>Event Loop:</strong> The "supervisor" that checks if the call stack is empty and moves tasks from the
+      callback queue to the stack.</li>
   </ul>
 
   <h2>Synchronous vs Asynchronous Execution</h2>
@@ -43,7 +49,8 @@ Task 2
   </pre>
 
   <h3>Asynchronous</h3>
-  <p>Some tasks (like timers or network requests) don’t run immediately. Instead, they are handled in the background and added to the callback queue when ready.</p>
+  <p>Some tasks (like timers or network requests) don’t run immediately. Instead, they are handled in the background and
+    added to the callback queue when ready.</p>
   <pre>
 console.log('Task 1');
 setTimeout(() => console.log('Task 2'), 2000);
@@ -78,10 +85,13 @@ Task 2 (after 2 seconds)
   </ol>
 
   <h2>Promises and MicroTasks</h2>
-  <p>JavaScript also has a <strong>microtask queue</strong> for tasks that should execute before other callback queue tasks.</p>
+  <p>JavaScript also has a <strong>microtask queue</strong> for tasks that should execute before other callback queue
+    tasks.</p>
   <ul>
-    <li><strong>MicroTasks:</strong> Examples: <code>Promise.then()</code>, <code>queueMicrotask()</code>. These run <strong>before</strong> the callback queue tasks.</li>
-    <li><strong>Order of Execution:</strong> The event loop first empties the <strong>microtask queue</strong>. Then it processes the <strong>callback queue</strong>.</li>
+    <li><strong>MicroTasks:</strong> Examples: <code>Promise.then()</code>, <code>queueMicrotask()</code>. These run
+      <strong>before</strong> the callback queue tasks.</li>
+    <li><strong>Order of Execution:</strong> The event loop first empties the <strong>microtask queue</strong>. Then it
+      processes the <strong>callback queue</strong>.</li>
   </ul>
   <pre>
 console.log('Start');
@@ -102,15 +112,20 @@ Timeout
 
   <h2>Why This Matters?</h2>
   <ul>
-    <li><strong>Efficient Use of Time:</strong> The event loop allows JavaScript to handle long-running tasks without blocking other operations.</li>
-    <li><strong>Understanding Delays:</strong> Knowing how the callback queue works helps you understand why certain operations are delayed (e.g., <code>setTimeout</code>).</li>
-    <li><strong>Debugging Code:</strong> By understanding the order of execution, you can debug asynchronous behavior.</li>
+    <li><strong>Efficient Use of Time:</strong> The event loop allows JavaScript to handle long-running tasks without
+      blocking other operations.</li>
+    <li><strong>Understanding Delays:</strong> Knowing how the callback queue works helps you understand why certain
+      operations are delayed (e.g., <code>setTimeout</code>).</li>
+    <li><strong>Debugging Code:</strong> By understanding the order of execution, you can debug asynchronous behavior.
+    </li>
   </ul>
 
   <h2>Advanced Notes</h2>
   <ul>
-    <li><strong>setTimeout is not precise:</strong> Even with a <code>0ms</code> delay, the task doesn’t run immediately because it must wait for the stack to clear and for other  MicroTasks to finish.</li>
-    <li><strong>Blocking the Event Loop:</strong> If a task in the call stack takes too long (e.g., an infinite loop), it blocks other tasks, including those in the callback queue.</li>
+    <li><strong>setTimeout is not precise:</strong> Even with a <code>0ms</code> delay, the task doesn’t run immediately
+      because it must wait for the stack to clear and for other MicroTasks to finish.</li>
+    <li><strong>Blocking the Event Loop:</strong> If a task in the call stack takes too long (e.g., an infinite loop),
+      it blocks other tasks, including those in the callback queue.</li>
   </ul>
   <pre>
 while (true) {
@@ -118,6 +133,7 @@ while (true) {
 }
   </pre>
   <a class="link-button" href="21-setTimeoutandsetInterval.html">PreviousPage</a>
-  <a class="link-button" href="23-ReturningFunctionswithClosures.html">NextPage</a>  
+  <a class="link-button" href="23-ReturningFunctionswithClosures.html">NextPage</a>
 </body>
+
 </html>

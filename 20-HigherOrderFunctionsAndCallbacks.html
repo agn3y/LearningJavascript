@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Higher Order Functions and Callbacks</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/HigherOrderFunctionsAndCallbacks.js"></script>
 </head>
+
 <body>
     <h1>Higher Order Functions and Callbacks</h1>
     <h2>Passing Functions as Arguments</h2>
-    <p>In JavaScript, functions can be used like regular values. You can give a function as an input to another function. This is called passing a function as an argument.</p>
+    <p>In JavaScript, functions can be used like regular values. You can give a function as an input to another
+        function. This is called passing a function as an argument.</p>
     <p>A higher-order function is simply a function that takes another function as an argument or returns a function</p>
     <h4>Explanation:</h4>
-    <p>Imagine you have a box (function), and inside this box, you can put another smaller box (another function). This bigger box (higher-order function) can then either open the smaller box and use what's inside (call the function) or give you a new box (return a function).</p>
+    <p>Imagine you have a box (function), and inside this box, you can put another smaller box (another function). This
+        bigger box (higher-order function) can then either open the smaller box and use what's inside (call the
+        function) or give you a new box (return a function).</p>
     <code>
         <pre>
 // A higher-order function that takes another function as an argument
@@ -32,9 +37,9 @@ greetUser(sayGoodbye);
         </pre>
     </code>
 
-<p>More simple version of this code:</p>
+    <p>More simple version of this code:</p>
 
-<code><pre>
+    <code><pre>
 // A higher-order function that calls the callback function directly
 function greetUser() {
   console.log("Hello");
@@ -50,7 +55,10 @@ function sayGoodbye() {
 greetUser();
 </pre></code>
 
-    <p>In the code, the value "Agney" is passed as the name and the sayGoodbye function is passed as the callback. When the greetUser function is called, it first prints "Hello, Agney" using the value of name. After that, it calls the callback function, which is the sayGoodbye function, and prints "Goodbye!". So, the result is that it prints "Hello, Agney" on one line, and "Goodbye!" on the next line</p>
+    <p>In the code, the value "Agney" is passed as the name and the sayGoodbye function is passed as the callback. When
+        the greetUser function is called, it first prints "Hello, Agney" using the value of name. After that, it calls
+        the callback function, which is the sayGoodbye function, and prints "Goodbye!". So, the result is that it prints
+        "Hello, Agney" on one line, and "Goodbye!" on the next line</p>
 
     <p>we can also use something which is called Anonymous function</p>
     <code><pre>
@@ -87,15 +95,18 @@ greetUser(sayGoodbye);
     </ul>
     <h2>Why Use Higher-Order Functions and Callbacks?</h2>
     <ol>
-        <li>Reusability: You can write one function (like greetUser) and use it with many different callback functions</li>
+        <li>Reusability: You can write one function (like greetUser) and use it with many different callback functions
+        </li>
         <li>Do things in order: You can do something first, and then run the callback function</li>
     </ol>
     <h2>Key Points</h2>
     <ol>
-        <li><strong>Higher-order function:</strong> A function that works with other functions (takes them as input or returns them)</li>
+        <li><strong>Higher-order function:</strong> A function that works with other functions (takes them as input or
+            returns them)</li>
         <li><strong>Callback:</strong> A function you pass to another function to use later</li>
     </ol>
     <a class="link-button" href="19-ScopeInJavaScript.html">PreviousPage</a>
-    <a class="link-button" href="21-setTimeoutandsetInterval.html">NextPage</a>     
+    <a class="link-button" href="21-setTimeoutandsetInterval.html">NextPage</a>
 </body>
+
 </html>

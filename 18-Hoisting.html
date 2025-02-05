@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoisting</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../externJsFile/HoistingExamples.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoisting</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../externJsFile/HoistingExamples.js"></script>
 </head>
+
 <body>
-    <h1>What is hosting?</h1>
-    <p>JavaScript hoisting is a behavior where the declarations of functions, variables, and classes are moved to the top of their scope during the memory creation phase, before the actual execution of the code</p>
-    <h2>Hoisting is like moving your toys to the top of the shelf before you play with them</h2>
-    <ul>
-        <li><strong>Variables and functions</strong> are like your toys. When you write your code, JavaScript moves your toys (variables and functions) to the top of your shelf (the top of the code) before you even start playing with them.</li>
-        <li>But here's the thing :<br>
-          <ul>
-            <li>With <strong>var</strong>, JavaScript moves your toy to the top and says, "I see this toy, but I don’t know what it is yet!" So, when you try to play with it, it’s like saying "undefined" because the toy has no name yet.</li>
-            <li>With <strong>let</strong> and <strong>const</strong>, JavaScript moves them to the top, but they are like toys stuck in a special "waiting zone"(Temporal Dead Zone). You can't play with them until you tell JavaScript what they are (their value). If you try to play with them too early, you’ll get an error.</li>
-            <li><strong> Functions</strong> are like your toys that are already fully ready to play with. When you define a function, it's like you’ve already packed and placed your toy at the top of the shelf, so you can play with it anytime!
-            </li>
-            <code><pre>
+  <h1>What is hosting?</h1>
+  <p>JavaScript hoisting is a behavior where the declarations of functions, variables, and classes are moved to the top
+    of their scope during the memory creation phase, before the actual execution of the code</p>
+  <h2>Hoisting is like moving your toys to the top of the shelf before you play with them</h2>
+  <ul>
+    <li><strong>Variables and functions</strong> are like your toys. When you write your code, JavaScript moves your
+      toys (variables and functions) to the top of your shelf (the top of the code) before you even start playing with
+      them.</li>
+    <li>But here's the thing :<br>
+      <ul>
+        <li>With <strong>var</strong>, JavaScript moves your toy to the top and says, "I see this toy, but I don’t know
+          what it is yet!" So, when you try to play with it, it’s like saying "undefined" because the toy has no name
+          yet.</li>
+        <li>With <strong>let</strong> and <strong>const</strong>, JavaScript moves them to the top, but they are like
+          toys stuck in a special "waiting zone"(Temporal Dead Zone). You can't play with them until you tell JavaScript
+          what they are (their value). If you try to play with them too early, you’ll get an error.</li>
+        <li><strong> Functions</strong> are like your toys that are already fully ready to play with. When you define a
+          function, it's like you’ve already packed and placed your toy at the top of the shelf, so you can play with it
+          anytime!
+        </li>
+        <code><pre>
 sayHello();  // This works!
 
 function sayHello() {
   console.log("Hello!");
 }
             </pre></code>
-            <li><strong>What happens:</strong> You can call the function sayHello() before even writing it down in the code, because JavaScript moves it to the top, all ready to use!</li>
-          </ul>
-        </br></li>
-        <li>So, hoisting is just a way JavaScript organizes things behind the scenes, but it can be confusing when you try to use something too early!</li>
-    </ul>
-    <h2>Function-expression</h2>
-    <p>A function expression in JavaScript is a way to define a function as part of an expression. It can be assigned to a variable, passed as an argument to other functions, or returned from another function. The key point is that the function is not declared with the function keyword at the top level, but rather as part of an expression.</p>
-    <code>
+        <li><strong>What happens:</strong> You can call the function sayHello() before even writing it down in the code,
+          because JavaScript moves it to the top, all ready to use!</li>
+      </ul>
+      </br>
+    </li>
+    <li>So, hoisting is just a way JavaScript organizes things behind the scenes, but it can be confusing when you try
+      to use something too early!</li>
+  </ul>
+  <h2>Function-expression</h2>
+  <p>A function expression in JavaScript is a way to define a function as part of an expression. It can be assigned to a
+    variable, passed as an argument to other functions, or returned from another function. The key point is that the
+    function is not declared with the function keyword at the top level, but rather as part of an expression.</p>
+  <code>
       <pre>
 
 1. Named Function Expression:
@@ -66,17 +82,19 @@ const greet = function(name) {
 This is a function expression with a parameter (name). It returns a greeting string using the value of name
 </pre>
     </code>
-<h3>Note:</h3>
-<p>here we saw three type of Function Expression there is something else that we should remember which is called Function Declaration</p>
-<p>when we declare a function like this its called Function Declaration</p>
-<code><pre>
+  <h3>Note:</h3>
+  <p>here we saw three type of Function Expression there is something else that we should remember which is called
+    Function Declaration</p>
+  <p>when we declare a function like this its called Function Declaration</p>
+  <code><pre>
 Function Declaration
 
 function hiMessage(name){
 console.log(`Hii, My name is ${name}`);
 }
 </pre></code>
-<a class="link-button" href="17-CallStack.html">PreviousPage</a>
-<a class="link-button" href="19-ScopeInJavaScript.html">NextPage</a>
+  <a class="link-button" href="17-CallStack.html">PreviousPage</a>
+  <a class="link-button" href="19-ScopeInJavaScript.html">NextPage</a>
 </body>
+
 </html>

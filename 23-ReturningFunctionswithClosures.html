@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Returning Functions with Closures</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/Returning Functions with Closures.js"></script>
 </head>
+
 <body>
     <h1>Returning Functions with Closures</h1>
     <p>
-        In JavaScript, functions can return other functions. When a returned function 
-        references variables from its parent function, it creates a <strong>closure</strong>. 
-        A closure allows the returned function to "remember" the variables of the parent function 
+        In JavaScript, functions can return other functions. When a returned function
+        references variables from its parent function, it creates a <strong>closure</strong>.
+        A closure allows the returned function to "remember" the variables of the parent function
         even after the parent function has finished executing.
     </p>
 
@@ -38,18 +40,23 @@ console.dir(add1);
     <h1>Simple Closure Explanation</h1>
 
     <h2>1. `outer` Function</h2>
-    <p>The <strong>outer</strong> function creates a variable <strong>a = 4</strong> and calls another function called <strong>parent</strong>.</p>
-  
+    <p>The <strong>outer</strong> function creates a variable <strong>a = 4</strong> and calls another function called
+        <strong>parent</strong>.</p>
+
     <h2>2. `parent` Function</h2>
-    <p>The <strong>parent</strong> function creates <strong>b = 6</strong> and returns a new function called <strong>add</strong>.</p>
-  
+    <p>The <strong>parent</strong> function creates <strong>b = 6</strong> and returns a new function called
+        <strong>add</strong>.</p>
+
     <h2>3. Closure Happens</h2>
-    <p>The <strong>add</strong> function remembers both <strong>a</strong> (from <strong>outer</strong>) and <strong>b</strong> (from <strong>parent</strong>) even after the functions are done.</p>
-  
+    <p>The <strong>add</strong> function remembers both <strong>a</strong> (from <strong>outer</strong>) and
+        <strong>b</strong> (from <strong>parent</strong>) even after the functions are done.</p>
+
     <h2>4. What `add` Does</h2>
-    <p>When <strong>add1()</strong> is called, it adds <strong>a</strong> and <strong>b</strong> (4 + 6) and prints <strong>10</strong>.</p>
-  
+    <p>When <strong>add1()</strong> is called, it adds <strong>a</strong> and <strong>b</strong> (4 + 6) and prints
+        <strong>10</strong>.</p>
+
     <a class="link-button" href="22-Event Loop and Callback Queue.html">PreviousPage</a>
-    <a class="link-button" href="24-DifferencebetweenMethods&Functions.html">NextPage</a> 
+    <a class="link-button" href="24-DifferencebetweenMethods&Functions.html">NextPage</a>
 </body>
+
 </html>

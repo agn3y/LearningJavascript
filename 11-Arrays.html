@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,34 +17,34 @@
     <ol>
         <li><strong>pop()</strong>: Removes the last element from the array.</li>
         <code class="codeBox">fruitCollection.pop();</code>
-        
+
         <li><strong>push()</strong>: Adds one or more elements to the end of an array.</li>
         <code class="codeBox">fruitCollection.push('Papaya');</code>
-        
+
         <li><strong>shift()</strong>: Removes the first element of an array.</li>
         <code class="codeBox">fruitCollection.shift();</code>
-        
+
         <li><strong>unshift()</strong>: Adds one or more elements to the beginning of an array.</li>
         <code class="codeBox">fruitCollection.unshift('Banana');</code>
-        
+
         <li><strong>concat()</strong>: Merges two or more arrays.</li>
         <code class="codeBox">const newFruitCollection = fruitCollection.concat(['Guava', 'Pineapple']);</code>
-        
+
         <li><strong>indexOf()</strong>: Returns the first index of a specified element, or -1 if not found.</li>
         <code class="codeBox">fruitCollection.indexOf('Mango');</code>
-        
+
         <li><strong>includes()</strong>: Checks if an element exists in the array.</li>
         <code class="codeBox">fruitCollection.includes('Mango');</code>
-        
+
         <li><strong>reverse()</strong>: Reverses the order of elements in an array.</li>
         <code class="codeBox">fruitCollection.reverse();</code>
-        
+
         <li><strong>sort()</strong>: Sorts the elements of an array.</li>
         <code class="codeBox">fruitCollection.sort();</code>
-        
+
         <li><strong>slice()</strong>: Returns a shallow copy of a portion of the array.</li>
         <code class="codeBox">const slicedArray = fruitCollection.slice(1, 3);</code>
-        
+
         <li><strong>splice()</strong>: Changes the contents of an array by removing or replacing existing elements.</li>
         <code class="codeBox">fruitCollection.splice(2, 1, 'Kiwi');</code>
     </ol>
@@ -53,7 +53,8 @@
     <ul>
         <li>To add a new property, you can use <code class="codeBox">fruitCollection[5] = 'Papaya';</code></li>
         <li>Alternatively, use <code class="codeBox">fruitCollection[fruitCollection.length] = 'new-fruit';</code></li>
-        <li>If you add 'Sapota(chiku)' at <code class="codeBox">fruitCollection[10]</code>, all indices between 5 and 10 will be <code>undefined</code>.</li>
+        <li>If you add 'Sapota(chiku)' at <code class="codeBox">fruitCollection[10]</code>, all indices between 5 and 10
+            will be <code>undefined</code>.</li>
     </ul>
 
     <script>
@@ -67,11 +68,14 @@
     </script>
 
     <h2>Multidimensional Arrays</h2>
-    <p>Multidimensional arrays are arrays within arrays. They are used to represent more complex data structures like matrices.</p>
-    <h3>Learn more in this <a href="https://www.youtube.com/watch?v=hhO8aiDgN9A&list=PLfEr2kn3s-bo4LwlbyZugHPavhcdW8YMC&index=25&t=345s" target="_blank">video on Multidimensional Arrays</a>.</h3>
+    <p>Multidimensional arrays are arrays within arrays. They are used to represent more complex data structures like
+        matrices.</p>
+    <h3>Learn more in this <a
+            href="https://www.youtube.com/watch?v=hhO8aiDgN9A&list=PLfEr2kn3s-bo4LwlbyZugHPavhcdW8YMC&index=25&t=345s"
+            target="_blank">video on Multidimensional Arrays</a>.</h3>
 
     <a class="link-button" href="10-SealAndFreeze.html">PreviousPage</a>
-    <a class="link-button" href="11.1-Basic Array Method.html"target="_blank">Basic Array Method</a>
+    <a class="link-button" href="11.1-Basic Array Method.html" target="_blank">Basic Array Method</a>
     <a class="link-button" href="12-Deep Vs Shallow Copy.html">NextPage</a>
 </body>
 

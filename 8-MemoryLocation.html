@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Location</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <h1>Memory Location</h1>
-    <p>Understanding how values are assigned to variables is crucial in programming. In JavaScript, values are stored in memory locations, and variables point to those locations. Below is a diagram to help visualize this concept:</p>
+    <p>Understanding how values are assigned to variables is crucial in programming. In JavaScript, values are stored in
+        memory locations, and variables point to those locations. Below is a diagram to help visualize this concept:</p>
 
-    <img src="../images/code-execution-in-javascript.svg" alt="Illustration of memory allocation and variable assignment in JavaScript" width="40%" height="30%"><br><br>
+    <img src="../images/code-execution-in-javascript.svg"
+        alt="Illustration of memory allocation and variable assignment in JavaScript" width="40%" height="30%"><br><br>
 
-    <p>The image above shows how variables store values in memory during execution. For example, when you assign a value to a variable, like the following:</p>
-    
+    <p>The image above shows how variables store values in memory during execution. For example, when you assign a value
+        to a variable, like the following:</p>
+
     <code><pre>
         const age = 12;
         const songName = 'DanzaKuduro';
@@ -23,12 +26,18 @@
 
     <h4>Explanation:</h4>
     <ol>
-        <li>When JavaScript runs, it allocates memory to store variables. It doesn't need to know how many variables there are in advance. It creates memory slots (addresses) to hold values as the code executes.</li>
+        <li>When JavaScript runs, it allocates memory to store variables. It doesn't need to know how many variables
+            there are in advance. It creates memory slots (addresses) to hold values as the code executes.</li>
         <li>Then the JavaScript engine assigns values to these memory slots.</li>
-        <li>For primitive types (like numbers, strings, booleans), the value itself is stored in the variable. When you assign one variable to another, it copies the actual value.</li>
-        <li>For objects (like arrays and functions), the variable stores a reference (memory address) to the location where the object is stored, not the object itself.</li>
-        <li>When you compare objects, JavaScript checks if the memory addresses (references) are the same. Even if two objects have the same content, they might not be the same object if they are stored at different memory locations.</li> 
-        <li>This is also a reason why we can access a function before defining it, but with variables, this doesn't work.</li>
+        <li>For primitive types (like numbers, strings, booleans), the value itself is stored in the variable. When you
+            assign one variable to another, it copies the actual value.</li>
+        <li>For objects (like arrays and functions), the variable stores a reference (memory address) to the location
+            where the object is stored, not the object itself.</li>
+        <li>When you compare objects, JavaScript checks if the memory addresses (references) are the same. Even if two
+            objects have the same content, they might not be the same object if they are stored at different memory
+            locations.</li>
+        <li>This is also a reason why we can access a function before defining it, but with variables, this doesn't
+            work.</li>
     </ol>
 
     <script>
@@ -37,7 +46,8 @@
     </script>
 
     <a class="link-button" href="7-TernaryOperator.html">Previous Page</a>
-    <a href="https://www.youtube.com/watch?v=Gqlv6inCZqI&list=PLfEr2kn3s-bo4LwlbyZugHPavhcdW8YMC&index=21" target="_blank">Helpful video to understand this topic</a>
+    <a href="https://www.youtube.com/watch?v=Gqlv6inCZqI&list=PLfEr2kn3s-bo4LwlbyZugHPavhcdW8YMC&index=21"
+        target="_blank">Helpful video to understand this topic</a>
     <a class="link-button" href="9-Objects.html">Next Page</a><br><br>
 </body>
 

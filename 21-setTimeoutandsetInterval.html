@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>setTimeout, setInterval, clearTimeout, and clearInterval</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="../externJsFile/setTimeoutandsetInterval.js"></script>
 </head>
+
 <body>
-  <h1>Understanding setTimeout, setInterval, clearTimeout, and clearInterval  </h1>
+  <h1>Understanding setTimeout, setInterval, clearTimeout, and clearInterval </h1>
 
   <h2>1. What is <code>setTimeout</code>?</h2>
   <p><strong>Purpose:</strong> It’s like a timer that waits for a certain amount of time before doing something.</p>
@@ -75,8 +77,10 @@ clearInterval(intervalID); // Cancels the interval
   <p>Stops the repeating task, so the message is no longer shown.</p>
 
   <h2>What is a Timer ID?</h2>
-  <p>Every <code>setTimeout</code> and <code>setInterval</code> gives you a unique number called a <strong>Timer ID</strong>.</p>
-  <p><strong>Why it’s important:</strong> You need this ID to stop the timeout or interval with <code>clearTimeout</code> or <code>clearInterval</code>.</p>
+  <p>Every <code>setTimeout</code> and <code>setInterval</code> gives you a unique number called a <strong>Timer
+      ID</strong>.</p>
+  <p><strong>Why it’s important:</strong> You need this ID to stop the timeout or interval with
+    <code>clearTimeout</code> or <code>clearInterval</code>.</p>
   <p><strong>Example of Timer ID:</strong></p>
   <pre>
 const id = setTimeout(() => {}, 1000); // Timer ID = 1
@@ -104,19 +108,25 @@ clearTimeout(id); // Stops this timeout
 
   <h2>Why Are These Useful?</h2>
   <ul>
-    <li><strong><code>setTimeout</code> Use Cases:</strong> Delaying actions, like showing a message after a few seconds.</li>
-    <li><strong><code>setInterval</code> Use Cases:</strong> Repeating actions, like updating a clock or running animations.</li>
-    <li><strong><code>clearTimeout</code> and <code>clearInterval</code> Use Cases:</strong> Stopping unnecessary tasks to save resources or avoid errors.</li>
+    <li><strong><code>setTimeout</code> Use Cases:</strong> Delaying actions, like showing a message after a few
+      seconds.</li>
+    <li><strong><code>setInterval</code> Use Cases:</strong> Repeating actions, like updating a clock or running
+      animations.</li>
+    <li><strong><code>clearTimeout</code> and <code>clearInterval</code> Use Cases:</strong> Stopping unnecessary tasks
+      to save resources or avoid errors.</li>
   </ul>
 
   <h2>Easy-to-Understand Scenario</h2>
   <p>Imagine a cooking timer:</p>
   <ul>
-    <li><strong><code>setTimeout:</code></strong> You set a timer to ring <strong>once</strong> after 10 minutes. If you cancel it, the timer doesn’t ring.</li>
-    <li><strong><code>setInterval:</code></strong> You set an alarm to remind you <strong>every 5 minutes</strong> to stir the food. If you stop the alarm, it doesn’t ring again.</li>
+    <li><strong><code>setTimeout:</code></strong> You set a timer to ring <strong>once</strong> after 10 minutes. If you
+      cancel it, the timer doesn’t ring.</li>
+    <li><strong><code>setInterval:</code></strong> You set an alarm to remind you <strong>every 5 minutes</strong> to
+      stir the food. If you stop the alarm, it doesn’t ring again.</li>
     <li><strong>Timer ID:</strong> It’s like the number of the timer/alarm, so you can tell which one to cancel.</li>
   </ul>
   <a class="link-button" href="20-HigherOrderFunctionsAndCallbacks.html">PreviousPage</a>
-  <a class="link-button" href="22-Event Loop and Callback Queue.html">NextPage</a>  
+  <a class="link-button" href="22-Event Loop and Callback Queue.html">NextPage</a>
 </body>
+
 </html>
