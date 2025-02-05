@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Delegation in JavaScript</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <h1>Event Delegation in JavaScript: A Detailed Explanation</h1>
 
     <h2>Definition</h2>
     <p>
-        Event Delegation is a technique in JavaScript where you attach a single event listener to a parent element instead of adding event listeners to each child element individually. This works because of <strong>event bubbling</strong> and <strong>event propagation</strong> mechanisms in JavaScript.
+        Event Delegation is a technique in JavaScript where you attach a single event listener to a parent element
+        instead of adding event listeners to each child element individually. This works because of <strong>event
+            bubbling</strong> and <strong>event propagation</strong> mechanisms in JavaScript.
     </p>
 
     <h2>Core Concepts</h2>
@@ -31,14 +35,19 @@
 
     <h3>2. Why Use Event Delegation?</h3>
     <p>
-        Instead of attaching multiple event listeners to child elements, you attach <strong>one listener</strong> to a parent element. The parent listens for events triggered by its child elements and determines the specific target using the <code>event.target</code> property.
+        Instead of attaching multiple event listeners to child elements, you attach <strong>one listener</strong> to a
+        parent element. The parent listens for events triggered by its child elements and determines the specific target
+        using the <code>event.target</code> property.
     </p>
 
     <h2>Advantages of Event Delegation</h2>
     <ul>
-        <li><strong>Performance Optimization</strong>: Adding separate event listeners for each child element increases memory usage. Event Delegation allows you to handle many events with a single listener.</li>
-        <li><strong>Dynamic Elements</strong>: When new child elements are added dynamically (e.g., through JavaScript), the parent element still catches their events without adding new listeners.</li>
-        <li><strong>Cleaner Code</strong>: Managing one listener is simpler and more maintainable than managing multiple listeners.</li>
+        <li><strong>Performance Optimization</strong>: Adding separate event listeners for each child element increases
+            memory usage. Event Delegation allows you to handle many events with a single listener.</li>
+        <li><strong>Dynamic Elements</strong>: When new child elements are added dynamically (e.g., through JavaScript),
+            the parent element still catches their events without adding new listeners.</li>
+        <li><strong>Cleaner Code</strong>: Managing one listener is simpler and more maintainable than managing multiple
+            listeners.</li>
     </ul>
 
     <h2>How Event Delegation Works</h2>
@@ -79,21 +88,25 @@ document.getElementById('button-container').addEventListener('click', function(e
     <ul>
         <li>The <code>click</code> event bubbles from the button up to the <code>&lt;div&gt;</code>.</li>
         <li>The <code>event.target</code> property identifies the element that triggered the event.</li>
-        <li>The <code>if</code> condition ensures that only buttons with the <code>btn</code> class trigger the code.</li>
+        <li>The <code>if</code> condition ensures that only buttons with the <code>btn</code> class trigger the code.
+        </li>
     </ul>
 
     <h2>Key Details</h2>
     <ul>
-        <li><strong>Event Target (<code>event.target</code>)</strong>: Refers to the actual DOM element that triggered the event (e.g., the button clicked).</li>
-        <li><strong>Event Listener on Parent</strong>: Always attach the listener to the <strong>closest common ancestor</strong> of the child elements you want to monitor.</li>
-        <li><strong>Filtering Events</strong>: Use checks like <code>if (event.target.matches(selector))</code> to ensure you handle only specific elements:
+        <li><strong>Event Target (<code>event.target</code>)</strong>: Refers to the actual DOM element that triggered
+            the event (e.g., the button clicked).</li>
+        <li><strong>Event Listener on Parent</strong>: Always attach the listener to the <strong>closest common
+                ancestor</strong> of the child elements you want to monitor.</li>
+        <li><strong>Filtering Events</strong>: Use checks like <code>if (event.target.matches(selector))</code> to
+            ensure you handle only specific elements:
             <pre>
 if (event.target.matches('.btn')) {
     console.log('Button clicked');
 }</pre>
         </li>
         <li><strong>Dynamic Elements</strong>: Works seamlessly for elements added after the event listener is attached:
-<pre>
+            <pre>
 const container = document.getElementById('button-container');
 
 // Adding a new button dynamically
@@ -108,18 +121,28 @@ container.appendChild(newButton);
 
     <h2>Limitations and Considerations</h2>
     <ul>
-        <li><strong>Event Bubbling Issues</strong>: Be cautious of unintended behaviors when events bubble up through multiple parent elements. Use <code>event.stopPropagation()</code> if needed.</li>
-        <li><strong>Performance Overhead</strong>: If the parent element has many children, the event listener must process every bubbling event, which may slightly impact performance.</li>
-        <li><strong>Specificity</strong>: Ensure the filtering logic (<code>if</code> condition) is robust to avoid handling unwanted elements.</li>
-        <li><strong>Event Types</strong>: Event Delegation works well with bubbling events like <code>click</code>, <code>keyup</code>, etc., but <strong>not all events bubble</strong> (e.g., <code>focus</code> and <code>blur</code> do not).</li>
+        <li><strong>Event Bubbling Issues</strong>: Be cautious of unintended behaviors when events bubble up through
+            multiple parent elements. Use <code>event.stopPropagation()</code> if needed.</li>
+        <li><strong>Performance Overhead</strong>: If the parent element has many children, the event listener must
+            process every bubbling event, which may slightly impact performance.</li>
+        <li><strong>Specificity</strong>: Ensure the filtering logic (<code>if</code> condition) is robust to avoid
+            handling unwanted elements.</li>
+        <li><strong>Event Types</strong>: Event Delegation works well with bubbling events like <code>click</code>,
+            <code>keyup</code>, etc., but <strong>not all events bubble</strong> (e.g., <code>focus</code> and
+            <code>blur</code> do not).
+        </li>
     </ul>
 
     <h2>Practical Use Cases</h2>
     <ul>
-        <li><strong>Handling Lists or Tables</strong>: Add a single listener to handle clicks on rows or cells dynamically.</li>
-        <li><strong>Form Validation</strong>: Validate multiple input fields with a single listener on the <code>&lt;form&gt;</code> element.</li>
+        <li><strong>Handling Lists or Tables</strong>: Add a single listener to handle clicks on rows or cells
+            dynamically.</li>
+        <li><strong>Form Validation</strong>: Validate multiple input fields with a single listener on the
+            <code>&lt;form&gt;</code> element.
+        </li>
         <li><strong>Menus and Navigation</strong>: Handle clicks on dropdown or navigation items dynamically.</li>
-        <li><strong>Infinite Scrolling or Lazy Loading</strong>: Use delegation to attach scroll events to a container.</li>
+        <li><strong>Infinite Scrolling or Lazy Loading</strong>: Use delegation to attach scroll events to a container.
+        </li>
     </ul>
 
     <h2>Final Code Example</h2>
@@ -132,7 +155,8 @@ container.appendChild(newButton);
     &lt;li class="menu-item"&gt;Contact&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<h3>JavaScript</h3><pre>
+    <h3>JavaScript</h3>
+    <pre>
 document.getElementById('menu').addEventListener('click', function(event) {
     if (event.target &amp;&amp; event.target.matches('li.menu-item')) {
             console.log('Menu item clicked: ' + event.target.textContent);
@@ -148,6 +172,7 @@ document.getElementById('menu').addEventListener('click', function(event) {
 
     <a class="link-button" href="../extra-topic/EventDelegation.html" target="_blank">Event Delegation</a>
     <a class="link-button" href="49-EventSimulation.html">PreviousPage</a>
-    <a class="link-button" href="#">NextPage</a> 
+    <a class="link-button" href="51-localStorage.html">NextPage</a>
 </body>
+
 </html>
