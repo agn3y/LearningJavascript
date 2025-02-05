@@ -17,6 +17,7 @@ h1 {
 
 li {
     text-decoration: none;
+    list-style: none;
 }
 
 a {
