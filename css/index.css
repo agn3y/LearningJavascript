@@ -1,14 +1,46 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     color: #E0E0E0;
-    background-color: #1E1E2E;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 2;
+    overflow: hidden;
+}
+
+.main-container {
+    background-image: url('../images/dope.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section-1 {
+    flex: 5;
+}
+
+.section-2 {
+    flex: 6;
+}
+
+.index {
+    padding: 2rem;
+    max-width: 400px;
+    max-height: 600px;
+    background-color: #1E1E2E;
+    border: 1px solid tomato;
+    border-radius: 8px;
+    overflow: scroll;
+    scrollbar-width: none;
+    flex: 1;
 }
 
 h1 {
@@ -16,6 +48,7 @@ h1 {
 }
 
 li {
+    text-align: justify;
     text-decoration: none;
     list-style: none;
 }
@@ -31,11 +64,4 @@ a:hover {
 
 a:visited {
     color: lightblue;
-}
-
-.index-menu {
-    width: 100%;
-    max-width: 450px;
-    margin-inline: auto;
-    text-align: left;
 }
