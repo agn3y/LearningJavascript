@@ -10,7 +10,7 @@ body {
     font-weight: 400;
     font-style: normal;
     line-height: 2;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .main-container {
@@ -19,16 +19,16 @@ body {
     background-size: cover;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
+    padding: 1rem;
 }
 
-.section-1 {
-    flex: 5;
-}
-
+.section-1,
 .section-2 {
-    flex: 6;
+    flex: 1;
+    min-width: 300px;
 }
 
 .index {
@@ -38,9 +38,8 @@ body {
     background-color: #1E1E2E;
     border: 1px solid tomato;
     border-radius: 8px;
-    overflow: scroll;
+    overflow-y: auto;
     scrollbar-width: none;
-    flex: 1;
 }
 
 h1 {
@@ -49,7 +48,6 @@ h1 {
 
 li {
     text-align: justify;
-    text-decoration: none;
     list-style: none;
 }
 
@@ -64,4 +62,33 @@ a:hover {
 
 a:visited {
     color: lightblue;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .section-1,
+    .section-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .index {
+        width: 90%;
+        max-width: 350px;
+        max-height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .index {
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+        max-height: 450px;
+    }
 }
