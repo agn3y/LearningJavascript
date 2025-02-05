@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math and Operators</title>
+    <link rel="shortcut icon" href="../images/4726005-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -21,16 +22,16 @@
                 JavaScript can perform implicit type conversion in some cases.
             </p>
             <p>
-                For example, multiplying width and height strings such as <code>"8" * "5"</code> results in 
+                For example, multiplying width and height strings such as <code>"8" * "5"</code> results in
                 <code>40</code> because JavaScript converts them to numbers automatically. However, during addition,
                 the strings are concatenated, producing results like <code>"8" + "5" = "85"</code>.
             </p>
             <p>
                 To ensure correct arithmetic operations, we explicitly convert string inputs to numbers using:
-                <ul>
-                    <li><code>+prompt()</code> — a shorthand for converting strings to numbers</li>
-                    <li><code>parseInt()</code> — a more flexible method that allows for specifying base values</li>
-                </ul>
+            <ul>
+                <li><code>+prompt()</code> — a shorthand for converting strings to numbers</li>
+                <li><code>parseInt()</code> — a more flexible method that allows for specifying base values</li>
+            </ul>
             </p>
         </section>
 
@@ -72,7 +73,8 @@ document.write(`<p>Age: ${age}</p>`);
         <section>
             <h2>Comparing <code>+prompt()</code> and <code>parseInt()</code></h2>
             <p>
-                Using <code>+prompt()</code> converts null or empty values to <code>0</code>, whereas <code>parseInt()</code> will return 
+                Using <code>+prompt()</code> converts null or empty values to <code>0</code>, whereas
+                <code>parseInt()</code> will return
                 <code>NaN</code> in such cases. Choose the method that best fits your requirements.
             </p>
         </section>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Understanding Logical Operators</title>
+    <link rel="shortcut icon" href="../images/4726005-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -16,8 +17,8 @@
     <main>
         <section>
             <p>
-                Logical operators like <code>&&</code> (AND) and <code>||</code> (OR) are commonly used to return 
-                boolean values (<code>true</code> or <code>false</code>). However, in reality, they return values 
+                Logical operators like <code>&&</code> (AND) and <code>||</code> (OR) are commonly used to return
+                boolean values (<code>true</code> or <code>false</code>). However, in reality, they return values
                 based on the **truthy** or **falsy** nature of their operands.
             </p>
             <h2>Behavior of Logical Operators</h2>
@@ -33,13 +34,15 @@
                 <li>First, the values are evaluated to determine if they are truthy or falsy.</li>
                 <li>The result depends on the operator:
                     <ul>
-                        <li><strong>AND (<code>&&</code>):</strong> Returns the first falsy value, or the last truthy value if all are truthy.</li>
-                        <li><strong>OR (<code>||</code>):</strong> Returns the first truthy value, or the last falsy value if all are falsy.</li>
+                        <li><strong>AND (<code>&&</code>):</strong> Returns the first falsy value, or the last truthy
+                            value if all are truthy.</li>
+                        <li><strong>OR (<code>||</code>):</strong> Returns the first truthy value, or the last falsy
+                            value if all are falsy.</li>
                     </ul>
                 </li>
             </ol>
             <p>
-                For example, in <code>0 && 2</code>, <code>0</code> is falsy, so it is returned. In <code>0 || 2</code>, 
+                For example, in <code>0 && 2</code>, <code>0</code> is falsy, so it is returned. In <code>0 || 2</code>,
                 <code>2</code> is the first truthy value, so it is returned.
             </p>
         </section>
@@ -47,7 +50,7 @@
         <section>
             <h2>Code Example</h2>
             <script>
-                function printThatCode() {  
+                function printThatCode() {
                     const userAge = 22;
 
                     // Logical conditions
