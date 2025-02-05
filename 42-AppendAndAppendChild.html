@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>append and appendChild?</title>
+    <link rel="shortcut icon" href="images/4726005-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/appendandappendChild.js" defer></script>
 </head>
@@ -16,7 +17,8 @@
 
     <p>In modern JavaScript, methods like <code>append()</code>, <code>appendChild()</code>, and
         <code>cloneNode()</code> are frequently used for manipulating the DOM (Document Object Model). While they are
-        related, each of these methods serves a unique purpose. Let’s break down their differences and use cases.</p>
+        related, each of these methods serves a unique purpose. Let’s break down their differences and use cases.
+    </p>
 
     <h2>1. <code>appendChild()</code></h2>
 
@@ -36,7 +38,8 @@
         <li><strong>Single Node:</strong> <code>appendChild()</code> accepts only one argument at a time, and that
             argument must be a <strong>node</strong> (HTML element or text node).</li>
         <li><strong>Re-parenting:</strong> If the node being appended already exists elsewhere in the DOM, it is
-            <strong>removed</strong> from its original parent and <strong>re-attached</strong> to the new parent.</li>
+            <strong>removed</strong> from its original parent and <strong>re-attached</strong> to the new parent.
+        </li>
     </ul>
 
     <h3>Example</h3>
@@ -46,7 +49,8 @@ parentDiv.appendChild(newDiv); // Appends the newDiv to parentDiv</code></pre>
 
     <p>In the example above, <code>newDiv</code> will be appended as a child of <code>parentDiv</code>. If
         <code>newDiv</code> was already in the DOM, it would be moved to <code>parentDiv</code> and removed from its
-        previous parent.</p>
+        previous parent.
+    </p>
 
     <h2>2. <code>append()</code></h2>
 
@@ -70,7 +74,8 @@ parentDiv.appendChild(newDiv); // Appends the newDiv to parentDiv</code></pre>
             first.</li>
         <li><strong>No Re-parenting:</strong> If you append a node that already exists in the DOM, it will be
             <strong>moved</strong> to the new parent, but it will not be removed from its original position before
-            moving.</li>
+            moving.
+        </li>
     </ul>
 
     <h3>Example</h3>
@@ -80,7 +85,8 @@ let div2 = document.createElement('div');
 parentDiv.append(div1, div2, "Some text content"); // Adds multiple nodes and text at once</code></pre>
 
     <p>In the example, <code>div1</code> and <code>div2</code> are appended to <code>parentDiv</code>, and the string
-        <code>"Some text content"</code> is also appended as text inside the parent.</p>
+        <code>"Some text content"</code> is also appended as text inside the parent.
+    </p>
 
     <h2>3. <code>cloneNode()</code></h2>
 
@@ -187,7 +193,8 @@ document.body.appendChild(clonedNode);  // Appends the cloned node to the body</
     <h2>Conclusion</h2>
     <p><code>appendChild()</code> and <code>append()</code> are both used for adding nodes to a parent element, but
         <code>append()</code> offers more flexibility, allowing you to append multiple nodes and text in a single
-        operation.</p>
+        operation.
+    </p>
     <p><code>cloneNode()</code> is used when you need to <strong>duplicate</strong> a node, either shallowly or deeply,
         without affecting the original node.</p>
     <p>By understanding the differences between these methods, you can choose the right one for your specific needs when

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Bubbling and Event Capturing</title>
+  <link rel="shortcut icon" href="images/4726005-removebg-preview.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -124,7 +125,8 @@
         <li><strong>Bubbling</strong> is the default behavior. You don’t need to do anything special to make it work.
         </li>
         <li><strong>Capturing</strong> needs to be explicitly set by passing <code>true</code> in
-          <code>addEventListener</code>.</li>
+          <code>addEventListener</code>.
+        </li>
       </ul>
     </li>
     <li><strong>Use cases:</strong>
@@ -143,9 +145,11 @@
   </p>
   <ul>
     <li>If you want to stop the event from bubbling up (from child to parent), you use
-      <code>event.stopPropagation()</code> inside the event handler.</li>
+      <code>event.stopPropagation()</code> inside the event handler.
+    </li>
     <li>If you want to stop the event from being captured (from parent to child), you use
-      <code>event.stopPropagation()</code> in the capturing phase.</li>
+      <code>event.stopPropagation()</code> in the capturing phase.
+    </li>
   </ul>
 
   <h3>Example</h3>
@@ -182,7 +186,8 @@
   <p><strong>What happens when you click the button:</strong></p>
   <ol>
     <li>Only the "Button Clicked" alert shows up, and the event doesn’t bubble up to the <code>div</code> because
-      <code>stopPropagation()</code> was called.</li>
+      <code>stopPropagation()</code> was called.
+    </li>
   </ol>
 
   <h2>Summary</h2>
