@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #E0E0E0;
+    background-color: #1E1E2E;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2;
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    text-decoration: none;
+}
+
+a {
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: tomato;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+.index-menu {
+    width: 100%;
+    max-width: 450px;
+    margin-inline: auto;
+    text-align: left;
+}
