@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access Parent, Sibling & Children Elements in JavaScript</title>
     <script src="../externJsFile/AccessParentSibling&ChildrenElements.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Access Parent, Sibling, and Children Elements Using JavaScript</h1>
 
@@ -18,7 +20,8 @@
         <p><strong>Property:</strong> <code>parentElement</code></p>
         <p>Returns the immediate parent of an element.</p>
 
-        <h3>Example:</h3><pre><code>
+        <h3>Example:</h3>
+        <pre><code>
 let childElement = document.querySelector('.child');
 let parentElement = childElement.parentElement; // Access parent
 console.log(parentElement);
@@ -35,14 +38,16 @@ console.log(parentElement);
             <li><code>nextElementSibling</code>: Access the next sibling element.</li>
         </ul>
 
-        <h3>Example:</h3><pre><code>
+        <h3>Example:</h3>
+        <pre><code>
 let currentElement = document.querySelector('.current');
 let previousSibling = currentElement.previousElementSibling; // Access previous sibling
 let nextSibling = currentElement.nextElementSibling; // Access next sibling
 console.log(previousSibling);
 console.log(nextSibling);
 </code></pre>
-        <p><strong>Note:</strong> If there are no siblings in that direction, these properties return <code>null</code>.</p>
+        <p><strong>Note:</strong> If there are no siblings in that direction, these properties return <code>null</code>.
+        </p>
     </section>
 
     <section>
@@ -55,7 +60,8 @@ console.log(nextSibling);
             <li><code>lastElementChild</code>: Access the last child element.</li>
         </ul>
 
-        <h3>Example:</h3><pre><code>
+        <h3>Example:</h3>
+        <pre><code>
 let parentElement = document.querySelector('.parent');
 let allChildren = parentElement.children; // Access all children
 let firstChild = parentElement.firstElementChild; // Access first child
@@ -65,12 +71,14 @@ console.log(allChildren); // HTMLCollection
 console.log(firstChild);
 console.log(lastChild);
 </code></pre>
-        <p><strong>Note:</strong> <code>children</code> excludes text nodes, while <code>childNodes</code> includes text nodes and comments.</p>
+        <p><strong>Note:</strong> <code>children</code> excludes text nodes, while <code>childNodes</code> includes text
+            nodes and comments.</p>
     </section>
 
     <section>
         <h2>4. Traversing Using <code>childNodes</code></h2>
-        <p><code>childNodes</code>: Returns a NodeList of all children, including text nodes, comments, and element nodes.</p>
+        <p><code>childNodes</code>: Returns a NodeList of all children, including text nodes, comments, and element
+            nodes.</p>
 
         <h3>Example:</h3>
         <pre>
@@ -80,7 +88,8 @@ let allNodes = parent.childNodes; // Includes text and comment nodes
 console.log(allNodes);
 </code>
         </pre>
-        <p><strong>Filter Node Types:</strong> Use <code>nodeType</code> to distinguish between node types (1 = element, 3 = text).</p>
+        <p><strong>Filter Node Types:</strong> Use <code>nodeType</code> to distinguish between node types (1 = element,
+            3 = text).</p>
     </section>
 
     <section>
@@ -110,8 +119,10 @@ console.log(childOfFirstChild);
             <li>Be mindful of text nodes when using <code>childNodes</code>.</li>
         </ul>
     </section>
-    <a class="link-button" href="../extra-topic/AccessParentSibling&ChildrenElements.html"target="_blank">INteresting</a>
+    <a class="link-button" href="../extra-topic/AccessParentSibling&ChildrenElements.html"
+        target="_blank">INteresting</a>
     <a class="link-button" href="39-HowToApplyStylesInJavaScript.html">PreviousPage</a>
     <a class="link-button" href="41-Difference Between Element and Node.html">NextPage</a>
 </body>
+
 </html>

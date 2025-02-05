@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Events and Event Object in JavaScript</title>
-    <link rel="stylesheet" href="..//css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Form Events and Event Object in JavaScript</h1>
 
     <h2>1. Form Events in JavaScript</h2>
-    <p>Form events are triggered when the user interacts with form elements (like input fields, buttons, checkboxes, etc.) in various ways. Common form events include typing into a field, submitting the form, selecting an option, or focusing on a field.</p>
+    <p>Form events are triggered when the user interacts with form elements (like input fields, buttons, checkboxes,
+        etc.) in various ways. Common form events include typing into a field, submitting the form, selecting an option,
+        or focusing on a field.</p>
 
     <h3>Common Form Events:</h3>
     <ol>
         <li>
             <strong>`submit`</strong>
-            <p>Triggered when the form is submitted. Commonly used to validate form data before sending it to the server.</p>
+            <p>Triggered when the form is submitted. Commonly used to validate form data before sending it to the
+                server.</p>
             <pre><code>const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevents the form from submitting
@@ -47,7 +52,8 @@ dropdown.addEventListener("change", (event) => {
 
         <li>
             <strong>`focus`</strong>
-            <p>Fires when an element (like input or textarea) gains focus (i.e., when the user clicks or tabs into it).</p>
+            <p>Fires when an element (like input or textarea) gains focus (i.e., when the user clicks or tabs into it).
+            </p>
             <pre><code>const inputField = document.querySelector("input");
 inputField.addEventListener("focus", () => {
     console.log("Input field is focused.");
@@ -77,7 +83,8 @@ form.addEventListener("reset", () => {
     </ol>
 
     <h2>2. Event Object in JavaScript</h2>
-    <p>The Event Object represents the event that occurred and provides information about it. It is automatically passed to event handler functions and contains useful properties and methods to handle the event.</p>
+    <p>The Event Object represents the event that occurred and provides information about it. It is automatically passed
+        to event handler functions and contains useful properties and methods to handle the event.</p>
 
     <h3>Common Properties of the Event Object:</h3>
     <ol>
@@ -176,8 +183,9 @@ document.querySelector("button").addEventListener("click", (event) => {
         <li>Use methods like `preventDefault()` to control the default behavior.</li>
         <li>Access properties like `target` and `type` to customize responses to user actions.</li>
     </ul>
-    <a class="link-button" href="../extra-topic/formEvents.html"target="_blank">FormEventListeners</a>
+    <a class="link-button" href="../extra-topic/formEvents.html" target="_blank">FormEventListeners</a>
     <a class="link-button" href="44-EventListeners.html">PreviousPage</a>
     <a class="link-button" href="46-Keyboardevents.html">NextPage</a>
 </body>
+
 </html>

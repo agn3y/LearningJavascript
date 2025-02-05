@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to apply styles in JavaScript</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/HowToApplyStylesInJavaScript.js"></script>
 </head>
 
@@ -13,9 +13,11 @@
     <h2>Explanation of How to Apply Styles in JavaScript</h2>
 
     <p id="explanation">
-        1. <strong>Inline Styles:</strong> You can directly modify an element's style using the <code>style</code> property.<br>
+        1. <strong>Inline Styles:</strong> You can directly modify an element's style using the <code>style</code>
+        property.<br>
         2. <strong>Using <code>cssText</code>:</strong> This lets you apply multiple styles at once using a string.<br>
-        3. <strong>Adding/Removing Classes:</strong> You can add or remove predefined CSS classes using <code>classList</code>.<br>
+        3. <strong>Adding/Removing Classes:</strong> You can add or remove predefined CSS classes using
+        <code>classList</code>.<br>
         4. <strong>Using <code>setAttribute</code>:</strong> You can apply the style attribute directly to an element.
     </p>
 
@@ -27,7 +29,7 @@
         // This function applies styles directly to the paragraph
         function applyStyles() {
             const messageElement = document.getElementById('message');
-            
+
             // Applying Inline Styles
             messageElement.style.color = 'blue';  // Text color is blue
             messageElement.style.fontSize = '24px';  // Font size is 24px
@@ -75,7 +77,7 @@
             <a href="google.com">element with an a tag</a>
         </p>
         <p>
-            <a href="google.com" style = "color:#00D700">element with an a tag</a>
+            <a href="google.com" style="color:#00D700">element with an a tag</a>
         </p>
     </section>
 

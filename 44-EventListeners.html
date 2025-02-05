@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Listeners Explained</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="../externJsFile/EventListeners.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1 class="dummy-id" id="dummy-id">Event Listeners: In-Depth Explanation</h1>
@@ -14,7 +16,8 @@
   <section>
     <h2>How Event Listeners Work</h2>
     <ol>
-      <li><strong>Listening for Events:</strong> An event listener waits for a specific event (e.g., click, keydown) to occur on a target element.</li>
+      <li><strong>Listening for Events:</strong> An event listener waits for a specific event (e.g., click, keydown) to
+        occur on a target element.</li>
       <li><strong>Responding to Events:</strong> Once the event occurs, the listener invokes a callback function.</li>
     </ol>
   </section>
@@ -33,11 +36,11 @@
     <pre><code>element.addEventListener('event', function, useCapture);</code></pre>
     <p>
       <strong>Parameters:</strong>
-      <ul>
-        <li><code>event</code>: Type of event (e.g., 'click', 'keydown').</li>
-        <li><code>function</code>: The callback function.</li>
-        <li><code>useCapture</code>: Optional boolean indicating the event flow phase (bubbling or capturing).</li>
-      </ul>
+    <ul>
+      <li><code>event</code>: Type of event (e.g., 'click', 'keydown').</li>
+      <li><code>function</code>: The callback function.</li>
+      <li><code>useCapture</code>: Optional boolean indicating the event flow phase (bubbling or capturing).</li>
+    </ul>
     </p>
   </section>
 
@@ -61,7 +64,7 @@
       <li><strong>Target Phase:</strong> Event reaches the target element.</li>
       <li><strong>Bubbling Phase:</strong> Event propagates back up the DOM tree.</li>
     </ol>
-<pre><code>document.body.addEventListener('click', () => {
+    <pre><code>document.body.addEventListener('click', () => {
   console.log('Body clicked!');
 });
 document.getElementById('myButton').addEventListener('click', (event) => {
@@ -132,16 +135,17 @@ button.removeEventListener('click', logMessage); // Detaches the listener.</code
     <h2>Conclusion</h2>
     <p>
       Event listeners are powerful tools for interactive applications. To master them:
-      <ul>
-        <li>Understand the DOM and event propagation.</li>
-        <li>Handle exceptions like non-existent elements and incorrect callbacks.</li>
-        <li>Use advanced techniques like <code>once</code> and <code>removeEventListener</code>.</li>
-      </ul>
-      By designing robust event listeners, you can create efficient, user-friendly applications!
+    <ul>
+      <li>Understand the DOM and event propagation.</li>
+      <li>Handle exceptions like non-existent elements and incorrect callbacks.</li>
+      <li>Use advanced techniques like <code>once</code> and <code>removeEventListener</code>.</li>
+    </ul>
+    By designing robust event listeners, you can create efficient, user-friendly applications!
     </p>
   </footer>
-  <a class="link-button" href="../extra-topic/eventListner.html"target="_blank">EventListeners</a>
+  <a class="link-button" href="../extra-topic/eventListner.html" target="_blank">EventListeners</a>
   <a class="link-button" href="43-WorkingWithElements.html">PreviousPage</a>
   <a class="link-button" href="45-Form Event and Event Object.html">NextPage</a>
 </body>
+
 </html>

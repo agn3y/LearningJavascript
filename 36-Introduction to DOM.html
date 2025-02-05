@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to DOM</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/DOM.js"></script>
 </head>
+
 <body>
     <h1 id="NoCanada">Introduction to DOM in JavaScript</h1>
-    <p>The <strong>DOM</strong> (Document Object Model) in JavaScript is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each element, attribute, and piece of text on the page is a node in that tree. JavaScript can interact with the DOM to modify the structure, style, and content of a webpage dynamically.</p>
+    <p>The <strong>DOM</strong> (Document Object Model) in JavaScript is a programming interface for web documents. It
+        represents the structure of a webpage as a tree of objects, where each element, attribute, and piece of text on
+        the page is a node in that tree. JavaScript can interact with the DOM to modify the structure, style, and
+        content of a webpage dynamically.</p>
     <h2>Key Concepts of DOM:</h2>
-        <ul>
-            <li><strong>Document</strong>: Refers to the entire HTML or XML document. It is the root object from which you access the DOM tree.</li>
-            <li><strong>Elements</strong>: Every part of a webpage, such as headings, paragraphs, images, buttons, etc., is represented as an element node in the DOM.</li>
-            <li><strong>Nodes</strong>: Nodes are the building blocks of the DOM. These include:
-        <ul>
-            <li><strong>Element nodes</strong>: Represent HTML tags (e.g., &lt;div&gt;, &lt;p&gt;).</li>
-            <li><strong>Text nodes</strong>: Contain the text inside HTML tags (e.g., the text inside &lt;p&gt; tags).</li>
-            <li><strong>Attribute nodes</strong>: Represent the attributes of an HTML element (e.g., class, id, src).</li>
-        </ul>
+    <ul>
+        <li><strong>Document</strong>: Refers to the entire HTML or XML document. It is the root object from which you
+            access the DOM tree.</li>
+        <li><strong>Elements</strong>: Every part of a webpage, such as headings, paragraphs, images, buttons, etc., is
+            represented as an element node in the DOM.</li>
+        <li><strong>Nodes</strong>: Nodes are the building blocks of the DOM. These include:
+            <ul>
+                <li><strong>Element nodes</strong>: Represent HTML tags (e.g., &lt;div&gt;, &lt;p&gt;).</li>
+                <li><strong>Text nodes</strong>: Contain the text inside HTML tags (e.g., the text inside &lt;p&gt;
+                    tags).</li>
+                <li><strong>Attribute nodes</strong>: Represent the attributes of an HTML element (e.g., class, id,
+                    src).</li>
+            </ul>
         </li>
-        <li><strong>DOM Tree</strong>: The DOM represents the webpage as a hierarchical tree structure where the document is the root, and the child nodes represent the elements and content.</li>
+        <li><strong>DOM Tree</strong>: The DOM represents the webpage as a hierarchical tree structure where the
+            document is the root, and the child nodes represent the elements and content.</li>
     </ul>
-   <h2>DOM in JavaScript:</h2>
+    <h2>DOM in JavaScript:</h2>
     <p>JavaScript can interact with the DOM to manipulate web pages. You can:</p>
     <ul>
-        <li><strong>Access elements</strong>: Select and access HTML elements using methods like <code>document.getElementById()</code>, <code>document.querySelector()</code>, etc.</li>
-        <li><strong>Modify elements</strong>: Change the content, attributes, or styles of elements. For example, <code>element.innerHTML</code> to change the text inside an element or <code>element.style</code> to change its CSS properties.</li>
-        <li><strong>Create and remove elements</strong>: Dynamically create new elements (<code>document.createElement()</code>) or remove elements (<code>element.remove()</code>).</li>
-        <li><strong>Handle events</strong>: Listen to user actions (like clicks or key presses) and trigger corresponding functions using event listeners (<code>element.addEventListener()</code>).</li>
+        <li><strong>Access elements</strong>: Select and access HTML elements using methods like
+            <code>document.getElementById()</code>, <code>document.querySelector()</code>, etc.</li>
+        <li><strong>Modify elements</strong>: Change the content, attributes, or styles of elements. For example,
+            <code>element.innerHTML</code> to change the text inside an element or <code>element.style</code> to change
+            its CSS properties.</li>
+        <li><strong>Create and remove elements</strong>: Dynamically create new elements
+            (<code>document.createElement()</code>) or remove elements (<code>element.remove()</code>).</li>
+        <li><strong>Handle events</strong>: Listen to user actions (like clicks or key presses) and trigger
+            corresponding functions using event listeners (<code>element.addEventListener()</code>).</li>
     </ul>
     <h2 id="NoCanada" class="hea">Example:</h2>
     <pre>
@@ -60,19 +75,22 @@
 </pre>
     <p><strong>Explanation:</strong></p>
     <ul>
-        <li>The DOM allows us to select the heading (&lt;h1&gt;) and the button (&lt;button&gt;) using <code>document.getElementById()</code>.</li>
-        <li>When the button is clicked, an event listener triggers a function that changes the text inside the heading by modifying its <code>innerHTML</code>.</li>
+        <li>The DOM allows us to select the heading (&lt;h1&gt;) and the button (&lt;button&gt;) using
+            <code>document.getElementById()</code>.</li>
+        <li>When the button is clicked, an event listener triggers a function that changes the text inside the heading
+            by modifying its <code>innerHTML</code>.</li>
     </ul>
 
     <h2 id="NoCanada" class="hea">Why is the DOM Important?</h2>
-    <p>The DOM is essential for making webpages interactive and dynamic. Without it, webpages would be static, meaning users could not interact with the content beyond just viewing it. With the DOM, JavaScript can change content, respond to user inputs, and update the page without needing to reload it.</p>
-    <img src="https://wallpapertag.com/wallpaper/full/0/1/f/265211-new-computer-wallpaper-hd-1920x1200.jpg" 
-    alt="Honey-Bunny" 
-    width="300px" 
-    height="auto" 
-    style="display: inline-block;">  <p style="display: inline-block;">&lt;-- Use newWallpaper() to change wallpaper</p>
-       <br>
+    <p>The DOM is essential for making webpages interactive and dynamic. Without it, webpages would be static, meaning
+        users could not interact with the content beyond just viewing it. With the DOM, JavaScript can change content,
+        respond to user inputs, and update the page without needing to reload it.</p>
+    <img src="https://wallpapertag.com/wallpaper/full/0/1/f/265211-new-computer-wallpaper-hd-1920x1200.jpg"
+        alt="Honey-Bunny" width="300px" height="auto" style="display: inline-block;">
+    <p style="display: inline-block;">&lt;-- Use newWallpaper() to change wallpaper</p>
+    <br>
     <a class="link-button" href="35-BOM.html">PreviousPage</a>
     <a class="link-button" href="37-innerText and textContent.html">NextPage</a>
 </body>
+
 </html>

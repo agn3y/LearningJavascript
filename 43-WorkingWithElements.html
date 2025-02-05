@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating and Removing Elements in JavaScript</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <h1>Creating and Removing Elements in JavaScript</h1>
-    
+
     <!-- Section 1: Creating Elements -->
     <section>
         <h2>1. Creating Elements in JavaScript</h2>
-        <p>In JavaScript, you can create new elements using the <code>document.createElement()</code> method. After creating the element, you can manipulate it (like adding text, classes, or attributes), and then append it to an existing part of the DOM.</p>
+        <p>In JavaScript, you can create new elements using the <code>document.createElement()</code> method. After
+            creating the element, you can manipulate it (like adding text, classes, or attributes), and then append it
+            to an existing part of the DOM.</p>
         <p><strong>Steps to Create an Element:</strong></p>
         <ol>
             <li><strong>Create an element:</strong> Use <code>document.createElement()</code>.</li>
@@ -56,11 +60,13 @@ paragraph.id = 'uniqueID';
     <!-- Section 2: Removing Elements -->
     <section>
         <h2>2. Removing Elements in JavaScript</h2>
-        <p>Removing elements involves selecting the element you want to remove and then using one of several methods. Here are two common methods:</p>
+        <p>Removing elements involves selecting the element you want to remove and then using one of several methods.
+            Here are two common methods:</p>
 
         <ul>
             <li><strong><code>remove()</code></strong>: This method removes the element from the DOM directly.</li>
-            <li><strong><code>parentNode.removeChild()</code></strong>: This method removes the element by referencing its parent node.</li>
+            <li><strong><code>parentNode.removeChild()</code></strong>: This method removes the element by referencing
+                its parent node.</li>
         </ul>
 
         <h3>Example 1: Using <code>remove()</code> Method</h3>
@@ -101,14 +107,16 @@ button2.addEventListener('click', function() {
             <strong><code>remove()</code></strong> is simpler and directly removes the element.
         </p>
         <p>
-            <strong><code>parentNode.removeChild()</code></strong> is a more traditional method where you first reference the parent of the element.
+            <strong><code>parentNode.removeChild()</code></strong> is a more traditional method where you first
+            reference the parent of the element.
         </p>
     </section>
 
     <!-- Section 3: Removing Elements Based on Conditions -->
     <section>
         <h2>3. Removing Elements Based on Conditions</h2>
-        <p>You might not always know the exact element to remove. In such cases, you can loop through the DOM to find elements and remove them based on certain conditions, such as class names or IDs.</p>
+        <p>You might not always know the exact element to remove. In such cases, you can loop through the DOM to find
+            elements and remove them based on certain conditions, such as class names or IDs.</p>
 
         <h3>Example: Removing Elements Based on a Class Name</h3>
         <p>This example shows how to remove all elements with a certain class:</p>
@@ -125,14 +133,16 @@ elementsToRemove.forEach(function(element) {
   element.remove();
 });
         </code></pre>
-        <p>In this example, several <code>&lt;div&gt;</code> elements are created and appended to the page. Then, all elements with the class <code>removeMe</code> are selected and removed.</p>
+        <p>In this example, several <code>&lt;div&gt;</code> elements are created and appended to the page. Then, all
+            elements with the class <code>removeMe</code> are selected and removed.</p>
     </section>
 
     <!-- Section 4: Summary -->
     <section>
         <h2>4. Summary of Key Methods</h2>
         <ul>
-            <li><code>document.createElement(tagName)</code>: Creates a new HTML element (like <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, etc.).</li>
+            <li><code>document.createElement(tagName)</code>: Creates a new HTML element (like <code>&lt;div&gt;</code>,
+                <code>&lt;p&gt;</code>, etc.).</li>
             <li><code>element.textContent</code>: Adds text inside the created element.</li>
             <li><code>element.classList.add()</code>: Adds a class to the element.</li>
             <li><code>parentNode.appendChild(child)</code>: Appends a child element to its parent.</li>
@@ -146,4 +156,5 @@ elementsToRemove.forEach(function(element) {
     <a class="link-button" href="42-AppendAndAppendChild.html">PreviousPage</a>
     <a class="link-button" href="44-EventListeners.html">NextPage</a>
 </body>
+
 </html>

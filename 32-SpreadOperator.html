@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spread Operator</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="../externJsFile/SpreadOperator.js"></script>
 </head>
+
 <body>
     <h1>Spread Operator in JavaScript</h1>
     <p>
-        The <strong>spread operator (<code>...</code>)</strong> in JavaScript is a powerful tool used to expand elements of an array or object into individual elements or properties. It is commonly used for tasks like cloning arrays/objects, merging them, or passing multiple arguments to functions.
+        The <strong>spread operator (<code>...</code>)</strong> in JavaScript is a powerful tool used to expand elements
+        of an array or object into individual elements or properties. It is commonly used for tasks like cloning
+        arrays/objects, merging them, or passing multiple arguments to functions.
     </p>
 
     <h2>Syntax</h2>
@@ -18,7 +22,7 @@
     <p>The <code>iterable</code> can be an array, string, or object.</p>
 
     <h2>Use Cases</h2>
-    
+
     <h3>1. Copying Arrays</h3>
     <p>The spread operator makes it easy to copy an array without modifying the original one.</p>
     <pre><code>
@@ -64,7 +68,8 @@ console.log(mergedObj); // { a: 1, b: 2, c: 3, d: 4 }
     </code></pre>
 
     <h3>6. Destructuring with Rest</h3>
-    <p>The spread operator is the opposite of the <strong>rest operator</strong>, but they look the same. With destructuring, the rest operator can collect the remaining properties or elements.</p>
+    <p>The spread operator is the opposite of the <strong>rest operator</strong>, but they look the same. With
+        destructuring, the rest operator can collect the remaining properties or elements.</p>
     <pre><code>
 const [first, ...rest] = [1, 2, 3, 4];
 console.log(first); // 1
@@ -79,4 +84,5 @@ console.log(rest); // [2, 3, 4]
     <a class="link-button" href="31-DefaultParameters.html">PreviousPage</a>
     <a class="link-button" href="33-RestParameters.html">NextPage</a>
 </body>
+
 </html>

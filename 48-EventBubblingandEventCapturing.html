@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Bubbling and Event Capturing</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <h1>Event Bubbling and Event Capturing in JavaScript</h1>
 
-    <h2>Event Bubbling (Default behavior)</h2>
-    <p>
-      <strong>Event Bubbling</strong> is the default behavior in JavaScript. When you trigger an event on an element, that event first happens on the target element (the element you clicked on), then it "bubbles up" to its parent, then to its parent's parent, and so on, all the way up to the root of the document (usually the <code>&lt;html&gt;</code> element).
-    </p>
-    <p><strong>How it works</strong>:</p>
-    <ul>
-      <li>You click on a button inside a <code>&lt;div&gt;</code>.</li>
-      <li>The event first happens on the button.</li>
-      <li>Then the event bubbles up to the <code>&lt;div&gt;</code> element.</li>
-      <li>After that, it goes to any parent of the <code>&lt;div&gt;</code>, and so on.</li>
-    </ul>
-    
-    <h3>Example of Event Bubbling</h3>
-    <pre>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling and Event Capturing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Event Bubbling and Event Capturing in JavaScript</h1>
+
+  <h2>Event Bubbling (Default behavior)</h2>
+  <p>
+    <strong>Event Bubbling</strong> is the default behavior in JavaScript. When you trigger an event on an element, that
+    event first happens on the target element (the element you clicked on), then it "bubbles up" to its parent, then to
+    its parent's parent, and so on, all the way up to the root of the document (usually the <code>&lt;html&gt;</code>
+    element).
+  </p>
+  <p><strong>How it works</strong>:</p>
+  <ul>
+    <li>You click on a button inside a <code>&lt;div&gt;</code>.</li>
+    <li>The event first happens on the button.</li>
+    <li>Then the event bubbles up to the <code>&lt;div&gt;</code> element.</li>
+    <li>After that, it goes to any parent of the <code>&lt;div&gt;</code>, and so on.</li>
+  </ul>
+
+  <h3>Example of Event Bubbling</h3>
+  <pre>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -51,24 +56,26 @@
   &lt;/body&gt;
   &lt;/html&gt;
     </pre>
-    <p><strong>What happens when you click the button:</strong></p>
-    <ol>
-      <li>First, the "Button Clicked" alert shows up.</li>
-      <li>Then, after that, the "Div Clicked" alert will show up because of bubbling.</li>
-    </ol>
-  
-    <h2>Event Capturing (or Trickling)</h2>
-    <p>
-      <strong>Event Capturing</strong> is the opposite of event bubbling. In this case, when an event occurs, it starts from the outermost element and "captures" the event as it trickles down to the target element. So the event happens first on the outermost element and then moves inward to the target element.
-    </p>
-    <p><strong>How it works</strong>:</p>
-    <ul>
-      <li>The event first happens on the parent element.</li>
-      <li>Then it goes inward, moving to each child element until it reaches the target element.</li>
-    </ul>
-    
-    <h3>Example of Event Capturing</h3>
-    <pre>
+  <p><strong>What happens when you click the button:</strong></p>
+  <ol>
+    <li>First, the "Button Clicked" alert shows up.</li>
+    <li>Then, after that, the "Div Clicked" alert will show up because of bubbling.</li>
+  </ol>
+
+  <h2>Event Capturing (or Trickling)</h2>
+  <p>
+    <strong>Event Capturing</strong> is the opposite of event bubbling. In this case, when an event occurs, it starts
+    from the outermost element and "captures" the event as it trickles down to the target element. So the event happens
+    first on the outermost element and then moves inward to the target element.
+  </p>
+  <p><strong>How it works</strong>:</p>
+  <ul>
+    <li>The event first happens on the parent element.</li>
+    <li>Then it goes inward, moving to each child element until it reaches the target element.</li>
+  </ul>
+
+  <h3>Example of Event Capturing</h3>
+  <pre>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -97,45 +104,52 @@
   &lt;/body&gt;
   &lt;/html&gt;
     </pre>
-    <p><strong>What happens when you click the button:</strong></p>
-    <ol>
-      <li>First, the "Div Clicked" alert shows up because the event starts at the outermost parent.</li>
-      <li>Then, the "Button Clicked" alert shows up as the event moves inward to the button.</li>
-    </ol>
-  
-    <h2>Key Differences between Bubbling and Capturing</h2>
-    <ul>
-      <li><strong>Order of events:</strong>
-        <ul>
-          <li><strong>Bubbling</strong>: Events go from the target element (where you clicked) and move outward to the parent elements.</li>
-          <li><strong>Capturing</strong>: Events go from the outermost element and move inward to the target element.</li>
-        </ul>
-      </li>
-      <li><strong>Default behavior:</strong>
-        <ul>
-          <li><strong>Bubbling</strong> is the default behavior. You don’t need to do anything special to make it work.</li>
-          <li><strong>Capturing</strong> needs to be explicitly set by passing <code>true</code> in <code>addEventListener</code>.</li>
-        </ul>
-      </li>
-      <li><strong>Use cases:</strong>
-        <ul>
-          <li><strong>Bubbling</strong> is commonly used because it's easier to control. For example, you might want to handle events on a parent element instead of on every individual child.</li>
-          <li><strong>Capturing</strong> is useful in certain situations where you need to control the event before it reaches the target element.</li>
-        </ul>
-      </li>
-    </ul>
-  
-    <h2>Stopping Event Propagation</h2>
-    <p>
-      You can stop the event from bubbling up or capturing by using the <code>stopPropagation()</code> method.
-    </p>
-    <ul>
-      <li>If you want to stop the event from bubbling up (from child to parent), you use <code>event.stopPropagation()</code> inside the event handler.</li>
-      <li>If you want to stop the event from being captured (from parent to child), you use <code>event.stopPropagation()</code> in the capturing phase.</li>
-    </ul>
-  
-    <h3>Example</h3>
-    <pre>
+  <p><strong>What happens when you click the button:</strong></p>
+  <ol>
+    <li>First, the "Div Clicked" alert shows up because the event starts at the outermost parent.</li>
+    <li>Then, the "Button Clicked" alert shows up as the event moves inward to the button.</li>
+  </ol>
+
+  <h2>Key Differences between Bubbling and Capturing</h2>
+  <ul>
+    <li><strong>Order of events:</strong>
+      <ul>
+        <li><strong>Bubbling</strong>: Events go from the target element (where you clicked) and move outward to the
+          parent elements.</li>
+        <li><strong>Capturing</strong>: Events go from the outermost element and move inward to the target element.</li>
+      </ul>
+    </li>
+    <li><strong>Default behavior:</strong>
+      <ul>
+        <li><strong>Bubbling</strong> is the default behavior. You don’t need to do anything special to make it work.
+        </li>
+        <li><strong>Capturing</strong> needs to be explicitly set by passing <code>true</code> in
+          <code>addEventListener</code>.</li>
+      </ul>
+    </li>
+    <li><strong>Use cases:</strong>
+      <ul>
+        <li><strong>Bubbling</strong> is commonly used because it's easier to control. For example, you might want to
+          handle events on a parent element instead of on every individual child.</li>
+        <li><strong>Capturing</strong> is useful in certain situations where you need to control the event before it
+          reaches the target element.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Stopping Event Propagation</h2>
+  <p>
+    You can stop the event from bubbling up or capturing by using the <code>stopPropagation()</code> method.
+  </p>
+  <ul>
+    <li>If you want to stop the event from bubbling up (from child to parent), you use
+      <code>event.stopPropagation()</code> inside the event handler.</li>
+    <li>If you want to stop the event from being captured (from parent to child), you use
+      <code>event.stopPropagation()</code> in the capturing phase.</li>
+  </ul>
+
+  <h3>Example</h3>
+  <pre>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -165,25 +179,29 @@
   &lt;/body&gt;
   &lt;/html&gt;
     </pre>
-    <p><strong>What happens when you click the button:</strong></p>
-    <ol>
-      <li>Only the "Button Clicked" alert shows up, and the event doesn’t bubble up to the <code>div</code> because <code>stopPropagation()</code> was called.</li>
-    </ol>
-  
-    <h2>Summary</h2>
-    <ul>
-      <li><strong>Bubbling</strong>: Events go from the target element to the outer elements.</li>
-      <li><strong>Capturing</strong>: Events go from the outermost element to the target element.</li>
-      <li><strong>stopPropagation()</strong>: Stops the event from moving further up (bubbling) or down (capturing).</li>
-    </ul>
-    <h2>In JavaScript, the addEventListener method has two important options you can use: capture and once.</h2>
+  <p><strong>What happens when you click the button:</strong></p>
+  <ol>
+    <li>Only the "Button Clicked" alert shows up, and the event doesn’t bubble up to the <code>div</code> because
+      <code>stopPropagation()</code> was called.</li>
+  </ol>
+
+  <h2>Summary</h2>
+  <ul>
+    <li><strong>Bubbling</strong>: Events go from the target element to the outer elements.</li>
+    <li><strong>Capturing</strong>: Events go from the outermost element to the target element.</li>
+    <li><strong>stopPropagation()</strong>: Stops the event from moving further up (bubbling) or down (capturing).</li>
+  </ul>
+  <h2>In JavaScript, the addEventListener method has two important options you can use: capture and once.</h2>
 
   <h2>1. Capture = true</h2>
   <p>
-    When you set <code>capture = true</code> in the <code>addEventListener</code> method, you are enabling <strong>Event Capturing</strong>. As we discussed earlier, Event Capturing is when the event is first handled by the outermost element and then moves inward to the target element.
+    When you set <code>capture = true</code> in the <code>addEventListener</code> method, you are enabling <strong>Event
+      Capturing</strong>. As we discussed earlier, Event Capturing is when the event is first handled by the outermost
+    element and then moves inward to the target element.
   </p>
   <p>
-    <code>Capture = true</code> tells JavaScript to trigger the event listener in the capturing phase (before it bubbles up).
+    <code>Capture = true</code> tells JavaScript to trigger the event listener in the capturing phase (before it bubbles
+    up).
   </p>
   <p>
     The default behavior for events is bubbling, so setting <code>capture = true</code> changes the flow to capturing.
@@ -191,14 +209,21 @@
 
   <h2>2. Once = true</h2>
   <p>
-    When you set <code>once = true</code> in the <code>addEventListener</code> method, it means that the event listener will only trigger once and then automatically remove itself. This is useful when you only need to handle an event one time (for example, when you want to perform an action once, like showing a message after a button click, and you don’t need the listener anymore).
+    When you set <code>once = true</code> in the <code>addEventListener</code> method, it means that the event listener
+    will only trigger once and then automatically remove itself. This is useful when you only need to handle an event
+    one time (for example, when you want to perform an action once, like showing a message after a button click, and you
+    don’t need the listener anymore).
   </p>
   <p>
-    <code>Once = true</code> makes the event listener automatically remove itself after the first execution, so it doesn't fire again on subsequent triggers of the same event.
+    <code>Once = true</code> makes the event listener automatically remove itself after the first execution, so it
+    doesn't fire again on subsequent triggers of the same event.
   </p>
-  <a class="link-button" href="../extra-topic/Event(BubblingandCapturing).html" target="_blank">Event Bubbling & Capturing</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling"target="_blank">mdn refer...</a>
+  <a class="link-button" href="../extra-topic/Event(BubblingandCapturing).html" target="_blank">Event Bubbling &
+    Capturing</a>
+  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling" target="_blank">mdn
+    refer...</a>
   <a class="link-button" href="47-MouseEvents.html">PreviousPage</a>
-  <a class="link-button" href="49-EventSimulation.html">NextPage</a>  
+  <a class="link-button" href="49-EventSimulation.html">NextPage</a>
 </body>
+
 </html>

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Keyboard Events</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <h1>Keyboard Events</h1>
-  <p>Keyboard events in JavaScript allow you to detect when a user presses or releases a key on the keyboard. These events are useful for creating interactive web applications, such as forms, games, or even keyboard shortcuts.</p>
+  <p>Keyboard events in JavaScript allow you to detect when a user presses or releases a key on the keyboard. These
+    events are useful for creating interactive web applications, such as forms, games, or even keyboard shortcuts.</p>
 
   <p>There are three main types of keyboard events in JavaScript:</p>
   <ul>
@@ -20,7 +23,8 @@
   <p>Let’s break down these events and explain each with easy examples:</p>
 
   <h2>1. <code>keydown</code> Event</h2>
-  <p>The <code>keydown</code> event is triggered when a key is pressed down. This event is fired once, when the key is first pressed, and it continues to trigger if the key is held down.</p>
+  <p>The <code>keydown</code> event is triggered when a key is pressed down. This event is fired once, when the key is
+    first pressed, and it continues to trigger if the key is held down.</p>
 
   <pre><code>
       &lt;!DOCTYPE html&gt;
@@ -40,7 +44,8 @@
       &lt;/html&gt;
     </code></pre>
 
-  <p>In this example, when you press any key, the <code>keydown</code> event will trigger and log the key name (like "a", "Enter", etc.).</p>
+  <p>In this example, when you press any key, the <code>keydown</code> event will trigger and log the key name (like
+    "a", "Enter", etc.).</p>
 
   <h3>Important properties of <code>event</code>:</h3>
   <ul>
@@ -50,7 +55,9 @@
   </ul>
 
   <h2>2. <code>keypress</code> Event (Deprecated)</h2>
-  <p>The <code>keypress</code> event was used to detect when a key that produces a character is pressed (e.g., letters, numbers). However, this event is now <strong>deprecated</strong> in modern browsers, and it is better to use <code>keydown</code> for detecting all key presses.</p>
+  <p>The <code>keypress</code> event was used to detect when a key that produces a character is pressed (e.g., letters,
+    numbers). However, this event is now <strong>deprecated</strong> in modern browsers, and it is better to use
+    <code>keydown</code> for detecting all key presses.</p>
 
   <pre><code>
       &lt;!DOCTYPE html&gt;
@@ -70,10 +77,12 @@
       &lt;/html&gt;
     </code></pre>
 
-  <p>While this still works in many browsers, it is recommended to use <code>keydown</code> or <code>keyup</code> because <code>keypress</code> doesn't capture non-printable keys like "Shift" or "Enter".</p>
+  <p>While this still works in many browsers, it is recommended to use <code>keydown</code> or <code>keyup</code>
+    because <code>keypress</code> doesn't capture non-printable keys like "Shift" or "Enter".</p>
 
   <h2>3. <code>keyup</code> Event</h2>
-  <p>The <code>keyup</code> event is triggered when a key is released. It occurs after the <code>keydown</code> event and only once when the key is released.</p>
+  <p>The <code>keyup</code> event is triggered when a key is released. It occurs after the <code>keydown</code> event
+    and only once when the key is released.</p>
 
   <pre><code>
       &lt;!DOCTYPE html&gt;
@@ -101,10 +110,14 @@
   <ul>
     <li><code>event.key</code>: Returns the value of the key pressed (e.g., "a", "Enter").</li>
     <li><code>event.code</code>: Represents the physical key on the keyboard (e.g., "KeyA" or "ArrowUp").</li>
-    <li><code>event.altKey</code>: A boolean that is <code>true</code> if the <strong>Alt</strong> key was pressed when the event occurred.</li>
-    <li><code>event.ctrlKey</code>: A boolean that is <code>true</code> if the <strong>Control</strong> key was pressed.</li>
-    <li><code>event.shiftKey</code>: A boolean that is <code>true</code> if the <strong>Shift</strong> key was pressed.</li>
-    <li><code>event.metaKey</code>: A boolean that is <code>true</code> if the <strong>Meta</strong> key (Windows key on Windows or Command key on macOS) was pressed.</li>
+    <li><code>event.altKey</code>: A boolean that is <code>true</code> if the <strong>Alt</strong> key was pressed when
+      the event occurred.</li>
+    <li><code>event.ctrlKey</code>: A boolean that is <code>true</code> if the <strong>Control</strong> key was pressed.
+    </li>
+    <li><code>event.shiftKey</code>: A boolean that is <code>true</code> if the <strong>Shift</strong> key was pressed.
+    </li>
+    <li><code>event.metaKey</code>: A boolean that is <code>true</code> if the <strong>Meta</strong> key (Windows key on
+      Windows or Command key on macOS) was pressed.</li>
   </ul>
 
   <h3>Example of <code>event</code> properties:</h3>
@@ -132,7 +145,8 @@
     </code></pre>
 
   <h2>Example: Preventing Default Action</h2>
-  <p>Sometimes, you might want to prevent the default behavior of certain keys, such as the "Enter" key (which submits a form). You can use <code>event.preventDefault()</code> to stop the default action.</p>
+  <p>Sometimes, you might want to prevent the default behavior of certain keys, such as the "Enter" key (which submits a
+    form). You can use <code>event.preventDefault()</code> to stop the default action.</p>
 
   <pre><code>
       &lt;!DOCTYPE html&gt;
@@ -161,7 +175,8 @@
     </code></pre>
 
   <h2>Handling Multiple Keys Simultaneously</h2>
-  <p>You can check if multiple keys are pressed at the same time (e.g., Shift + A) by using <code>event.shiftKey</code>, <code>event.ctrlKey</code>, or <code>event.altKey</code>.</p>
+  <p>You can check if multiple keys are pressed at the same time (e.g., Shift + A) by using <code>event.shiftKey</code>,
+    <code>event.ctrlKey</code>, or <code>event.altKey</code>.</p>
 
   <pre><code>
       &lt;!DOCTYPE html&gt;
@@ -185,9 +200,13 @@
   <p>This example will log "Shift + A pressed!" when both Shift and A keys are pressed at the same time.</p>
 
   <h2>Conclusion</h2>
-  <p>Keyboard events (<code>keydown</code>, <code>keypress</code>, and <code>keyup</code>) are important for capturing user input. The key properties help you understand which key was pressed and if any modifier keys (such as Shift or Control) were involved. By using event listeners like <code>addEventListener()</code>, you can create interactive behaviors based on key events in your web applications.</p>
-  <a class="link-button" href="../extra-topic/keyBoard.html"target="_blank">Keyboard Events</a>
+  <p>Keyboard events (<code>keydown</code>, <code>keypress</code>, and <code>keyup</code>) are important for capturing
+    user input. The key properties help you understand which key was pressed and if any modifier keys (such as Shift or
+    Control) were involved. By using event listeners like <code>addEventListener()</code>, you can create interactive
+    behaviors based on key events in your web applications.</p>
+  <a class="link-button" href="../extra-topic/keyBoard.html" target="_blank">Keyboard Events</a>
   <a class="link-button" href="45-Form Event and Event Object.html">PreviousPage</a>
-  <a class="link-button" href="47-MouseEvents.html">NextPage</a>    
+  <a class="link-button" href="47-MouseEvents.html">NextPage</a>
 </body>
+
 </html>
