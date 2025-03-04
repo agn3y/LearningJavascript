@@ -1,5 +1,5 @@
 const resolveBtn = document.querySelector(".approve-button");
-const rejecteBtn = document.querySelector(".reject-button");
+const rejectBtn = document.querySelector(".reject-button");
 
 const p = new Promise((resolve,reject)=>{
    
