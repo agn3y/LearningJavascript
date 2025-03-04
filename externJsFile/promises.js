@@ -7,7 +7,7 @@ const p = new Promise((resolve,reject)=>{
             resolve("Promise was resolved")
         }
 
-        rejecteBtn.onclick= ()=> {
+        rejectBtn.onclick= ()=> {
             reject("Promise was rejected")
         }
     }
